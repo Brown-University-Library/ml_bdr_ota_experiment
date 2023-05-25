@@ -1,3 +1,10 @@
+# Purpose
+
+This repo will be used to experiment with using machine-learning techniques to create useful metadata for [Opening-the-Archives](https://repository.library.brown.edu/studio/collections/bdr:318399/) items that are metadata-deficient.
+
+---
+
+
 # Usage
 
 Usage when running locally:
@@ -6,6 +13,7 @@ Usage when running locally:
 
 ---
 
+
 # Data-query
 
 Query to obtain raw data:
@@ -13,6 +21,7 @@ Query to obtain raw data:
     https://repository.library.brown.edu/api/search/?q=rel_is_member_of_collection_ssim:%22bdr:318399%22%20AND%20-rel_is_part_of_ssim:*%20AND%20ds_ids_ssim:MODS&rows=99999
 
 ---
+
 
 # Colab info
 
