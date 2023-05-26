@@ -1,3 +1,25 @@
+# Prompt
+
+I have 100,000 items where the item has a key, with associated data, in the form of:
+
+data = [
+    'bdr:123' {
+        'title': 'Test title',
+        'file_type': 'PDF',
+        'text': 'This is a test text',
+        'keywords': ['spacecraft', 'aliens', 'moon'],
+        'genre': 'scifi',
+    }
+]
+
+I want to train a model in which I'd pass the model an item's data (minus "genre") -- and have it return a suggested genre. And I want to do this using a very basic neural network. 
+
+Given a single file of python code -- what would the functions be?
+
+---
+
+# 4.0 output
+
 Your task involves building a text classification model, which would classify items into genres based on their provided data. Here's a simplified example using Keras, a high-level neural networks API, and Tensorflow. This example is a simple Multi-Layer Perceptron (MLP) model.
 
 This script doesn't handle pre-processing or feature extraction (e.g., from "title", "file_type", "text", "keywords") which would be required for a production-level script. Instead, it assumes that the inputs have been preprocessed into a numerical format.
