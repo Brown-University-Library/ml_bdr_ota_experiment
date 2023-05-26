@@ -57,7 +57,7 @@ Moreover, depending on the complexity of the data and task, a simple MLP might n
 
 ---
 
-* 3.5 Output
+# 3.5 Output
 
 To accomplish your task of training a basic neural network to suggest a genre based on the provided data, you can use the following functions in Python:
 
