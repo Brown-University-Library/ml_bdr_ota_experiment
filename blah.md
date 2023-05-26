@@ -54,3 +54,98 @@ train_model(model, X_train, y_train)
 This example is a very basic one and it's missing a lot of important steps, like data preprocessing and feature extraction. Text data, especially, usually requires a fair amount of preprocessing, like tokenization, stemming or lemmatization, and vectorization, before it can be used as input for a neural network.
 
 Moreover, depending on the complexity of the data and task, a simple MLP might not be the best model. More complex models, like Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), or transformers, could potentially achieve better performance.
+---
+3.5 Output
+To accomplish your task of training a basic neural network to suggest a genre based on the provided data, you can use the following functions in Python:
+
+1. **Data Preparation Function:**
+   This function prepares the data by extracting the relevant features and labels (genre) from the given item data. It removes the 'genre' key from the item's data and returns the input features and corresponding labels.
+
+```python
+def prepare_data(item_data):
+    features = []
+    labels = []
+    for item in item_data:
+        genre = item.pop('genre')  # Remove 'genre' key from item's data
+        features.append(list(item.values()))  # Extract feature values
+        labels.append(genre)  # Collect corresponding labels
+    return features, labels
+```
+
+2. **Neural Network Model Function:**
+   This function defines and compiles a simple neural network model using the Keras library. You can customize the model architecture based on your requirements.
+
+```python
+import tensorflow as tf
+from tensorflow import keras
+
+def create_model(input_shape):
+    model = keras.Sequential([
+        keras.layers.Dense(64, activation='relu', input_shape=input_shape),
+        keras.layers.Dense(32, activation='relu'),
+        keras.layers.Dense(num_classes, activation='softmax')  # Output layer with softmax activation
+    ])
+
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+    return model
+```
+
+3. **Model Training Function:**
+   This function trains the neural network model using the prepared data.
+
+```python
+def train_model(features, labels):
+    num_classes = len(set(labels))  # Number of unique genres
+    input_shape = (len(features[0]),)  # Shape of input features
+
+    # Convert labels to categorical format
+    label_to_index = {label: index for index, label in enumerate(set(labels))}
+    indexed_labels = [label_to_index[label] for label in labels]
+    categorical_labels = tf.keras.utils.to_categorical(indexed_labels, num_classes=num_classes)
+
+    model = create_model(input_shape)  # Create the model
+    model.fit(features, categorical_labels, epochs=10, batch_size=32)  # Train the model
+
+    return model
+```
+
+4. **Genre Prediction Function:**
+   This function takes an item's data (minus 'genre') and uses the trained model to predict the suggested genre.
+
+```python
+def predict_genre(item_data, model):
+    input_data = list(item_data.values())
+    predicted_genre = model.predict([input_data])
+    genre_index = tf.argmax(predicted_genre, axis=1)[0]
+    return list(label_to_index.keys())[list(label_to_index.values()).index(genre_index)]
+```
+
+Now you can use these functions as follows:
+
+```python
+item_data = [
+    {
+        'title': 'Test title',
+        'file_type': 'PDF',
+        'text': 'This is a test text',
+        'keywords': ['spacecraft', 'aliens', 'moon'],
+        'genre': 'scifi',
+    }
+    # Add more items as needed
+]
+
+features, labels = prepare_data(item_data)
+model = train_model(features, labels)
+
+# Example usage to predict genre
+input_item = {
+    'title': 'Another title',
+    'file_type': 'PDF',
+    'text': 'Another text',
+    'keywords': ['stars', 'galaxy'],
+}
+predicted_genre = predict_genre(input_item, model)
+print("Predicted Genre:", predicted_genre)
+```
+
+Remember to customize the model architecture, hyperparameters, and data preprocessing as per your specific needs.
