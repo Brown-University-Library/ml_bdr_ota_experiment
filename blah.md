@@ -54,8 +54,11 @@ train_model(model, X_train, y_train)
 This example is a very basic one and it's missing a lot of important steps, like data preprocessing and feature extraction. Text data, especially, usually requires a fair amount of preprocessing, like tokenization, stemming or lemmatization, and vectorization, before it can be used as input for a neural network.
 
 Moreover, depending on the complexity of the data and task, a simple MLP might not be the best model. More complex models, like Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), or transformers, could potentially achieve better performance.
+
 ---
-3.5 Output
+
+* 3.5 Output
+
 To accomplish your task of training a basic neural network to suggest a genre based on the provided data, you can use the following functions in Python:
 
 1. **Data Preparation Function:**
