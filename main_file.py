@@ -44,3 +44,7 @@ train_model(model, X_train, y_train)
 
 # Now you can use 'predict_genre' to predict the genre of a new item
 # Don't forget to preprocess the new item the same way you did with the training data
+
+
+if __name__ == '__main__':
+    run_code()
