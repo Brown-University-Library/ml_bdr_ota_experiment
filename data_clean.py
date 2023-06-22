@@ -51,13 +51,18 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     return ds
 
 def train_val_test_split(df, test_size=0.1):
+    print(df.shape)
+    print(df.head())
     # split the data into train, validation, and test sets
-    train, test = train_test_split(df, test_size)
-    train, val = train_test_split(train, test_size)
-    batch_size = 64
-    train_ds = df_to_dataset(train, batch_size=batch_size)
-    val_ds = df_to_dataset(val, shuffle=False, batch_size=batch_size)
-    test_ds = df_to_dataset(test, shuffle=False, batch_size=batch_size)
+    train, test = train_test_split(df, test_size=test_size)
+    train, val = train_test_split(train, test_size=test_size)
+    return train, val, test
+
+def dfs_to_datasets(train_df, val_df, test_df, batch_size=64):
+    # Convert the dataframes into tf.data.Datasets
+    train_ds = df_to_dataset(train_df, batch_size=batch_size)
+    val_ds = df_to_dataset(val_df, shuffle=False, batch_size=batch_size)
+    test_ds = df_to_dataset(test_df, shuffle=False, batch_size=batch_size)
     return train_ds, val_ds, test_ds
 
 def get_category_encoding_layer(name, dataset, dtype, max_tokens=None):
@@ -97,12 +102,16 @@ def manager():
 
     # create a copy of the dataframe with only the columns we want to use
     df = df[['pid','genre','keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
-    
+
+
     # drop rows with no values in the mods_subject_broad_theme_ssim column
     df = df.dropna(subset=['mods_subject_broad_theme_ssim'])
 
     # split the data into train, validation, and test sets
-    train_ds, val_ds, test_ds = train_val_test_split(df, test_size=0.1)
+    train, val, test = train_val_test_split(df)
+
+    # Convert the dataframes into tf.data.Datasets
+    train_ds, val_ds, test_ds = dfs_to_datasets(train, val, test)
     
     # Define the categorical columns
     categorical_columns = ['mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']
