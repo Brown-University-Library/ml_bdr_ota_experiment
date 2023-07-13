@@ -43,7 +43,15 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     # Convert the dataframe into a tf.data.Dataset
     df = df.copy()
     labels = df.pop('mods_subject_broad_theme_ssim')
+    # print(f'-=-=-=labels: {labels}')
+    # print(f'type(labels): {type(labels)}')
+
+    # print('=-=-=-=-=-=-=-=-=-=-=-=')
+    # print(f'The df dict is: {pprint.pformat(dict(df))[:1000]}')
+    # print('=-=-=-=-=-=-=-=-=-=-=-=')
+
     ds = tf.data.Dataset.from_tensor_slices((dict(df), labels))
+    # print('made it past ds=...')
     if shuffle:
         ds = ds.shuffle(buffer_size=len(df))
     ds = ds.batch(batch_size)
@@ -106,6 +114,9 @@ def manager():
 
     # drop rows with no values in the mods_subject_broad_theme_ssim column
     df = df.dropna(subset=['mods_subject_broad_theme_ssim'])
+
+    # Convert all values in the dataframe to strings
+    df = df.astype(str)
 
     # split the data into train, validation, and test sets
     train, val, test = train_val_test_split(df)
