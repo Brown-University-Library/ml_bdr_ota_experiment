@@ -145,8 +145,9 @@ def manager():
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # Print the unique values in the mods_subject_broad_theme_ssim column, sorted
-    print(f'Unique values in mods_subject_broad_theme_ssim column:\n{df["mods_subject_broad_theme_ssim"].unique().sort_values()}')
-
+    print(f'Unique values in mods_subject_broad_theme_ssim column:')
+    pprint.pprint(sorted(df['mods_subject_broad_theme_ssim'].unique()))
+    
     # split the data into train, validation, and test sets
     train, val, test = train_val_test_split(df)
 
