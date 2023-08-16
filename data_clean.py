@@ -20,6 +20,7 @@
 # Social Conditions
 ##############################################
 
+import sys
 import pandas as pd
 import json
 import pprint
@@ -115,8 +116,36 @@ def manager():
     # drop rows with no values in the mods_subject_broad_theme_ssim column
     df = df.dropna(subset=['mods_subject_broad_theme_ssim'])
 
+    print(f'Value 0 : {df["mods_subject_broad_theme_ssim"].iloc[0]}')
+    assert type(df['mods_subject_broad_theme_ssim'].iloc[0]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[0])
+
+    # # Print the first 100 values in broad themes column to see what it looks like
+    # print(f'First 100 values in broad themes column: {df["mods_subject_broad_theme_ssim"].head(100)}')
+
+    # for i in range(100):
+    #     print(f'Value {i} : {df["mods_subject_broad_theme_ssim"].iloc[i]}')
+
+    # # Test the type of the mods_subject_broad_theme_ssim column by asserting the type of the first 100 values
+    # for i in range(100):
+    #     assert type(df['mods_subject_broad_theme_ssim'].iloc[i]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[i])
+
+    print(f'Value 73 : {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+
+    # Sort the values in the mods_subject_broad_theme_ssim column
+    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(sorted)
+
+    print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+
     # Convert all values in the dataframe to strings
     df = df.astype(str)
+
+    print(f'Values 72-74 after stringifying:\n{df["mods_subject_broad_theme_ssim"].iloc[72:75]}')
+    assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+
+    # Print the unique values in the mods_subject_broad_theme_ssim column, sorted
+    print(f'Unique values in mods_subject_broad_theme_ssim column:\n{df["mods_subject_broad_theme_ssim"].unique().sort_values()}')
 
     # split the data into train, validation, and test sets
     train, val, test = train_val_test_split(df)
@@ -130,6 +159,7 @@ def manager():
     # Encode the categorical columns
     all_inputs = []
     encoded_features = []
+    # TODO: Currently failing on the line below
     encoded_features = encode_categorical_columns(all_inputs, encoded_features, categorical_columns)
 
     # Print the encoded features to see what they look like
