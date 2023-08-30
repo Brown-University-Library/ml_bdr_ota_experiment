@@ -26,10 +26,14 @@ import json
 import pprint
 
 import tensorflow as tf
-from tensorflow.keras import layers
+
+from tensorflow.keras import layers  
 from tensorflow.keras.layers.experimental import preprocessing
 
-from sklearn.model_selection import train_test_split
+try:
+    from sklearn.model_selection import train_test_split
+except ModuleNotFoundError:
+    from scikit_learn.model_selection import train_test_split
 
 
 def load_data():
