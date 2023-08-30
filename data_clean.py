@@ -118,17 +118,42 @@ def encode_categorical_columns(all_inputs, encoded_features, categorical_columns
         encoded_features.append(encoded_categorical_column)
     return encoded_features
 
+
 def stringify_list(passed_list):
+    """ 
+    Converts submitted list to a string, removing whitespace and punctuation.
+    If the submitted object is not a list, returns the object as a string.
+    Usage:
+    >>> stringify_list( ['a', 'b', 'c'] )
+    'a_b_c'
+    >>> stringify_list( ['a', 'b c', 'd'] )
+    'a_b-c_d'
+    >>> stringify_list( 'foo' )
+    'foo'
+    >>> stringify_list( 42 )
+    '42'
+    """
     # If the 'list' is not a list, return it as a string
     if type(passed_list) != list:
         return str(passed_list)
     # Convert a list to a string, removing whitespace and punctuation
     string = '_'.join(passed_list)
     string = string.replace(' ', '-')
-    # string = string.replace(',', '')
-    # string = string.replace('[', '')
-    # string = string.replace(']', '')
     return string
+
+
+# def stringify_list(passed_list):
+#     # If the 'list' is not a list, return it as a string
+#     if type(passed_list) != list:
+#         return str(passed_list)
+#     # Convert a list to a string, removing whitespace and punctuation
+#     string = '_'.join(passed_list)
+#     string = string.replace(' ', '-')
+#     # string = string.replace(',', '')
+#     # string = string.replace('[', '')
+#     # string = string.replace(']', '')
+#     return string
+
 
 def manager():
     # load the data
