@@ -65,6 +65,15 @@ def train_val_test_split(df, test_size=0.1):
     # split the data into train, validation, and test sets
     train, test = train_test_split(df, test_size=test_size)
     train, val = train_test_split(train, test_size=test_size)
+    print(f'train type: {type(train)}')
+    print(f'train shape: {train.shape}')
+    print(f'train head: {train.head()}')
+    print(f'val type: {type(val)}')
+    print(f'val shape: {val.shape}')
+    print(f'val head: {val.head()}')
+    print(f'test type: {type(test)}')
+    print(f'test shape: {test.shape}')
+    print(f'test head: {test.head()}')
     return train, val, test
 
 def dfs_to_datasets(train_df, val_df, test_df, batch_size=64):
@@ -105,6 +114,18 @@ def encode_categorical_columns(all_inputs, encoded_features, categorical_columns
         encoded_features.append(encoded_categorical_column)
     return encoded_features
 
+def stringify_list(passed_list):
+    # If the 'list' is not a list, return it as a string
+    if type(passed_list) != list:
+        return str(passed_list)
+    # Convert a list to a string, removing whitespace and punctuation
+    string = '_'.join(passed_list)
+    string = string.replace(' ', '-')
+    # string = string.replace(',', '')
+    # string = string.replace('[', '')
+    # string = string.replace(']', '')
+    return string
+
 def manager():
     # load the data
     df = load_data()
@@ -138,8 +159,18 @@ def manager():
     print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # Convert all values in the dataframe to strings
-    df = df.astype(str)
+    # Convert the values in the mods_subject_broad_theme_ssim column to strings, removing whitespace and punctuation
+    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list)
+
+    print(f'Value 73 after stringify: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+
+    # Stringify the genre and mods_language_code_ssim columns
+    df['genre'] = df['genre'].apply(stringify_list)
+    df['mods_language_code_ssim'] = df['mods_language_code_ssim'].apply(stringify_list)
+
+    # # Convert all values in the dataframe to strings
+    # df = df.astype(str)
 
     print(f'Values 72-74 after stringifying:\n{df["mods_subject_broad_theme_ssim"].iloc[72:75]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
