@@ -1,3 +1,4 @@
-source_data/OtA_raw.json
-source_data/OtA_raw.json
 .vscode/
+*.pyc
+source_data/OtA_raw.json
+source_data/OtA_raw.json
