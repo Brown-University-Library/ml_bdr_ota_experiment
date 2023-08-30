@@ -32,7 +32,7 @@ from tensorflow.keras.layers.experimental import preprocessing
 
 try:
     from sklearn.model_selection import train_test_split
-except ModuleNotFoundError:
+except ModuleNotFoundError:  # happens on macOS in py3.8 venv
     from scikit_learn.model_selection import train_test_split
 
 
