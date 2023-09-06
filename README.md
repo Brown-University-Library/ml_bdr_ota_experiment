@@ -7,9 +7,11 @@ This repo will be used to experiment with using machine-learning techniques to c
 
 # Usage
 
-Usage when running locally:
+- Using macOS, python3.8 (for python server compatibility), install from config/requirments_p38_mac.txt:
 
-    % jupyter notebook
+- Getting a notebook running locally:
+
+        % jupyter notebook
 
 ---
 
