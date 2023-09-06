@@ -209,10 +209,18 @@ def manager():
     pprint.pprint(sorted(df['mods_subject_broad_theme_ssim'].unique()))
     
     # split the data into train, validation, and test sets
-    train, val, test = train_val_test_split(df)
+    try:
+        train, val, test = train_val_test_split(df)
+    except Exception as e:
+        message = f'Unable to complete train_val_test_split: {e}'
+        raise Exception(message)
 
     # Convert the dataframes into tf.data.Datasets
-    train_ds, val_ds, test_ds = dfs_to_datasets(train, val, test)
+    try:
+        train_ds, val_ds, test_ds = dfs_to_datasets(train, val, test)
+    except Exception as e:
+        message = f'Unable to complete dfs_to_datasets: {e}'
+        raise Exception(message)
     
     # Define the categorical columns
     categorical_columns = ['mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']
