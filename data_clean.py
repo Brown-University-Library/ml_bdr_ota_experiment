@@ -217,7 +217,6 @@ def manager():
 
     # Print the entire row corresponding to index 39084
     print(f'Row 39084:\n{df.loc[39084]}')
-    sys.exit()
     
     # split the data into train, validation, and test sets
     try:
