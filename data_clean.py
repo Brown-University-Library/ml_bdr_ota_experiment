@@ -186,21 +186,24 @@ def manager():
     print(f'Value 73 : {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # Sort the values in the mods_subject_broad_theme_ssim column
-    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(sorted)
+    # # Sort the values in the mods_subject_broad_theme_ssim column
+    # df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(sorted)
 
-    print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
-    assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+    # print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    # assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # Convert the values in the mods_subject_broad_theme_ssim column to strings, removing whitespace and punctuation
-    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list)
+    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list, sort=True)
 
     print(f'Value 73 after stringify: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # Stringify the genre and mods_language_code_ssim columns
-    df['genre'] = df['genre'].apply(stringify_list)
-    df['mods_language_code_ssim'] = df['mods_language_code_ssim'].apply(stringify_list)
+    # Stringify the other columns with list values
+    df['genre'] = df['genre'].apply(stringify_list, sort=True)
+    df['mods_language_code_ssim'] = df['mods_language_code_ssim'].apply(stringify_list, sort=True)
+    df['mods_location_physical_location_ssim'] = df['mods_location_physical_location_ssim'].apply(stringify_list, sort=True)
+    df['keyword'] = df['keyword'].apply(stringify_list, sort=True)
+
 
     # # Convert all values in the dataframe to strings
     # df = df.astype(str)
