@@ -40,7 +40,9 @@ except ModuleNotFoundError:  # happens on macOS in py3.8 venv
 ## create basicConfig logger with no file-writer
 logging.basicConfig(
     level=logging.DEBUG,
-    format='%(asctime)s %(levelname)s %(message)s',
+    # format='%(asctime)s %(levelname)s %(message)s',
+    format='[%(asctime)s] %(levelname)s [%(module)s-%(funcName)s()::%(lineno)d] %(message)s',
+    datefmt='%d/%b/%Y %H:%M:%S',
     handlers=[
         logging.StreamHandler(sys.stdout)
     ]
@@ -77,9 +79,9 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     log.debug( f'item, ``{item}``' )
 
     log.debug( f'the value type, ``{type(item[1])}``' )
-    log.debug( 'in df_to_dataset(); about to instantiate ds' )
+    log.debug( 'about to instantiate ds' )
     ds = tf.data.Dataset.from_tensor_slices((the_dict, labels))
-    log.debug( 'in df_to_dataset(); ds instantiated' )
+    log.debug( 'ds instantiated' )
 
     # print('made it past ds=...')
     if shuffle:
