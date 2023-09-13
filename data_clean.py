@@ -144,7 +144,7 @@ def encode_categorical_columns(all_inputs, encoded_features, categorical_columns
     return encoded_features
 
 
-def stringify_list(passed_list):
+def stringify_list(passed_list, sort=False):
     """ 
     Converts submitted list to a string, removing whitespace and punctuation.
     If the submitted object is not a list, returns the object as a string.
@@ -157,11 +157,15 @@ def stringify_list(passed_list):
     'foo'
     >>> stringify_list( 42 )
     '42'
+    >>> stringify_list( ['b', 'a', 'd'], sort=True )
+    'a_b_d'
     """
     # If the 'list' is not a list, return it as a string
     if type(passed_list) != list:
         return str(passed_list)
     # Convert a list to a string, removing whitespace and punctuation
+    if sort:
+        passed_list = sorted(passed_list)
     string = '_'.join(passed_list)
     string = string.replace(' ', '-')
     return string
@@ -207,21 +211,24 @@ def manager():
     print(f'Value 73 : {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # Sort the values in the mods_subject_broad_theme_ssim column
-    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(sorted)
+    # # Sort the values in the mods_subject_broad_theme_ssim column
+    # df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(sorted)
 
-    print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
-    assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+    # print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    # assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # Convert the values in the mods_subject_broad_theme_ssim column to strings, removing whitespace and punctuation
-    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list)
+    df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list, sort=True)
 
     print(f'Value 73 after stringify: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # Stringify the genre and mods_language_code_ssim columns
-    df['genre'] = df['genre'].apply(stringify_list)
-    df['mods_language_code_ssim'] = df['mods_language_code_ssim'].apply(stringify_list)
+    # Stringify the other columns with list values
+    df['genre'] = df['genre'].apply(stringify_list, sort=True)
+    df['mods_language_code_ssim'] = df['mods_language_code_ssim'].apply(stringify_list, sort=True)
+    df['mods_location_physical_location_ssim'] = df['mods_location_physical_location_ssim'].apply(stringify_list, sort=True)
+    df['keyword'] = df['keyword'].apply(stringify_list, sort=True)
+
 
     # # Convert all values in the dataframe to strings
     # df = df.astype(str)
@@ -229,9 +236,12 @@ def manager():
     print(f'Values 72-74 after stringifying:\n{df["mods_subject_broad_theme_ssim"].iloc[72:75]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # Print the unique values in the mods_subject_broad_theme_ssim column, sorted
-    print(f'Unique values in mods_subject_broad_theme_ssim column:')
-    pprint.pprint(sorted(df['mods_subject_broad_theme_ssim'].unique()))
+    # # Print the unique values in the mods_subject_broad_theme_ssim column, sorted
+    # print(f'Unique values in mods_subject_broad_theme_ssim column:')
+    # pprint.pprint(sorted(df['mods_subject_broad_theme_ssim'].unique()))
+
+    # Print the entire row corresponding to index 39084
+    print(f'Row 39084:\n{df.loc[39084]}')
     
     # split the data into train, validation, and test sets
     try:
