@@ -135,11 +135,11 @@ def get_category_encoding_layer(name, dataset, dtype, max_tokens=None):
 
 
 
-def encode_categorical_columns(all_inputs, encoded_features, categorical_columns):
+def encode_categorical_columns(all_inputs, dataset, encoded_features, categorical_columns):
     # Convert categorical columns to numeric
     for column in categorical_columns:
         categorical_column = tf.keras.Input(shape=(1,), name=column, dtype='string')
-        encoding_layer = get_category_encoding_layer(column, train_ds, dtype='string', max_tokens=5)
+        encoding_layer = get_category_encoding_layer(column, dataset, dtype='string', max_tokens=5)
         encoded_categorical_column = encoding_layer(categorical_column)
         all_inputs.append(categorical_column)
         encoded_features.append(encoded_categorical_column)
@@ -265,8 +265,18 @@ def manager():
     # Encode the categorical columns
     all_inputs = []
     encoded_features = []
-    # TODO: Currently failing on the line below
-    encoded_features = encode_categorical_columns(all_inputs, encoded_features, categorical_columns)
+
+    for column_name in categorical_columns:
+        categorical_column = tf.keras.Input(shape=(1,), name=column_name, dtype='string')
+        encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string', max_tokens=5)
+        encoded_categorical_column = encoding_layer(categorical_column)
+        all_inputs.append(categorical_column)
+        encoded_features.append(encoded_categorical_column)
+
+
+    # train_encoded_features = encode_categorical_columns(all_inputs, train_ds, encoded_features, categorical_columns)
+    # val_encoded_features = encode_categorical_columns(all_inputs, val_ds, encoded_features, categorical_columns)
+    # test_encoded_features = encode_categorical_columns(all_inputs, test_ds, encoded_features, categorical_columns)
 
     # Print the encoded features to see what they look like
     print('Encoded Features:')
