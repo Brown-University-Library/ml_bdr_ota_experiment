@@ -20,6 +20,7 @@
 # Social Conditions
 ##############################################
 
+import logging
 import sys
 import pandas as pd
 import json
@@ -36,6 +37,19 @@ except ModuleNotFoundError:  # happens on macOS in py3.8 venv
     from scikit_learn.model_selection import train_test_split
 
 
+## create basicConfig logger with no file-writer
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)s %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+log = logging.getLogger(__name__)
+log.debug( 'test log entry' )
+
+
+
 def load_data():
     # Get the docs from the raw json file
     raw_data_dict = json.load(open('source_data/OtA_raw.json'))
@@ -48,6 +62,7 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     # Convert the dataframe into a tf.data.Dataset
     df = df.copy()
     labels = df.pop('mods_subject_broad_theme_ssim')
+    log.debug( f'labels, ``{pprint.pformat(labels)}``')
     # print(f'-=-=-=labels: {labels}')
     # print(f'type(labels): {type(labels)}')
 
@@ -55,7 +70,17 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     # print(f'The df dict is: {pprint.pformat(dict(df))[:1000]}')
     # print('=-=-=-=-=-=-=-=-=-=-=-=')
 
-    ds = tf.data.Dataset.from_tensor_slices((dict(df), labels))
+    log.debug( 'dictifying df' )
+    the_dict = dict(df)
+    log.debug( f'about to process the_dict, ``{pprint.pformat(the_dict)}``' )
+    item = list(the_dict.items())[0]
+    log.debug( f'item, ``{item}``' )
+
+    log.debug( f'the value type, ``{type(item[1])}``' )
+    log.debug( 'in df_to_dataset(); about to instantiate ds' )
+    ds = tf.data.Dataset.from_tensor_slices((the_dict, labels))
+    log.debug( 'in df_to_dataset(); ds instantiated' )
+
     # print('made it past ds=...')
     if shuffle:
         ds = ds.shuffle(buffer_size=len(df))
