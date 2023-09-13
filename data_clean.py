@@ -64,7 +64,7 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     # Convert the dataframe into a tf.data.Dataset
     df = df.copy()
     labels = df.pop('mods_subject_broad_theme_ssim')
-    log.debug( f'labels, ``{pprint.pformat(labels)}``')
+    # log.debug( f'labels, ``{pprint.pformat(labels)}``')
     # print(f'-=-=-=labels: {labels}')
     # print(f'type(labels): {type(labels)}')
 
@@ -72,16 +72,16 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     # print(f'The df dict is: {pprint.pformat(dict(df))[:1000]}')
     # print('=-=-=-=-=-=-=-=-=-=-=-=')
 
-    log.debug( 'dictifying df' )
+    # log.debug( 'dictifying df' )
     the_dict = dict(df)
-    log.debug( f'about to process the_dict, ``{pprint.pformat(the_dict)}``' )
+    # log.debug( f'about to process the_dict, ``{pprint.pformat(the_dict)}``' )
     item = list(the_dict.items())[0]
-    log.debug( f'item, ``{item}``' )
+    # log.debug( f'item, ``{item}``' )
 
-    log.debug( f'the value type, ``{type(item[1])}``' )
-    log.debug( 'about to instantiate ds' )
+    # log.debug( f'the value type, ``{type(item[1])}``' )
+    # log.debug( 'about to instantiate ds' )
     ds = tf.data.Dataset.from_tensor_slices((the_dict, labels))
-    log.debug( 'ds instantiated' )
+    # log.debug( 'ds instantiated' )
 
     # print('made it past ds=...')
     if shuffle:
@@ -91,20 +91,20 @@ def df_to_dataset(df, shuffle=True, batch_size=32):
     return ds
 
 def train_val_test_split(df, test_size=0.1):
-    print(df.shape)
-    print(df.head())
+    # print(df.shape)
+    # print(df.head())
     # split the data into train, validation, and test sets
     train, test = train_test_split(df, test_size=test_size)
     train, val = train_test_split(train, test_size=test_size)
-    print(f'train type: {type(train)}')
-    print(f'train shape: {train.shape}')
-    print(f'train head: {train.head()}')
-    print(f'val type: {type(val)}')
-    print(f'val shape: {val.shape}')
-    print(f'val head: {val.head()}')
-    print(f'test type: {type(test)}')
-    print(f'test shape: {test.shape}')
-    print(f'test head: {test.head()}')
+    # print(f'train type: {type(train)}')
+    # print(f'train shape: {train.shape}')
+    # print(f'train head: {train.head()}')
+    # print(f'val type: {type(val)}')
+    # print(f'val shape: {val.shape}')
+    # print(f'val head: {val.head()}')
+    # print(f'test type: {type(test)}')
+    # print(f'test shape: {test.shape}')
+    # print(f'test head: {test.head()}')
     return train, val, test
 
 def dfs_to_datasets(train_df, val_df, test_df, batch_size=64):
@@ -197,7 +197,7 @@ def manager():
     # drop rows with no values in the mods_subject_broad_theme_ssim column
     df = df.dropna(subset=['mods_subject_broad_theme_ssim'])
 
-    print(f'Value 0 : {df["mods_subject_broad_theme_ssim"].iloc[0]}')
+    # print(f'Value 0 : {df["mods_subject_broad_theme_ssim"].iloc[0]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[0]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[0])
 
     # # Print the first 100 values in broad themes column to see what it looks like
@@ -210,7 +210,7 @@ def manager():
     # for i in range(100):
     #     assert type(df['mods_subject_broad_theme_ssim'].iloc[i]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[i])
 
-    print(f'Value 73 : {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    # print(f'Value 73 : {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # # Sort the values in the mods_subject_broad_theme_ssim column
@@ -222,7 +222,7 @@ def manager():
     # Convert the values in the mods_subject_broad_theme_ssim column to strings, removing whitespace and punctuation
     df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list, sort=True)
 
-    print(f'Value 73 after stringify: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
+    # print(f'Value 73 after stringify: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # Stringify the other columns with list values
@@ -260,18 +260,30 @@ def manager():
         raise Exception(message)
     
     # Define the categorical columns
-    categorical_columns = ['mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']
+    categorical_columns = ['mods_location_physical_location_ssim', 'mods_language_code_ssim', 'genre', 'keyword']
 
     # Encode the categorical columns
     all_inputs = []
     encoded_features = []
 
+    # Check to see that mods_subject_broad_theme_ssim is in the train_ds dataset
+    # log.debug( f'train_ds, ``{train_ds}``' )
+    # log.debug( f'train_ds.element_spec, ``{train_ds.element_spec}``' )
+    # log.debug( f'train_ds.element_spec[0], ``{train_ds.element_spec[0]}``' )
+    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim], ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"]}``' )
+    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim].shape, ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"].shape}``' )
+    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim].shape[0], ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"].shape[0]}``' )
+    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim].shape[1], ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"].shape[1]}``' )
+
+
     for column_name in categorical_columns:
+        log.debug( f'column_name, ``{column_name}``' )
         categorical_column = tf.keras.Input(shape=(1,), name=column_name, dtype='string')
         encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string', max_tokens=5)
         encoded_categorical_column = encoding_layer(categorical_column)
         all_inputs.append(categorical_column)
         encoded_features.append(encoded_categorical_column)
+        log.debug( f'Done with column_name, ``{column_name}``' )
 
 
     # train_encoded_features = encode_categorical_columns(all_inputs, train_ds, encoded_features, categorical_columns)
@@ -281,6 +293,8 @@ def manager():
     # Print the encoded features to see what they look like
     print('Encoded Features:')
     pprint.pprint(encoded_features)
+
+
 
 if __name__ == '__main__':
     manager()
