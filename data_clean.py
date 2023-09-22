@@ -173,56 +173,41 @@ def stringify_list(passed_list, sort=False):
     return string
 
 
-# def stringify_list(passed_list):
-#     # If the 'list' is not a list, return it as a string
-#     if type(passed_list) != list:
-#         return str(passed_list)
-#     # Convert a list to a string, removing whitespace and punctuation
-#     string = '_'.join(passed_list)
-#     string = string.replace(' ', '-')
-#     # string = string.replace(',', '')
-#     # string = string.replace('[', '')
-#     # string = string.replace(']', '')
-#     return string
-
-
 def manager():
-    # load the data
+    '''
+    load the data which was fetched with data_fetch.py
+    Create a dataframe from the data
+    '''
     df = load_data()
 
-    # create a copy of the dataframe with only the columns we want to use
+    '''
+    create a copy of the dataframe with only the columns we want to use
+    This is a small subset of the columns in the original dataframe
+    After getting things to work with this subset, we can add more columns
+    '''
     df = df[['pid','genre','keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
 
 
-    # drop rows with no values in the mods_subject_broad_theme_ssim column
+    '''
+    Drop rows with no values in the mods_subject_broad_theme_ssim column
+    This is because that is the column we are teaching the model to predict
+    So we remove any rows that don't have a value in that column, because they can't be used to train the model
+    '''
     df = df.dropna(subset=['mods_subject_broad_theme_ssim'])
 
-    # print(f'Value 0 : {df["mods_subject_broad_theme_ssim"].iloc[0]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[0]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[0])
 
-    # # Print the first 100 values in broad themes column to see what it looks like
-    # print(f'First 100 values in broad themes column: {df["mods_subject_broad_theme_ssim"].head(100)}')
-
-    # for i in range(100):
-    #     print(f'Value {i} : {df["mods_subject_broad_theme_ssim"].iloc[i]}')
-
-    # # Test the type of the mods_subject_broad_theme_ssim column by asserting the type of the first 100 values
-    # for i in range(100):
-    #     assert type(df['mods_subject_broad_theme_ssim'].iloc[i]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[i])
-
-    # print(f'Value 73 : {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # # Sort the values in the mods_subject_broad_theme_ssim column
-    # df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(sorted)
-
-    # print(f'Value 73 after sorting: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
-    # assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+    '''
+    The next few steps are to convert the values in the dataframe into the format we want to use for training the model
+    Ultimately, the values in the columns need to be converted into numeric values
+    An intermediate step is to convert lists into strings and remove whitespace and punctuation
+    '''
 
     # Convert the values in the mods_subject_broad_theme_ssim column to strings, removing whitespace and punctuation
     df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list, sort=True)
 
-    # print(f'Value 73 after stringify: {df["mods_subject_broad_theme_ssim"].iloc[73]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # Stringify the other columns with list values
@@ -238,19 +223,33 @@ def manager():
     print(f'Values 72-74 after stringifying:\n{df["mods_subject_broad_theme_ssim"].iloc[72:75]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    # # Print the unique values in the mods_subject_broad_theme_ssim column, sorted
-    # print(f'Unique values in mods_subject_broad_theme_ssim column:')
-    # pprint.pprint(sorted(df['mods_subject_broad_theme_ssim'].unique()))
-
-    # Print the entire row corresponding to index 39084
+    # Print the entire row corresponding to index 39084, for debugging
     print(f'Row 39084:\n{df.loc[39084]}')
     
+    '''
+    At this point we have a dataframe with values that are either numeric, or can be encoded as numeric (which will be done later)
+    The next step is to split the data into train, validation, and test sets
+    This is so we can train the model a subset of the data, and then test it on the rest of the data (which it has not seen before)
+    The datasets are used in the following ways:
+        training set: used to train the model. The model will be evaluated on this data during training,
+            but it will not be used to evaluate the final model
+        validation set: used to evaluate the model during training. The model will not be trained on this data, only evaluated on it.
+            This is used to determine when the model has finished training. The model will not be trained further once it has reached,
+            the point where it is no longer improving on the validation set.
+        test set: used to evaluate the final model. The model will not be trained on this data, only evaluated on it.
+            This is the final evaluation of the model, and the results are used to determine how well the model performs.
+    '''
+
     # split the data into train, validation, and test sets
     try:
         train, val, test = train_val_test_split(df)
     except Exception as e:
         message = f'Unable to complete train_val_test_split: {e}'
         raise Exception(message)
+
+    '''
+    We convert the dataframes into tf.data.Datasets so they can be used to train the model with TensorFlow
+    '''
 
     # Convert the dataframes into tf.data.Datasets
     try:
@@ -259,22 +258,19 @@ def manager():
         message = f'Unable to complete dfs_to_datasets: {e}'
         raise Exception(message)
     
+    '''
+    Now we need to convert the categorical columns into numeric values by encoding them as one-hot vectors
+    This means that each value in the column will be broken out into its own column,
+    and the values will be represented by a 1 in that column if the value is present, and a 0 if it is not present
+    This allows the model to operate on the values as numbers, rather than strings
+    '''
+
     # Define the categorical columns
     categorical_columns = ['mods_location_physical_location_ssim', 'mods_language_code_ssim', 'genre', 'keyword']
 
     # Encode the categorical columns
     all_inputs = []
     encoded_features = []
-
-    # Check to see that mods_subject_broad_theme_ssim is in the train_ds dataset
-    # log.debug( f'train_ds, ``{train_ds}``' )
-    # log.debug( f'train_ds.element_spec, ``{train_ds.element_spec}``' )
-    # log.debug( f'train_ds.element_spec[0], ``{train_ds.element_spec[0]}``' )
-    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim], ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"]}``' )
-    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim].shape, ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"].shape}``' )
-    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim].shape[0], ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"].shape[0]}``' )
-    # log.debug( f'train_ds.element_spec[0][mods_subject_broad_theme_ssim].shape[1], ``{train_ds.element_spec[0]["mods_subject_broad_theme_ssim"].shape[1]}``' )
-
 
     for column_name in categorical_columns:
         log.debug( f'column_name, ``{column_name}``' )
@@ -286,9 +282,6 @@ def manager():
         log.debug( f'Done with column_name, ``{column_name}``' )
 
 
-    # train_encoded_features = encode_categorical_columns(all_inputs, train_ds, encoded_features, categorical_columns)
-    # val_encoded_features = encode_categorical_columns(all_inputs, val_ds, encoded_features, categorical_columns)
-    # test_encoded_features = encode_categorical_columns(all_inputs, test_ds, encoded_features, categorical_columns)
 
     # Print the encoded features to see what they look like
     print('Encoded Features:')
