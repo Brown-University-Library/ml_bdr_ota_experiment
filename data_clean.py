@@ -133,6 +133,25 @@ def get_category_encoding_layer(name, dataset, dtype, max_tokens=None):
     # Apply one-hot encoding to our indices and return this feature
     return lambda feature: encoder(index(feature))
 
+def get_category_encoding_layer_label(dataset, dtype, max_tokens=None):
+    # Create a StringLookup layer which will turn strings into integer indices
+    if dtype == 'string':
+        index = preprocessing.StringLookup(max_tokens=max_tokens)
+    else:
+        index = preprocessing.IntegerLookup(max_tokens=max_tokens)
+            
+    # Prepare a Dataset that only yields the label
+    feature_ds = dataset.map(lambda x, y: y)
+
+    # Learn the set of possible values and assign them a fixed integer index.
+    index.adapt(feature_ds)
+
+    # Create a Discretization for our integer indices.
+    encoder = preprocessing.CategoryEncoding(num_tokens=index.vocabulary_size())
+
+    # Apply one-hot encoding to our indices and return this feature
+    return lambda label: encoder(index(label))
+
 
 
 def encode_categorical_columns(all_inputs, dataset, encoded_features, categorical_columns):
@@ -281,11 +300,30 @@ def manager():
         encoded_features.append(encoded_categorical_column)
         log.debug( f'Done with column_name, ``{column_name}``' )
 
-
-
     # Print the encoded features to see what they look like
+    print('='*50)
     print('Encoded Features:')
     pprint.pprint(encoded_features)
+
+    log.debug( 'Encoding label' )
+    categorical_label_column = tf.keras.Input(shape=(1,), name='mods_subject_broad_theme_ssim', dtype='string')
+    encoding_layer = get_category_encoding_layer_label(train_ds, dtype='string', max_tokens=5)
+    encoded_categorical_label_column = encoding_layer(categorical_label_column)
+
+    print('|'*50)
+    pprint.pprint(categorical_label_column)
+
+    # Print the encoded label to see what it looks like
+    print('-'*50)
+    print('Encoded Label:')
+    pprint.pprint(encoded_categorical_label_column)
+
+    # Inspect the first encoded label
+    print('='*50)
+    print('First encoded label:')
+    # Need to find the right syntax for this
+
+
 
 
 
