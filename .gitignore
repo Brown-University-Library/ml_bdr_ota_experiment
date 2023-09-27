@@ -1,3 +1,4 @@
+.ipynb_checkpoints/
 .vscode/
 *.pyc
 source_data/OtA_raw.json
