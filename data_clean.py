@@ -158,7 +158,8 @@ def encode_categorical_columns(all_inputs, dataset, encoded_features, categorica
     # Convert categorical columns to numeric
     for column in categorical_columns:
         categorical_column = tf.keras.Input(shape=(1,), name=column, dtype='string')
-        encoding_layer = get_category_encoding_layer(column, dataset, dtype='string', max_tokens=5)
+        # encoding_layer = get_category_encoding_layer(column, dataset, dtype='string', max_tokens=5)
+        encoding_layer = get_category_encoding_layer(column, dataset, dtype='string')
         encoded_categorical_column = encoding_layer(categorical_column)
         all_inputs.append(categorical_column)
         encoded_features.append(encoded_categorical_column)
@@ -190,6 +191,84 @@ def stringify_list(passed_list, sort=False):
     string = '_'.join(passed_list)
     string = string.replace(' ', '-')
     return string
+
+# #compile
+# all_features = tf.keras.layers.concatenate(encoded_features)
+# x = tf.keras.layers.Dense(128, activation="relu")(all_features)
+# x = tf.keras.layers.Dense(64, activation="relu")(x)
+# x = tf.keras.layers.Dropout(0.1)(x)
+# output = tf.keras.layers.Dense(1)(x)
+
+# model = tf.keras.Model(all_inputs, output)
+
+# model.compile(optimizer='adam',
+#               loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+#               metrics=["accuracy"])
+
+def compile_model(all_inputs, encoded_features, categorical_label_column, num_classes):
+    all_features = tf.keras.layers.concatenate(encoded_features)
+    x = tf.keras.layers.Dense(128, activation="relu")(all_features)
+    x = tf.keras.layers.Dense(64, activation="relu")(x)
+    x = tf.keras.layers.Dropout(0.1)(x)
+    output = tf.keras.layers.Dense(num_classes, activation='softmax', name=categorical_label_column)(x)
+
+    model = tf.keras.Model(all_inputs, output)
+
+    model.compile(optimizer='adam',
+                loss=tf.keras.losses.CategoricalCrossentropy(),
+                metrics=["accuracy"])
+    log.debug( 'model compiled' )
+    return model
+
+def graph_model(model):
+    log.debug( 'about to graph model' )
+    # rankdir='LR' is used to make the graph horizontal.
+    tf.keras.utils.plot_model(model, show_shapes=True, rankdir="LR")
+
+def train_model(model, train_ds, val_ds, test_ds, num_classes, epochs=10):
+    log.debug( 'about to train model' )
+    exit=False
+    # Check if the target labels are already one-hot encoded
+    train_labels = train_ds.map(lambda x, y: y)
+    if train_labels.element_spec.shape[-1] == num_classes:
+        log.debug('Labels are already one-hot encoded')
+    else:
+        log.debug('Train Labels are not one-hot encoded')
+        exit=True
+
+    val_labels = val_ds.map(lambda x, y: y)
+    if val_labels.element_spec.shape[-1] == num_classes:
+        log.debug('Labels are already one-hot encoded')
+    else:
+        log.debug('Val Labels are not one-hot encoded')
+        exit=True
+
+    test_labels = test_ds.map(lambda x, y: y)
+    if test_labels.element_spec.shape[-1] == num_classes:
+        log.debug('Labels are already one-hot encoded')
+    else:
+        log.debug('Test Labels are not one-hot encoded')
+        exit=True
+
+    if exit:
+        raise Exception('Labels are not one-hot encoded')
+
+    model.fit(train_ds, validation_data=val_ds, epochs=epochs)
+    log.debug( 'training complete' )
+    loss, accuracy = model.evaluate(test_ds)
+    print("Accuracy", accuracy)
+    print("Loss", loss)
+    return model
+    
+
+
+
+## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 
 def manager():
@@ -228,6 +307,18 @@ def manager():
     df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list, sort=True)
 
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+
+    # # Print the values in the mods_subject_broad_theme_ssim column to see what they look like
+    # print('/\\'*50)
+    # print('mods_subject_broad_theme_ssim:')
+    # pprint.pprint(df['mods_subject_broad_theme_ssim'])
+    # print('/\\'*50)
+
+    # Get number of unique values in mods_subject_broad_theme_ssim column
+    num_unique_themes = len(df['mods_subject_broad_theme_ssim'].unique())
+    # print('/\\'*50)
+    # print(f'Number of unique themes: {num_unique_themes}')
+    # print('/\\'*50)
 
     # Stringify the other columns with list values
     df['genre'] = df['genre'].apply(stringify_list, sort=True)
@@ -294,7 +385,8 @@ def manager():
     for column_name in categorical_columns:
         log.debug( f'column_name, ``{column_name}``' )
         categorical_column = tf.keras.Input(shape=(1,), name=column_name, dtype='string')
-        encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string', max_tokens=5)
+        # encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string', max_tokens=5)
+        encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string')
         encoded_categorical_column = encoding_layer(categorical_column)
         all_inputs.append(categorical_column)
         encoded_features.append(encoded_categorical_column)
@@ -307,7 +399,8 @@ def manager():
 
     log.debug( 'Encoding label' )
     categorical_label_column = tf.keras.Input(shape=(1,), name='mods_subject_broad_theme_ssim', dtype='string')
-    encoding_layer = get_category_encoding_layer_label(train_ds, dtype='string', max_tokens=5)
+    # encoding_layer = get_category_encoding_layer_label(train_ds, dtype='string', max_tokens=5)
+    encoding_layer = get_category_encoding_layer_label(train_ds, dtype='string')
     encoded_categorical_label_column = encoding_layer(categorical_label_column)
 
     print('|'*50)
@@ -318,12 +411,52 @@ def manager():
     print('Encoded Label:')
     pprint.pprint(encoded_categorical_label_column)
 
-    # Inspect the first encoded label
-    print('='*50)
-    print('First encoded label:')
-    # Need to find the right syntax for this
+    import numpy
+
+    print('|-'*50)
+    print('About to print out batches')
+
+    # Run a small batch of data through the encoding layer to get the encoded label
+    for batch in train_ds.take(1):
+        print('+'*15)
+        # print(batch)
 
 
+        labels = batch[-1]
+        encoded_labels = encoding_layer(labels)
+        print("Encoded Labels:", encoded_labels.numpy())
+        print('='*50)
+        print('First encoded label:')
+        print(encoded_labels[0].numpy())
+        print('Second encoded label:')
+        print(encoded_labels[1].numpy())
+
+        print("Shape of Encoded Labels:", encoded_labels.shape)
+        print("Data Type of Encoded Labels:", encoded_labels.dtype)
+
+
+        # labels = batch['mods_subject_broad_theme_ssim']
+        # encoded_labels = encoding_layer(labels)
+        # print('='*50)
+        # print('First encoded label:')
+        # print(encoded_labels[0].numpy())  # Convert the first tensor in the batch to a NumPy array and print it
+
+
+
+    # # Inspect the first encoded label
+    # print('='*50)
+    # print('First encoded label:')
+    # # Need to find the right syntax for this
+
+
+    # Compile the model
+    model = compile_model(all_inputs, encoded_features, encoded_categorical_label_column, num_classes=num_unique_themes)
+
+    # Graph the model
+    graph_model(model)
+
+    # Train the model
+    trained_model = train_model(model, train_ds, val_ds, test_ds, epochs=10, num_classes=num_unique_themes)
 
 
 
