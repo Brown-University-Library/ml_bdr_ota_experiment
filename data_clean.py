@@ -210,7 +210,11 @@ def compile_model(all_inputs, encoded_features, categorical_label_column, num_cl
     x = tf.keras.layers.Dense(128, activation="relu")(all_features)
     x = tf.keras.layers.Dense(64, activation="relu")(x)
     x = tf.keras.layers.Dropout(0.1)(x)
-    output = tf.keras.layers.Dense(num_classes, activation='softmax', name=categorical_label_column)(x)
+    useable_name = categorical_label_column.name.split(':')[0]
+    # print('-='*50)
+    # print('useable_name:')
+    # print(useable_name)
+    output = tf.keras.layers.Dense(num_classes, activation='softmax', name=useable_name)(x)
 
     model = tf.keras.Model(all_inputs, output)
 
@@ -230,28 +234,32 @@ def train_model(model, train_ds, val_ds, test_ds, num_classes, epochs=10):
     exit=False
     # Check if the target labels are already one-hot encoded
     train_labels = train_ds.map(lambda x, y: y)
-    if train_labels.element_spec.shape[-1] == num_classes:
-        log.debug('Labels are already one-hot encoded')
-    else:
-        log.debug('Train Labels are not one-hot encoded')
-        exit=True
+    # log.debug( f'train_labels.element_spec.shape, ``{train_labels.element_spec.shape}``' )
+    # log.debug( f'train_labels.element_spec, ``{train_labels.element_spec}``' )
+    # if train_labels.element_spec.shape[-1] == num_classes:
+    #     log.debug('Labels are already one-hot encoded')
+    # else:
+    #     log.debug('Train Labels are not one-hot encoded')
+    #     log.debug( f'train_labels.element_spec.shape[-1], ``{train_labels.element_spec.shape[-1]}``' )
+    #     log.debug( f'num_classes, ``{num_classes}``' )
+    #     exit=True
 
-    val_labels = val_ds.map(lambda x, y: y)
-    if val_labels.element_spec.shape[-1] == num_classes:
-        log.debug('Labels are already one-hot encoded')
-    else:
-        log.debug('Val Labels are not one-hot encoded')
-        exit=True
+    # val_labels = val_ds.map(lambda x, y: y)
+    # if val_labels.element_spec.shape[-1] == num_classes:
+    #     log.debug('Labels are already one-hot encoded')
+    # else:
+    #     log.debug('Val Labels are not one-hot encoded')
+    #     exit=True
 
-    test_labels = test_ds.map(lambda x, y: y)
-    if test_labels.element_spec.shape[-1] == num_classes:
-        log.debug('Labels are already one-hot encoded')
-    else:
-        log.debug('Test Labels are not one-hot encoded')
-        exit=True
+    # test_labels = test_ds.map(lambda x, y: y)
+    # if test_labels.element_spec.shape[-1] == num_classes:
+    #     log.debug('Labels are already one-hot encoded')
+    # else:
+    #     log.debug('Test Labels are not one-hot encoded')
+    #     exit=True
 
-    if exit:
-        raise Exception('Labels are not one-hot encoded')
+    # if exit:
+    #     raise Exception('Labels are not one-hot encoded')
 
     model.fit(train_ds, validation_data=val_ds, epochs=epochs)
     log.debug( 'training complete' )
@@ -260,7 +268,53 @@ def train_model(model, train_ds, val_ds, test_ds, num_classes, epochs=10):
     print("Loss", loss)
     return model
     
-
+def inspect_dataset(dataset):
+    # Logs various aspects of a dataset to allow for inspection and debugging
+    print('=-=-=-=-=-=-=-=-=-=-=-=')
+    print('Inspecting dataset:')
+    print('=-=-=-=-=-=-=-=-=-=-=-=')
+    print(f'dataset type: {type(dataset)}')
+    print(f'dataset element_spec: {dataset.element_spec}')
+    print(f'dataset element_spec type: {type(dataset.element_spec)}')
+    print(f'dataset element_spec[0] type: {type(dataset.element_spec[0])}')
+    print(f'dataset element_spec[0] shape: {dataset.element_spec[0].shape}')
+    print(f'dataset element_spec[0] dtype: {dataset.element_spec[0].dtype}')
+    print(f'dataset element_spec[1] type: {type(dataset.element_spec[1])}')
+    print(f'dataset element_spec[1] shape: {dataset.element_spec[1].shape}')
+    print(f'dataset element_spec[1] dtype: {dataset.element_spec[1].dtype}')
+    print('=-=-=-=-=-=-=-=-=-=-=-=')
+    print('Inspecting dataset element:')
+    print('=-=-=-=-=-=-=-=-=-=-=-=')
+    for element in dataset.take(1):
+        print(f'element type: {type(element)}')
+        print(f'element[0] type: {type(element[0])}')
+        print(f'element[0] shape: {element[0].shape}')
+        print(f'element[0] dtype: {element[0].dtype}')
+        print(f'element[1] type: {type(element[1])}')
+        print(f'element[1] shape: {element[1].shape}')
+        print(f'element[1] dtype: {element[1].dtype}')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        print('Inspecting element[0]:')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        print(f'element[0] type: {type(element[0])}')
+        print(f'element[0] shape: {element[0].shape}')
+        print(f'element[0] dtype: {element[0].dtype}')
+        print(f'element[0] value: {element[0]}')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        print('Inspecting element[1]:')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        print(f'element[1] type: {type(element[1])}')
+        print(f'element[1] shape: {element[1].shape}')
+        print(f'element[1] dtype: {element[1].dtype}')
+        print(f'element[1] value: {element[1]}')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        print('Inspecting element[0][0]:')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        print(f'element[0][0] type: {type(element[0][0])}')
+        print(f'element[0][0] shape: {element[0][0].shape}')
+        print(f'element[0][0] dtype: {element[0][0].dtype}')
+        print(f'element[0][0] value: {element[0][0]}')
+        print('=-=-=-=-=-=-=-=-=-=-=-=')
 
 
 ## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -278,6 +332,14 @@ def manager():
     '''
     df = load_data()
 
+    # log.debug( 'data loaded' )
+    # log.debug( f'df.shape, ``{df.shape}``' )
+    # log.debug(f'df.head(), ``{df.head()}``')
+    # # log every value in the first row of the dataframe
+    # for key, value in df.iloc[0].items():
+    #     log.debug( f'key, ``{key}``; value, ``{value}``' )
+    
+
     '''
     create a copy of the dataframe with only the columns we want to use
     This is a small subset of the columns in the original dataframe
@@ -285,6 +347,14 @@ def manager():
     '''
     df = df[['pid','genre','keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
 
+    # log.debug( '\n\n\ncolumns selected' )
+    # log.debug( f'df.shape, ``{df.shape}``' )
+    # log.debug(f'df.head(), ``{df.head()}``')
+    # # log every value in the first row of the dataframe
+    # for key, value in df.iloc[0].items():
+    #     log.debug( f'key, ``{key}``; value, ``{value}``' )
+
+  
 
     '''
     Drop rows with no values in the mods_subject_broad_theme_ssim column
@@ -297,6 +367,14 @@ def manager():
 
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
+    log.debug( '\n\n\nrows dropped' )
+    log.debug( f'df.shape, ``{df.shape}``' )
+    log.debug(f'df.head(), ``{df.head()}``')
+    # log every value in the first row of the dataframe
+    for key, value in df.iloc[0].items():
+        log.debug( f'key, ``{key}``; value, ``{value}``' )
+
+    sys.exit()
     '''
     The next few steps are to convert the values in the dataframe into the format we want to use for training the model
     Ultimately, the values in the columns need to be converted into numeric values
@@ -357,6 +435,7 @@ def manager():
         message = f'Unable to complete train_val_test_split: {e}'
         raise Exception(message)
 
+
     '''
     We convert the dataframes into tf.data.Datasets so they can be used to train the model with TensorFlow
     '''
@@ -368,6 +447,9 @@ def manager():
         message = f'Unable to complete dfs_to_datasets: {e}'
         raise Exception(message)
     
+    log.debug( 'Datasets created' )
+    inspect_dataset(train_ds)
+
     '''
     Now we need to convert the categorical columns into numeric values by encoding them as one-hot vectors
     This means that each value in the column will be broken out into its own column,
@@ -448,6 +530,7 @@ def manager():
     # print('First encoded label:')
     # # Need to find the right syntax for this
 
+    inspect_dataset(train_ds)
 
     # Compile the model
     model = compile_model(all_inputs, encoded_features, encoded_categorical_label_column, num_classes=num_unique_themes)
