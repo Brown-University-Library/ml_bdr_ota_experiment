@@ -450,12 +450,15 @@ def manager():
 
 
     # Compile the model
+    log.debug( 'about to compile model' )
     model = compile_model(all_inputs, encoded_features, encoded_categorical_label_column, num_classes=num_unique_themes)
 
     # Graph the model
+    log.debug( f'about to graph model' )
     graph_model(model)
 
     # Train the model
+    log.debug( 'about to train model' )
     trained_model = train_model(model, train_ds, val_ds, test_ds, epochs=10, num_classes=num_unique_themes)
 
 
