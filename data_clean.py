@@ -277,11 +277,11 @@ def inspect_dataset(dataset):
     print(f'dataset element_spec: {dataset.element_spec}')
     print(f'dataset element_spec type: {type(dataset.element_spec)}')
     print(f'dataset element_spec[0] type: {type(dataset.element_spec[0])}')
-    print(f'dataset element_spec[0] shape: {dataset.element_spec[0].shape}')
-    print(f'dataset element_spec[0] dtype: {dataset.element_spec[0].dtype}')
+    # print(f'dataset element_spec[0] shape: {dataset.element_spec[0].shape}')
+    # print(f'dataset element_spec[0] dtype: {dataset.element_spec[0].dtype}')
     print(f'dataset element_spec[1] type: {type(dataset.element_spec[1])}')
-    print(f'dataset element_spec[1] shape: {dataset.element_spec[1].shape}')
-    print(f'dataset element_spec[1] dtype: {dataset.element_spec[1].dtype}')
+    # print(f'dataset element_spec[1] shape: {dataset.element_spec[1].shape}')
+    # print(f'dataset element_spec[1] dtype: {dataset.element_spec[1].dtype}')
     print('=-=-=-=-=-=-=-=-=-=-=-=')
     print('Inspecting dataset element:')
     print('=-=-=-=-=-=-=-=-=-=-=-=')
@@ -367,14 +367,14 @@ def manager():
 
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == list, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
-    log.debug( '\n\n\nrows dropped' )
-    log.debug( f'df.shape, ``{df.shape}``' )
-    log.debug(f'df.head(), ``{df.head()}``')
-    # log every value in the first row of the dataframe
-    for key, value in df.iloc[0].items():
-        log.debug( f'key, ``{key}``; value, ``{value}``' )
+    # log.debug( '\n\n\nrows without mods_subject_broad_theme_ssim dropped' )
+    # log.debug( f'df.shape, ``{df.shape}``' )
+    # log.debug(f'df.head(), ``{df.head()}``')
+    # # log every value in the first row of the dataframe
+    # for key, value in df.iloc[0].items():
+    #     log.debug( f'key, ``{key}``; value, ``{value}``' )
 
-    sys.exit()
+
     '''
     The next few steps are to convert the values in the dataframe into the format we want to use for training the model
     Ultimately, the values in the columns need to be converted into numeric values
@@ -384,7 +384,16 @@ def manager():
     # Convert the values in the mods_subject_broad_theme_ssim column to strings, removing whitespace and punctuation
     df['mods_subject_broad_theme_ssim'] = df['mods_subject_broad_theme_ssim'].apply(stringify_list, sort=True)
 
+
+
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
+
+    # log.debug( "\n\n\nmods_subject_broad_theme_ssim values 'stringified' " )
+    # log.debug( f'df.shape, ``{df.shape}``' )
+    # log.debug(f'df.head(), ``{df.head()}``')
+    # # log every value in the first row of the dataframe
+    # for key, value in df.iloc[0].items():
+    #     log.debug( f'key, ``{key}``; value, ``{value}``' )
 
     # # Print the values in the mods_subject_broad_theme_ssim column to see what they look like
     # print('/\\'*50)
@@ -394,9 +403,9 @@ def manager():
 
     # Get number of unique values in mods_subject_broad_theme_ssim column
     num_unique_themes = len(df['mods_subject_broad_theme_ssim'].unique())
-    # print('/\\'*50)
-    # print(f'Number of unique themes: {num_unique_themes}')
-    # print('/\\'*50)
+    # log.debug('/\\'*50)
+    # log.debug(f'Number of unique themes: {num_unique_themes}')
+    # log.debug('/\\'*50)
 
     # Stringify the other columns with list values
     df['genre'] = df['genre'].apply(stringify_list, sort=True)
@@ -408,12 +417,18 @@ def manager():
     # # Convert all values in the dataframe to strings
     # df = df.astype(str)
 
-    print(f'Values 72-74 after stringifying:\n{df["mods_subject_broad_theme_ssim"].iloc[72:75]}')
+    # log.debug(f'Values 72-74 after stringifying:\n{df["mods_subject_broad_theme_ssim"].iloc[72:75]}')
     assert type(df['mods_subject_broad_theme_ssim'].iloc[73]) == str, type(df['mods_subject_broad_theme_ssim'].iloc[73])
 
     # Print the entire row corresponding to index 39084, for debugging
-    print(f'Row 39084:\n{df.loc[39084]}')
+    # log.debug(f'Row 39084:\n{df.loc[39084]}')
+
+    # log.debug('Veryfying that language code of row 39084 is a string (even when nan)')
+    assert type(df['mods_language_code_ssim'].loc[39084]) == str, type(df['mods_language_code_ssim'].loc[39084])
     
+    log.info( 'Data loaded and cleaned - Moving to splitting and converting to datasets' )
+    log.info('-'*50)
+
     '''
     At this point we have a dataframe with values that are either numeric, or can be encoded as numeric (which will be done later)
     The next step is to split the data into train, validation, and test sets
@@ -435,6 +450,21 @@ def manager():
         message = f'Unable to complete train_val_test_split: {e}'
         raise Exception(message)
 
+    assert type(train) == pd.core.frame.DataFrame, type(train)
+    log.debug('Assert validated that train is a dataframe')
+
+    log.debug( f'df.shape, ``{df.shape}``' )
+    log.debug( 'Data split into train, val, and test sets' )
+    log.debug( f'train.shape, ``{train.shape}``' )
+    log.debug( f'val.shape, ``{val.shape}``' )
+    log.debug( f'test.shape, ``{test.shape}``' )
+
+    assert train.shape[0] + val.shape[0] + test.shape[0] == df.shape[0], f'train, val, and test sizes != df size -- {train.shape[0] + val.shape[0] + test.shape[0]} != {df.shape[0]}'
+
+    log.debug( f'\n\n\ntrain.head(), ``{train.head()}``' )
+    log.debug( f'val.head(), ``{val.head()}``' )
+    log.debug( f'test.head(), ``{test.head()}``' )
+
 
     '''
     We convert the dataframes into tf.data.Datasets so they can be used to train the model with TensorFlow
@@ -449,6 +479,8 @@ def manager():
     
     log.debug( 'Datasets created' )
     inspect_dataset(train_ds)
+
+    sys.exit()
 
     '''
     Now we need to convert the categorical columns into numeric values by encoding them as one-hot vectors
