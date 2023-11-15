@@ -271,55 +271,39 @@ def train_model(model, train_ds, val_ds, test_ds, num_classes, epochs=10):
     
 def inspect_dataset(dataset):
     # Logs various aspects of a dataset to allow for inspection and debugging
-    print('=-=-=-=-=-=-=-=-=-=-=-=')
-    print('Inspecting dataset:')
-    print('=-=-=-=-=-=-=-=-=-=-=-=')
-    print(f'dataset type: {type(dataset)}')
-    print(f'dataset element_spec: {dataset.element_spec}')
-    print(f'dataset element_spec type: {type(dataset.element_spec)}')
-    print(f'dataset element_spec[0] type: {type(dataset.element_spec[0])}')
-    # print(f'dataset element_spec[0] shape: {dataset.element_spec[0].shape}')
-    # print(f'dataset element_spec[0] dtype: {dataset.element_spec[0].dtype}')
-    print(f'dataset element_spec[1] type: {type(dataset.element_spec[1])}')
-    # print(f'dataset element_spec[1] shape: {dataset.element_spec[1].shape}')
-    # print(f'dataset element_spec[1] dtype: {dataset.element_spec[1].dtype}')
-    print('=-=-=-=-=-=-=-=-=-=-=-=')
-    print('Inspecting dataset element:')
-    print('=-=-=-=-=-=-=-=-=-=-=-=')
+    log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+    log.debug('Inspecting dataset:')
+    log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+    log.debug(f'dataset type: {type(dataset)}')
+    log.debug(f'dataset element_spec: {dataset.element_spec}')
+    log.debug(f'dataset element_spec type: {type(dataset.element_spec)}')
+    log.debug(f'dataset element_spec[0] type: {type(dataset.element_spec[0])}')
+    # log.debug(f'dataset element_spec[0] shape: {dataset.element_spec[0].shape}')
+    # log.debug(f'dataset element_spec[0] dtype: {dataset.element_spec[0].dtype}')
+    log.debug(f'dataset element_spec[1] type: {type(dataset.element_spec[1])}')
+    # log.debug(f'dataset element_spec[1] shape: {dataset.element_spec[1].shape}')
+    # log.debug(f'dataset element_spec[1] dtype: {dataset.element_spec[1].dtype}')
+    log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+    log.debug('Inspecting dataset element:')
+    log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
     for element in dataset.take(1):
-        print(f'element type: {type(element)}')
-        print(f'element[0] type: {type(element[0])}')
-        # print(f'element[0] shape: {element[0].shape}')
-        # print(f'element[0] dtype: {element[0].dtype}')
-        print(f'element[1] type: {type(element[1])}')
-        # print(f'element[1] shape: {element[1].shape}')
-        # print(f'element[1] dtype: {element[1].dtype}')
+        log.debug(f'element type: {type(element)}')
+        log.debug(f'element len: {len(element)}')
 
-        RESUME FROM HERE
         # https://chat.openai.com/share/39ece13f-1713-47af-8bbc-b81b99aaa642
+        log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+        log.debug('Inspecting element[0]:')
+        log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+        log.debug(f'element[0] type: {type(element[0])}')
+        log.debug(f'element[0] value: {element[0]}')
 
-        # print('=-=-=-=-=-=-=-=-=-=-=-=')
-        # print('Inspecting element[0]:')
-        # print('=-=-=-=-=-=-=-=-=-=-=-=')
-        # print(f'element[0] type: {type(element[0])}')
-        # print(f'element[0] shape: {element[0].shape}')
-        # print(f'element[0] dtype: {element[0].dtype}')
-        # print(f'element[0] value: {element[0]}')
-        # print('=-=-=-=-=-=-=-=-=-=-=-=')
-        # print('Inspecting element[1]:')
-        # print('=-=-=-=-=-=-=-=-=-=-=-=')
-        # print(f'element[1] type: {type(element[1])}')
-        # print(f'element[1] shape: {element[1].shape}')
-        # print(f'element[1] dtype: {element[1].dtype}')
-        # print(f'element[1] value: {element[1]}')
-        print('=-=-=-=-=-=-=-=-=-=-=-=')
-        print('Inspecting element[0][0]:')
-        print('=-=-=-=-=-=-=-=-=-=-=-=')
-        print(f'element[0][0] type: {type(element[0][0])}')
-        print(f'element[0][0] shape: {element[0][0].shape}')
-        print(f'element[0][0] dtype: {element[0][0].dtype}')
-        print(f'element[0][0] value: {element[0][0]}')
-        print('=-=-=-=-=-=-=-=-=-=-=-=')
+        log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+        log.debug('Inspecting element[1]:')
+        log.debug('=-=-=-=-=-=-=-=-=-=-=-=')
+        log.debug(f'element[1] type: {type(element[1])}')
+        log.debug(f'element[1] shape: {element[1].shape}')
+        log.debug(f'element[1] dtype: {element[1].dtype}')
+        log.debug(f'element[1] value: {element[1]}')
 
 
 ## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -456,19 +440,19 @@ def manager():
         raise Exception(message)
 
     assert type(train) == pd.core.frame.DataFrame, type(train)
-    log.debug('Assert validated that train is a dataframe')
+    # log.debug('Assert validated that train is a dataframe')
 
-    log.debug( f'df.shape, ``{df.shape}``' )
-    log.debug( 'Data split into train, val, and test sets' )
-    log.debug( f'train.shape, ``{train.shape}``' )
-    log.debug( f'val.shape, ``{val.shape}``' )
-    log.debug( f'test.shape, ``{test.shape}``' )
+    # log.debug( f'df.shape, ``{df.shape}``' )
+    # log.debug( 'Data split into train, val, and test sets' )
+    # log.debug( f'train.shape, ``{train.shape}``' )
+    # log.debug( f'val.shape, ``{val.shape}``' )
+    # log.debug( f'test.shape, ``{test.shape}``' )
 
     assert train.shape[0] + val.shape[0] + test.shape[0] == df.shape[0], f'train, val, and test sizes != df size -- {train.shape[0] + val.shape[0] + test.shape[0]} != {df.shape[0]}'
 
-    log.debug( f'\n\n\ntrain.head(), ``{train.head()}``' )
-    log.debug( f'val.head(), ``{val.head()}``' )
-    log.debug( f'test.head(), ``{test.head()}``' )
+    # log.debug( f'\n\n\ntrain.head(), ``{train.head()}``' )
+    # log.debug( f'val.head(), ``{val.head()}``' )
+    # log.debug( f'test.head(), ``{test.head()}``' )
 
 
     '''
@@ -484,8 +468,10 @@ def manager():
     
     log.debug( 'Datasets created' )
     inspect_dataset(train_ds)
-
-    sys.exit()
+    log.debug( '\n\nVAL DS\n\n')
+    inspect_dataset(val_ds)
+    log.debug( '\n\nTEST DS\n\n')
+    inspect_dataset(test_ds)
 
     '''
     Now we need to convert the categorical columns into numeric values by encoding them as one-hot vectors
@@ -501,20 +487,38 @@ def manager():
     all_inputs = []
     encoded_features = []
 
+    log.debug('-='*50)
+    log.debug( '\n\nEncoding categorical columns\n\n' )
+
     for column_name in categorical_columns:
         log.debug( f'column_name, ``{column_name}``' )
         categorical_column = tf.keras.Input(shape=(1,), name=column_name, dtype='string')
+        log.debug( f'categorical_column, ``{categorical_column}``' )
         # encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string', max_tokens=5)
         encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string')
+        log.debug( f'encoding_layer type, ``{type(encoding_layer)}``' )
+        # log.debug( f'encoding_layer, ``{encoding_layer}``' )
+        log.debug('\n```\nEncoding layer instantiated\n```\n')
         encoded_categorical_column = encoding_layer(categorical_column)
-        all_inputs.append(categorical_column)
+        log.debug( f'encoded_categorical_column type, ``{type(encoded_categorical_column)}``' )
+        log.debug( f'encoded_categorical_column, ``{encoded_categorical_column}``' )
+        log.debug('\n\n\nInspecting encoded_categorical_column\n\n\n')
+        # tf.print(encoded_categorical_column,)
+        #<https://chat.openai.com/share/071436bb-5e44-4609-aa9e-84793f660240>
+
+        STOPPED HERE
+
         encoded_features.append(encoded_categorical_column)
+        log.debug( f'encoded_features, ``{encoded_features}``' )
         log.debug( f'Done with column_name, ``{column_name}``' )
+        sys.exit( 'done with column_name' )
+
 
     # Print the encoded features to see what they look like
     print('='*50)
     print('Encoded Features:')
     pprint.pprint(encoded_features)
+
 
     log.debug( 'Encoding label' )
     categorical_label_column = tf.keras.Input(shape=(1,), name='mods_subject_broad_theme_ssim', dtype='string')
