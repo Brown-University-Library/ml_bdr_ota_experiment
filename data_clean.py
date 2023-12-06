@@ -466,12 +466,12 @@ def manager():
         message = f'Unable to complete dfs_to_datasets: {e}'
         raise Exception(message)
     
-    log.debug( 'Datasets created' )
-    inspect_dataset(train_ds)
-    log.debug( '\n\nVAL DS\n\n')
-    inspect_dataset(val_ds)
-    log.debug( '\n\nTEST DS\n\n')
-    inspect_dataset(test_ds)
+    # log.debug( 'Datasets created' )
+    # inspect_dataset(train_ds)
+    # log.debug( '\n\nVAL DS\n\n')
+    # inspect_dataset(val_ds)
+    # log.debug( '\n\nTEST DS\n\n')
+    # inspect_dataset(test_ds)
 
     '''
     Now we need to convert the categorical columns into numeric values by encoding them as one-hot vectors
@@ -487,8 +487,8 @@ def manager():
     all_inputs = []
     encoded_features = []
 
-    log.debug('-='*50)
-    log.debug( '\n\nEncoding categorical columns\n\n' )
+    # log.debug('-='*50)
+    # log.debug( '\n\nEncoding categorical columns\n\n' )
 
     for column_name in categorical_columns:
         log.debug( f'column_name, ``{column_name}``' )
@@ -497,34 +497,44 @@ def manager():
         # encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string', max_tokens=5)
         encoding_layer = get_category_encoding_layer(column_name, train_ds, dtype='string')
         log.debug( f'encoding_layer type, ``{type(encoding_layer)}``' )
-        # log.debug( f'encoding_layer, ``{encoding_layer}``' )
+        log.debug( f'encoding_layer, ``{encoding_layer}``' )
         log.debug('\n```\nEncoding layer instantiated\n```\n')
         encoded_categorical_column = encoding_layer(categorical_column)
-        log.debug( f'encoded_categorical_column type, ``{type(encoded_categorical_column)}``' )
-        log.debug( f'encoded_categorical_column, ``{encoded_categorical_column}``' )
-        log.debug('\n\n\nInspecting encoded_categorical_column\n\n\n')
+        # log.debug( f'encoded_categorical_column type, ``{type(encoded_categorical_column)}``' )
+        # log.debug( f'encoded_categorical_column, ``{encoded_categorical_column}``' )
+        # log.debug('\n\n\nInspecting encoded_categorical_column\n\n\n')
         # tf.print(encoded_categorical_column,)
         #<https://chat.openai.com/share/071436bb-5e44-4609-aa9e-84793f660240>
 
-        STOPPED HERE
+        # log.debug( f'Is tensor: ``{tf.is_tensor(encoded_categorical_column)}``' )
 
         encoded_features.append(encoded_categorical_column)
-        log.debug( f'encoded_features, ``{encoded_features}``' )
-        log.debug( f'Done with column_name, ``{column_name}``' )
-        sys.exit( 'done with column_name' )
+        # log.debug( f'encoded_features, ``{encoded_features}``' )
+        # log.debug( f'Done with column_name, ``{column_name}``' )
+        # sys.exit( 'done with column_name' )
 
 
-    # Print the encoded features to see what they look like
-    print('='*50)
-    print('Encoded Features:')
-    pprint.pprint(encoded_features)
+    # Log the encoded features to see what they look like
+    log.debug('='*50)
+    log.debug('Encoded Features:')
+    log.debug(pprint.pformat(encoded_features))
 
 
     log.debug( 'Encoding label' )
     categorical_label_column = tf.keras.Input(shape=(1,), name='mods_subject_broad_theme_ssim', dtype='string')
+    log.debug( f'categorical_label_column type, ``{type(categorical_label_column)}``' )
+    log.debug( f'categorical_label_column, ``{categorical_label_column}``' )
     # encoding_layer = get_category_encoding_layer_label(train_ds, dtype='string', max_tokens=5)
     encoding_layer = get_category_encoding_layer_label(train_ds, dtype='string')
+    log.debug( f'encoding_layer type, ``{type(encoding_layer)}``' )
+    log.debug( f'encoding_layer, ``{encoding_layer}``' )
     encoded_categorical_label_column = encoding_layer(categorical_label_column)
+
+    sys.exit( 'done with encoding label' )
+
+    STOPPED HERE...look into:
+#     [06/Dec/2023 10:55:49] DEBUG [data_clean-manager()::526] categorical_label_column, ``KerasTensor(type_spec=TensorSpec(shape=(None, 1), dtype=tf.string, name='mods_subject_broad_theme_ssim'), name='mods_subject_broad_theme_ssim', description="created by layer 'mods_subject_broad_theme_ssim'")``
+# 2023-12-06 10:55:49.506952: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_3' with dtype string and shape [16305]
 
     print('|'*50)
     pprint.pprint(categorical_label_column)
