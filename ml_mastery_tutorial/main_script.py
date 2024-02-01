@@ -1,5 +1,5 @@
 # mlp for multi-label classification
-from numpy import mean
+from numpy import asarray
 from numpy import std
 from sklearn.datasets import make_multilabel_classification
 from sklearn.model_selection import RepeatedKFold
@@ -17,14 +17,17 @@ The function prints the shape of the dataset (X and y) and the first few example
 
 # example of a multi-label classification task
 from sklearn.datasets import make_multilabel_classification
-# define dataset
-# X, y = make_multilabel_classification(n_samples=1000, n_features=10, n_classes=3, n_labels=2, random_state=1)
-X, y = make_multilabel_classification(n_samples=100, n_features=10, n_classes=3, n_labels=2, random_state=1)  # TEMP!!!
-# summarize dataset shape
-print(X.shape, y.shape)
-# summarize first few examples
-for i in range(10):
-	print(X[i], y[i])
+
+def get_dataset():
+	# define dataset
+	X, y = make_multilabel_classification(n_samples=1000, n_features=10, n_classes=3, n_labels=2, random_state=1)
+	# X, y = make_multilabel_classification(n_samples=100, n_features=10, n_classes=3, n_labels=2, random_state=1)  # TEMP!!!
+	# summarize dataset shape
+	print(X.shape, y.shape)
+	# summarize first few examples
+	for i in range(10):
+		print(X[i], y[i])
+	return X, y
 	
 
 # get the model
@@ -66,4 +69,15 @@ def evaluate_model(X, y):
 		results.append(acc)
 	return results
 
-STOP HERE!!!
+# load dataset
+X, y = get_dataset()
+n_inputs, n_outputs = X.shape[1], y.shape[1]
+# get model
+model = get_model(n_inputs, n_outputs)
+# fit the model on all data
+model.fit(X, y, verbose=0, epochs=100)
+# make a prediction for new data
+row = [3, 3, 6, 7, 8, 2, 11, 11, 1, 3]
+newX = asarray([row])
+yhat = model.predict(newX)
+print('Predicted: %s' % yhat[0])
