@@ -20,18 +20,19 @@ The function prints the shape of the dataset (X and y) and the first few example
 # example of a multi-label classification task
 from sklearn.datasets import make_multilabel_classification
 
-def get_dataset():
-	# define dataset
-	X, y = make_multilabel_classification(n_samples=1000, n_features=10, n_classes=3, n_labels=2, random_state=1)
-	# X, y = make_multilabel_classification(n_samples=100, n_features=10, n_classes=3, n_labels=2, random_state=1)  # TEMP!!!
-	# summarize dataset shape
-	print(X.shape, y.shape)
-	# summarize first few examples
-	for i in range(10):
-		print(X[i], y[i])
-	return X, y
-	
 # def get_dataset():
+# 	# define dataset
+# 	X, y = make_multilabel_classification(n_samples=1000, n_features=10, n_classes=3, n_labels=2, random_state=1)
+# 	# X, y = make_multilabel_classification(n_samples=100, n_features=10, n_classes=3, n_labels=2, random_state=1)  # TEMP!!!
+# 	# summarize dataset shape
+# 	print(X.shape, y.shape)
+# 	# summarize first few examples
+# 	for i in range(10):
+# 		print(X[i], y[i])
+# 	return X, y
+	
+def get_dataset():
+	PICK UP HERE: Create new toy dataset
 
 def validate_dataset(X, y):
 	# validate that the dataset matches the expected shape:
