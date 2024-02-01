@@ -1,10 +1,12 @@
+import sys
+
 # mlp for multi-label classification
 from numpy import asarray
 from numpy import std
 from sklearn.datasets import make_multilabel_classification
 from sklearn.model_selection import RepeatedKFold
-from keras.models import Sequential
-from keras.layers import Dense
+# from keras.models import Sequential
+# from keras.layers import Dense
 from sklearn.metrics import accuracy_score
 
 """
@@ -29,6 +31,29 @@ def get_dataset():
 		print(X[i], y[i])
 	return X, y
 	
+# def get_dataset():
+
+def validate_dataset(X, y):
+	# validate that the dataset matches the expected shape:
+	# example: [3 5 2 5 6 3 1 5 2 4] [1 0 1]
+	try:
+		assert X.shape[0] == y.shape[0], "X and y must have the same number of samples"
+		assert y.shape[1] == 3, "y must have 3 classes"
+		assert X.shape[1] == 10, "X must have 10 features"
+		assert y.shape[0] == 1000, "y must have 1000 samples"
+		assert X.shape[0] == 1000, "X must have 1000 samples"
+		# assert that the training datatypes are numeric
+		assert X.dtype == 'float64', "X must be of type float64"
+		# assert that the label datatypes are integers
+		assert y.dtype == 'int64', "y must be of type int64"
+		# assert that the label values are 0 or 1
+		assert y.min() >= 0, "y must have a minimum value of 0"
+		assert y.max() <= 1, "y must have a maximum value of 1"
+
+	except AssertionError as e:
+		print(e)
+		return False
+	return True
 
 # get the model
 # define a function to get the model
@@ -71,7 +96,15 @@ def evaluate_model(X, y):
 
 # load dataset
 X, y = get_dataset()
+# validate dataset
+if validate_dataset(X, y):
+	print("Dataset is valid")
+else:
+	sys.exit("Dataset is invalid")
 n_inputs, n_outputs = X.shape[1], y.shape[1]
+
+sys.exit("Stopping for testing")
+
 # get model
 model = get_model(n_inputs, n_outputs)
 # fit the model on all data
