@@ -8,6 +8,7 @@ from sklearn.model_selection import RepeatedKFold
 # from keras.models import Sequential
 # from keras.layers import Dense
 from sklearn.metrics import accuracy_score
+import pandas
 
 """
 This demonstrates a multi-label classification task using the make_multilabel_classification function from the sklearn.datasets module.
@@ -31,6 +32,53 @@ from sklearn.datasets import make_multilabel_classification
 # 		print(X[i], y[i])
 # 	return X, y
 
+# def create_toy_dataset():
+# 	# This dataset will be composed of songs, with the following features:
+# 	# - genre
+# 	# - artist
+# 	# - decade
+# 	# The labels will be:
+# 	# - has_guitar
+# 	# - has_saxophone
+# 	# - has_vocals
+
+# 	# define dataset
+# 	possible_genres = ['rock', 'pop', 'jazz', 'blues', 'country']
+# 	possible_artists = ['Rocky', 'Popsicle', 'Jazzy Jeff', 'Blueman Group', 'Country Joe', 'Jazz on the Rocks', 'Blue Note Rock', 'Country of Pop']
+# 	possible_decades = ['60s', '70s', '80s', '90s']
+
+# 	X = []
+# 	y = []
+# 	for i in range(1000):
+# 		# generate random features
+# 		genre = possible_genres[i % len(possible_genres)]
+# 		artist = possible_artists[i % len(possible_artists)]
+# 		decade = possible_decades[i % len(possible_decades)]
+# 		# generate random labels
+# 		has_guitar = 1 if genre in ['rock', 'blues', 'country'] else 0
+# 		has_saxophone = 1 if genre in ['jazz', 'blues'] else 0
+# 		has_vocals = 1 if artist in ['Rocky', 'Popsicle', 'Jazzy Jeff', 'Country Joe'] else 0
+# 		# store
+# 		X.append([genre, artist, decade])
+# 		y.append([has_guitar, has_saxophone, has_vocals])
+# 	# convert to numpy array
+# 	X = asarray(X)
+# 	y = asarray(y)
+# 	# summarize dataset shape
+# 	print(X.shape, y.shape)
+# 	# Print the header row
+# 	print("X: genre, artist, decade")
+# 	print("y: has_guitar, has_saxophone, has_vocals")
+# 	print('-'*40)
+# 	print(X)
+# 	print('-'*40)
+
+# 	# summarize first few examples
+# 	for i in range(10):
+# 		print(X[i], y[i])
+# 	return X, y
+
+# create a toy dataset, convert to pandas dataframe, return the dataframe
 def create_toy_dataset():
 	# This dataset will be composed of songs, with the following features:
 	# - genre
@@ -63,19 +111,43 @@ def create_toy_dataset():
 	# convert to numpy array
 	X = asarray(X)
 	y = asarray(y)
+	# convert to pandas dataframe
+	df = pandas.DataFrame(X, columns=['genre', 'artist', 'decade'])
+	# convert the values to strings
+	df = df.astype('string')
+	# print info about the dataframe
+	print(df.info())
+
+	# add the labels to the dataframe
+	df['has_guitar'] = y[:, 0]
+	df['has_saxophone'] = y[:, 1]
+	df['has_vocals'] = y[:, 2]
 	# summarize dataset shape
 	print(X.shape, y.shape)
+	# print info about the dataframe
+	print(df.info())
+
 	# Print the header row
 	print("X: genre, artist, decade")
 	print("y: has_guitar, has_saxophone, has_vocals")
 	# summarize first few examples
-	for i in range(10):
-		print(X[i], y[i])
-	return X, y
+	print(df.head())
+	return df
+
+STOPPED HERE: NEXT: do one-hot encoding of the categorical features, write a separate validation function for after the one-hot encoding
 
 
 def get_dataset():
-	return create_toy_dataset()
+	df = create_toy_dataset()
+	# convert the dataframe to numpy arrays
+	X = df[['genre', 'artist', 'decade']].values
+	y = df[['has_guitar', 'has_saxophone', 'has_vocals']].values
+	# print X for debugging
+	print('-'*40)
+	print(X)
+	print('-'*40)
+
+	return X, y
 
 def validate_dataset(X, y): # For the toy dataset created by us (music dataset)
 	# validate that the dataset matches the expected shape:
@@ -86,8 +158,12 @@ def validate_dataset(X, y): # For the toy dataset created by us (music dataset)
 		assert X.shape[1] == 3, "X must have 3 features"
 		assert y.shape[0] == 1000, "y must have 1000 samples"
 		assert X.shape[0] == 1000, "X must have 1000 samples"
-		# assert that the training datatypes are <U17 (string)
-		assert X.dtype == '<U17', f'X must be of type <U17, but is ```{X.dtype}```'
+		# assert that the training data values are strings
+		for i in range(X.shape[1]):
+			for j in range(X.shape[0]):
+				assert type(X[j][i]) == str, f'X must be of type string, but is ```{type(X[j][i])}```'
+
+		assert X.dtype == 'string', f'X must be of type string, but is ```{X.dtype}```'
 		# assert that the label datatypes are integers
 		assert y.dtype == 'int64', "y must be of type int64"
 		# assert that the label values are 0 or 1
@@ -99,7 +175,7 @@ def validate_dataset(X, y): # For the toy dataset created by us (music dataset)
 		return False
 	return True
 
-STOPPED HERE: Need to one-hot encode the string features in the toy dataset then write another validation for the one-hot encoded dataset
+
 
 # def validate_dataset(X, y): # For the original dataset from tutorial
 # 	# validate that the dataset matches the expected shape:
