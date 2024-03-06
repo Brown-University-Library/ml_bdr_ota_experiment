@@ -5,8 +5,8 @@ from numpy import asarray
 from numpy import std
 from sklearn.datasets import make_multilabel_classification
 from sklearn.model_selection import RepeatedKFold
-# from keras.models import Sequential
-# from keras.layers import Dense
+from keras.models import Sequential
+from keras.layers import Dense
 from sklearn.metrics import accuracy_score
 import pandas
 
@@ -134,17 +134,52 @@ def create_toy_dataset():
 	print(df.head())
 	return df
 
-STOPPED HERE: NEXT: do one-hot encoding of the categorical features, write a separate validation function for after the one-hot encoding
+def one_hot_encode(df, column_name):
+	# one-hot encode the column
+	one_hot = pandas.get_dummies(df[column_name], dtype='int64')
+	print(f'one_hot for column {column_name}:\n{one_hot}')
+	# drop the original column
+	df = df.drop(column_name, axis=1)
+	# join the new one-hot encoded columns
+	df = df.join(one_hot)
+	return df
+
+# STOPPED HERE: NEXT: do one-hot encoding of the categorical features, write a separate validation function for after the one-hot encoding
 
 
 def get_dataset():
 	df = create_toy_dataset()
+	# one-hot encode the categorical features
+	feature_columns = df.columns[:-3] # all columns except the last 3
+	print(f'feature_columns: {feature_columns}')
+	for column_name in feature_columns:
+		df = one_hot_encode(df, column_name)
+	# df = one_hot_encode(df, 'genre')
+	print(f'one-hot encoded df:\n')
+	print(df.head())
+
+	updated_feature_columns = df.columns[3:] # all columns except the first 3 (first 3 are labels)
+	print(f'updated_feature_columns: {updated_feature_columns}')
+
+	# print info about the dataframe
+	print('-'*40)
+	print('df.info()')
+	print(df.info())
+	print('-'*40)
+
 	# convert the dataframe to numpy arrays
-	X = df[['genre', 'artist', 'decade']].values
+	X = df[updated_feature_columns].values
 	y = df[['has_guitar', 'has_saxophone', 'has_vocals']].values
 	# print X for debugging
+	print('   X   ')
 	print('-'*40)
 	print(X)
+	print('-'*40)
+
+	# print y for debugging
+	print('   y   ')
+	print('-'*40)
+	print(y)
 	print('-'*40)
 
 	return X, y
@@ -161,9 +196,9 @@ def validate_dataset(X, y): # For the toy dataset created by us (music dataset)
 		# assert that the training data values are strings
 		for i in range(X.shape[1]):
 			for j in range(X.shape[0]):
-				assert type(X[j][i]) == str, f'X must be of type string, but is ```{type(X[j][i])}```'
+				assert type(X[j][i]) == str, f'X[{j}][{i}] must be of type string, but is ```{type(X[j][i])}```'
 
-		assert X.dtype == 'string', f'X must be of type string, but is ```{X.dtype}```'
+		assert X.dtype == 'object', f'X must be of type object, but is ```{X.dtype}```'
 		# assert that the label datatypes are integers
 		assert y.dtype == 'int64', "y must be of type int64"
 		# assert that the label values are 0 or 1
@@ -238,23 +273,45 @@ def evaluate_model(X, y):
 		results.append(acc)
 	return results
 
-# load dataset
-X, y = get_dataset()
-# validate dataset
-if validate_dataset(X, y):
-	print("Dataset is valid")
-else:
-	sys.exit("Dataset is invalid")
-n_inputs, n_outputs = X.shape[1], y.shape[1]
+if __name__ == "__main__":
 
-sys.exit("Stopping for testing")
+	# load dataset
+	X, y = get_dataset()
+	# # validate dataset
+	# if validate_dataset(X, y):
+	# 	print("Dataset is valid")
+	# else:
+	# 	sys.exit("Dataset is invalid")
 
-# get model
-model = get_model(n_inputs, n_outputs)
-# fit the model on all data
-model.fit(X, y, verbose=0, epochs=100)
-# make a prediction for new data
-row = [3, 3, 6, 7, 8, 2, 11, 11, 1, 3]
-newX = asarray([row])
-yhat = model.predict(newX)
-print('Predicted: %s' % yhat[0])
+	n_inputs, n_outputs = X.shape[1], y.shape[1]
+	# print the shape of the dataset
+	print(f'X.shape: {X.shape}, y.shape: {y.shape}')
+
+	# use one_hot_encode to encode the categorical features
+
+
+	# sys.exit("Stopping for testing")
+
+	# get model
+	model = get_model(n_inputs, n_outputs)
+	# fit the model on all data
+	model.fit(X, y, verbose=0, epochs=100)
+
+
+	# # evaluate the model
+	# results = evaluate_model(X, y)
+
+
+	# make a prediction for new data
+	# row = [3, 3, 6, 7, 8, 2, 11, 11, 1, 3]
+	'''
+	 ['blues', 'country', 'jazz', 'pop', 'rock', 'Blue Note Rock',
+       'Blueman Group', 'Country Joe', 'Country of Pop', 'Jazz on the Rocks',
+       'Jazzy Jeff', 'Popsicle', 'Rocky', '60s', '70s', '80s', '90s']
+	'''
+	row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
+	print(f'Test row: blues, Blue Note Rock, 70s')
+	newX = asarray([row])
+	yhat = model.predict(newX)
+	print('has_guitar, has_saxophone, has_vocals')
+	print('Predicted: %s' % yhat[0])
