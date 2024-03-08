@@ -13,6 +13,9 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import RepeatedKFold
 
 
+## original dataset helper functions --------------------------------
+
+
 def get_original_dataset():
     """ Generates a synthetic dataset with 1000 samples, 10 features, 3 classes, and 2 labels per sample.
         The function prints the shape of the dataset (X and y) and the first few examples.
@@ -26,6 +29,67 @@ def get_original_dataset():
     for i in range(10):
         print(X[i], y[i])  # type: ignore
     return X, y
+
+
+def validate_original_dataset(X, y): # For the original dataset from tutorial
+    """ Validates the original dataset.
+        Called by manage_original_dataset_processing() """
+    # validate that the dataset matches the expected shape:
+    # example: [3 5 2 5 6 3 1 5 2 4] [1 0 1]
+    try:
+        assert X.shape[0] == y.shape[0], "X and y must have the same number of samples"
+        assert y.shape[1] == 3, "y must have 3 classes"
+        assert X.shape[1] == 10, "X must have 10 features"
+        assert y.shape[0] == 1000, "y must have 1000 samples"
+        assert X.shape[0] == 1000, "X must have 1000 samples"
+        # assert that the training datatypes are numeric
+        assert X.dtype == 'float64', "X must be of type float64"
+        # assert that the label datatypes are integers
+        assert y.dtype == 'int64', "y must be of type int64"
+        # assert that the label values are 0 or 1
+        assert y.min() >= 0, "y must have a minimum value of 0"
+        assert y.max() <= 1, "y must have a maximum value of 1"
+
+    except AssertionError as e:
+        print(e)
+        return False
+    return True
+
+
+def evaluate_model(X, y):
+    """ Evaluates model using repeated k-fold cross-validation
+        Called by manage_original_dataset_processing() """
+    results = list()
+    n_inputs, n_outputs = X.shape[1], y.shape[1]
+    # define evaluation procedure
+    cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+    # enumerate folds
+    for train_ix, test_ix in cv.split(X):
+        #prepare data
+        X_train, X_test = X[train_ix], X[test_ix]
+        y_train, y_test = y[train_ix], y[test_ix]
+        # define model
+        model = get_model(n_inputs, n_outputs)
+        # fit model
+        print( 'running training model.fit()' )
+        model.fit(X_train, y_train, verbose=0, epochs=100)  # type: ignore
+        print( 'finished training model.fit()' )
+        # make a prediction on the test set
+        yhat = model.predict(X_test)
+        # round probabilities to class labels
+        yhat = yhat.round()
+        # calculate accuracy
+        acc = accuracy_score(y_test, yhat)
+        # store result
+        print('>%.3f' % acc)
+        results.append(acc)
+    return results
+
+
+## end original dataset helper functions ----------------------------
+
+
+## toy dataset helper functions -------------------------------------
 
 
 def create_toy_dataset():
@@ -183,34 +247,17 @@ def validate_dataset(X, y): # For the toy dataset created by us (music dataset)
     return True
 
 
-def validate_original_dataset(X, y): # For the original dataset from tutorial
-    """ Validates the original dataset.
-        Called by manage_original_dataset_processing() """
-    # validate that the dataset matches the expected shape:
-    # example: [3 5 2 5 6 3 1 5 2 4] [1 0 1]
-    try:
-        assert X.shape[0] == y.shape[0], "X and y must have the same number of samples"
-        assert y.shape[1] == 3, "y must have 3 classes"
-        assert X.shape[1] == 10, "X must have 10 features"
-        assert y.shape[0] == 1000, "y must have 1000 samples"
-        assert X.shape[0] == 1000, "X must have 1000 samples"
-        # assert that the training datatypes are numeric
-        assert X.dtype == 'float64', "X must be of type float64"
-        # assert that the label datatypes are integers
-        assert y.dtype == 'int64', "y must be of type int64"
-        # assert that the label values are 0 or 1
-        assert y.min() >= 0, "y must have a minimum value of 0"
-        assert y.max() <= 1, "y must have a maximum value of 1"
-
-    except AssertionError as e:
-        print(e)
-        return False
-    return True
+## end toy dataset helper functions ---------------------------------
 
 
-# get the model
-# define a function to get the model
+## common helper function(s) ----------------------------------------
+
+
 def get_model(n_inputs, n_outputs):
+    """ Creates and compiles a Sequential neural network model 
+            with a ReLU-activated layer and a sigmoid output layer for classification.
+        See the ml_mastery_tutorial README_ml_mastery.md` for great information.
+        Called by both manage_original_dataset_processing() and manage_toy_dataset_processing() """
     # create a sequential model
     model = Sequential()
     # add a dense layer with 20 units, using 'relu' activation function
@@ -222,35 +269,9 @@ def get_model(n_inputs, n_outputs):
     return model
 
 
-# evaluate a model using repeated k-fold cross-validation
-def evaluate_model(X, y):
-    """ Evaluates model using repeated k-fold cross-validation
-        Called by manage_original_dataset_processing() """
-    results = list()
-    n_inputs, n_outputs = X.shape[1], y.shape[1]
-    # define evaluation procedure
-    cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
-    # enumerate folds
-    for train_ix, test_ix in cv.split(X):
-        #prepare data
-        X_train, X_test = X[train_ix], X[test_ix]
-        y_train, y_test = y[train_ix], y[test_ix]
-        # define model
-        model = get_model(n_inputs, n_outputs)
-        # fit model
-        print( 'running training model.fit()' )
-        model.fit(X_train, y_train, verbose=0, epochs=100)  # type: ignore
-        print( 'finished training model.fit()' )
-        # make a prediction on the test set
-        yhat = model.predict(X_test)
-        # round probabilities to class labels
-        yhat = yhat.round()
-        # calculate accuracy
-        acc = accuracy_score(y_test, yhat)
-        # store result
-        print('>%.3f' % acc)
-        results.append(acc)
-    return results
+## end common helper function(s) ------------------------------------
+
+
 
 
 ## manage original dataset processing -------------------------------
