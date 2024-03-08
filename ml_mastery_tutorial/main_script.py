@@ -263,7 +263,7 @@ def evaluate_model(X, y):
         model = get_model(n_inputs, n_outputs)
         # fit model
         print( 'running training model.fit()' )
-        model.fit(X_train, y_train, verbose=0, epochs=100)
+        model.fit(X_train, y_train, verbose='auto', epochs=100)
         print( 'finished training model.fit()' )
         # make a prediction on the test set
         yhat = model.predict(X_test)
@@ -299,9 +299,10 @@ def manage_toy_dataset_processing():
     # get model
     model = get_model(n_inputs, n_outputs)
     # fit the model on all data
-    print( 'running training model.fit()' )
-
-    model.fit(X, y, verbose=0, epochs=100)
+    print( 'running manager model.fit()' )
+    # model.fit(X, y, verbose=0, epochs=100)
+    model.fit(X, y, verbose=0, epochs=100)  # type: ignore
+    print( 'finished manager model.fit()' )
 
 
     # # evaluate the model
