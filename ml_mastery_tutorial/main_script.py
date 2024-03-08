@@ -1,14 +1,15 @@
+## python
 import sys
 
-# mlp for multi-label classification
+## third-party
+import pandas
+from keras.layers import Dense
+from keras.models import Sequential
 from numpy import asarray
 from numpy import std
 from sklearn.datasets import make_multilabel_classification
-from sklearn.model_selection import RepeatedKFold
-from keras.models import Sequential
-from keras.layers import Dense
 from sklearn.metrics import accuracy_score
-import pandas
+from sklearn.model_selection import RepeatedKFold
 
 """
 This demonstrates a multi-label classification task using the make_multilabel_classification function from the sklearn.datasets module.
