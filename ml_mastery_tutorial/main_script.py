@@ -22,8 +22,9 @@ def get_original_dataset():
     # summarize dataset shape
     print(X.shape, y.shape)
     # summarize first few examples
+    print( '\nfirst few examples of original dataset...' )
     for i in range(10):
-        print(X[i], y[i])
+        print(X[i], y[i])  # type: ignore
     return X, y
 
 
