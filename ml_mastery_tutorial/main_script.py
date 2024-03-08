@@ -261,7 +261,7 @@ def evaluate_model(X, y):
 		# define model
 		model = get_model(n_inputs, n_outputs)
 		# fit model
-		model.fit(X_train, y_train, verbose=0, epochs=100)
+		model.fit(X_train, y_train, verbose='0', epochs=100)
 		# make a prediction on the test set
 		yhat = model.predict(X_test)
 		# round probabilities to class labels
@@ -295,7 +295,7 @@ if __name__ == "__main__":
 	# get model
 	model = get_model(n_inputs, n_outputs)
 	# fit the model on all data
-	model.fit(X, y, verbose=0, epochs=100)
+	model.fit(X, y, verbose='0', epochs=100)
 
 
 	# # evaluate the model
