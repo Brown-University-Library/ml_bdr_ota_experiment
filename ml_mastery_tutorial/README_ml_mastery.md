@@ -1,3 +1,13 @@
+### on this page...
+- [Purpose](#purpose)
+- [History](#history)
+- [Usage](#usage)
+- [Model](#model)
+- [Other]("other)
+
+---
+
+
 # Purpose
 
 The purpose of this repo is to experiment with using machine-learning techniques to create useful metadata for [Opening-the-Archives] items that are metadata-deficient.
