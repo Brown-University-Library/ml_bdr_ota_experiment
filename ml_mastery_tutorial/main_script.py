@@ -274,8 +274,9 @@ def evaluate_model(X, y):
 		results.append(acc)
 	return results
 
-if __name__ == "__main__":
 
+## manage toy-dataset processing ------------------------------------
+def manage_toy_dataset_processing():
 	# load dataset
 	X, y = get_dataset()
 	# # validate dataset
@@ -320,3 +321,8 @@ if __name__ == "__main__":
 	yhat = model.predict(newX)
 	print('has_guitar, has_saxophone, has_vocals')
 	print('Predicted: %s' % yhat[0])
+	
+
+## ------------------------------------------------------------------
+if __name__ == "__main__":
+	manage_toy_dataset_processing()
