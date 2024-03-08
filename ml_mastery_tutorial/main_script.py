@@ -256,8 +256,8 @@ def evaluate_model(X, y):
 ## manage original dataset processing -------------------------------
 def manage_original_dataset_processing():
     """ Manages the original dataset processing.
-        This demonstrates a multi-label classification task using the make_multilabel_classification function 
-            from the sklearn.datasets module.
+        This demonstrates a multi-label classification task using the 
+            make_multilabel_classification function from the sklearn.datasets module.
         Called by dundermain. """
     # load dataset
     X, y = get_original_dataset()
@@ -354,5 +354,11 @@ def manage_toy_dataset_processing():
 
 ## ------------------------------------------------------------------
 if __name__ == "__main__":
+    """
+    Possible TODOs: 
+    - add command-line argument to specify which dataset to process
+    - add `manage_small_real_dataset_processing()`
+    - add `manage_full_real_dataset_processing()`
+    """
     # manage_original_dataset_processing()
     manage_toy_dataset_processing()
