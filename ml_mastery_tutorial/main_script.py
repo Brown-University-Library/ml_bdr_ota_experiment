@@ -310,8 +310,8 @@ if __name__ == "__main__":
        'Jazzy Jeff', 'Popsicle', 'Rocky', '60s', '70s', '80s', '90s']
 	'''
 
-	FOR NEXT TIME: Create process to allow testing row in a more sensible way (i.e. using the same one-hot encoding process as the training data)
-	BJD Has an idea involving a dictionary
+	# FOR NEXT TIME: Create process to allow testing row in a more sensible way (i.e. using the same one-hot encoding process as the training data)
+	# BJD Has an idea involving a dictionary
 
 	row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
 	print(f'Test row: blues, Blue Note Rock, 70s')
