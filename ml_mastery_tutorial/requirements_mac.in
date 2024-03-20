@@ -1,0 +1,8 @@
+""" 
+Requirements to get code running on Mac M1, running python 3.8.18.
+The version of python is old to be compatible with our servers.
+"""
+
+pandas==2.0.3
+scikit-learn==1.3.2
+tensorflow==2.13.0
