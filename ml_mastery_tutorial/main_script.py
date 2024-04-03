@@ -151,6 +151,8 @@ def create_toy_dataset():
     # summarize first few examples
     print( '\nfirst few examples of toy dataset...')
     print(df.head())
+    # Save the dataframe to a csv file
+    df.to_csv('toy_dataset.csv', index=False)
     return df
 
     # end def create_toy_dataset()
@@ -176,17 +178,34 @@ def one_hot_encode(df, column_name):
     df = df.join(one_hot)
     return df
 
+# def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
+#     temp_df = pandas.DataFrame(test_row, index=[0])
+#     print(f'{temp_df = }')
+#     # one-hot encode each column
+#     for column_name in temp_df.columns:
+#         temp_df = one_hot_encode(temp_df, column_name)
+
+#     print(f'one-hot encoded temp_df:\n')
+#     print(temp_df.head())
+
+#     return temp_df
+
 def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
-    temp_df = pandas.DataFrame(test_row, index=[0])
-    print(f'{temp_df = }')
-    # one-hot encode each column
-    for column_name in temp_df.columns:
-        temp_df = one_hot_encode(temp_df, column_name)
-
-    print(f'one-hot encoded temp_df:\n')
-    print(temp_df.head())
-
+    # Create a dataframe from the test_row dictionary using the global_feature_columns as the columns
+    temp_df = pandas.DataFrame(columns=global_feature_columns)
+    # Create a row with all False values
+    temp_df.loc[0] = False
+    # print(f'------\n{temp_df = }')
+    # Iterate through the values in test_row and look for the corresponding column in temp_df
+    for key, value in test_row.items():
+        # print(f'{key = }, {value = }')
+        if value in temp_df.columns:
+            # print(f'{value = } is in temp_df.columns')
+            # If the column exists, set the value in the first row to True
+            temp_df.at[0, value] = True
+    # print(f'After: \n{temp_df}')
     return temp_df
+
 
 def get_dataset():
     """ Creates a toy-dataset in a dataframe.
@@ -383,22 +402,33 @@ def manage_toy_dataset_processing():
     # BJD Has an idea involving a dictionary
 
     print(f'{global_feature_columns = }')
-    sys.exit("Stopping for testing")
+    # sys.exit("Stopping for testing")
 
-    FOR NEXT TIME: Revise one_hot_encode_test_row() to take into account all the columns (we're using a global variable to store the column names)
+    #FOR NEXT TIME: Revise one_hot_encode_test_row() to take into account all the columns (we're using a global variable to store the column names)
 
     # row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
-    row = {'genre': 'blues', 'artist': 'Blue Note Rock', 'decade': '70s'}
-    print(f'Test row: {row}')
+    test_rows = [
+                {'genre': 'blues', 'artist': 'Blue Note Rock', 'decade': '70s'},
+                {'genre': 'country', 'artist': 'Country Joe', 'decade': '80s'},
+                {'genre': 'jazz', 'artist': 'Jazz on the Rocks', 'decade': '90s'},
+                {'genre': 'pop', 'artist': 'Country of Pop', 'decade': '60s'},
+                {'genre': 'rock', 'artist': 'Popsicle', 'decade': '70s'}
+                ]
 
-    encoded_test_row = one_hot_encode_test_row(row)
+    for test_row in test_rows:
+        print(f'Test row: {test_row}')
 
-    # newX = asarray([row])
-    newX = encoded_test_row.values
-    yhat = model.predict(newX)
-    print('has_guitar, has_saxophone, has_vocals')
-    print('Predicted: %s' % yhat[0])
+        encoded_test_row = one_hot_encode_test_row(test_row=test_row)
 
+        # newX = asarray([row])
+        newX = encoded_test_row.values
+        yhat = model.predict(newX)
+        print('             has_guitar, has_saxophone, has_vocals')
+        print(f'Predicted:    ',end='')
+        for i in range(yhat.shape[1]):
+            print(f'{yhat[0][i]:.2f}', end='        ')
+        print()
+          
     ## end of manage_toy_dataset_processing()
     
 
