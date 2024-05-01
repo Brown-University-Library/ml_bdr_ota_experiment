@@ -12,6 +12,9 @@ from sklearn.datasets import make_multilabel_classification
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import RepeatedKFold
 
+# # Global Variable in use!!
+# # global_feature_columns
+
 
 ## original dataset helper functions --------------------------------
 
@@ -148,6 +151,8 @@ def create_toy_dataset():
     # summarize first few examples
     print( '\nfirst few examples of toy dataset...')
     print(df.head())
+    # Save the dataframe to a csv file
+    df.to_csv('toy_dataset.csv', index=False)
     return df
 
     # end def create_toy_dataset()
@@ -173,6 +178,34 @@ def one_hot_encode(df, column_name):
     df = df.join(one_hot)
     return df
 
+# def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
+#     temp_df = pandas.DataFrame(test_row, index=[0])
+#     print(f'{temp_df = }')
+#     # one-hot encode each column
+#     for column_name in temp_df.columns:
+#         temp_df = one_hot_encode(temp_df, column_name)
+
+#     print(f'one-hot encoded temp_df:\n')
+#     print(temp_df.head())
+
+#     return temp_df
+
+def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
+    # Create a dataframe from the test_row dictionary using the global_feature_columns as the columns
+    temp_df = pandas.DataFrame(columns=global_feature_columns)
+    # Create a row with all False values
+    temp_df.loc[0] = False
+    # print(f'------\n{temp_df = }')
+    # Iterate through the values in test_row and look for the corresponding column in temp_df
+    for key, value in test_row.items():
+        # print(f'{key = }, {value = }')
+        if value in temp_df.columns:
+            # print(f'{value = } is in temp_df.columns')
+            # If the column exists, set the value in the first row to True
+            temp_df.at[0, value] = True
+    # print(f'After: \n{temp_df}')
+    return temp_df
+
 
 def get_dataset():
     """ Creates a toy-dataset in a dataframe.
@@ -191,6 +224,10 @@ def get_dataset():
 
     updated_feature_columns = df.columns[3:] # all columns except the first 3 (first 3 are labels)
     print(f'updated_feature_columns: {updated_feature_columns}')
+
+    # Assign updated_feature_columns to global variable
+    global global_feature_columns
+    global_feature_columns = updated_feature_columns
 
     # print info about the dataframe
     print('-'*40)
@@ -262,6 +299,8 @@ def get_model(n_inputs, n_outputs):
     model = Sequential()
     # add a dense layer with 20 units, using 'relu' activation function
     model.add(Dense(20, input_dim=n_inputs, kernel_initializer='he_uniform', activation='relu'))
+    # add a dense layer with 10 units, using 'relu' activation function #TEST 
+    model.add(Dense(10, kernel_initializer='he_uniform', activation='relu'))
     # add a dense layer with n_outputs units, using 'sigmoid' activation function
     model.add(Dense(n_outputs, activation='sigmoid'))
     # compile the model with binary cross-entropy loss and adam optimizer
@@ -348,9 +387,10 @@ def manage_toy_dataset_processing():
     print( 'finished manager model.fit()' )
 
 
-    # # evaluate the model
+    # # # evaluate the model
     # results = evaluate_model(X, y)
-
+    # print( f'Standard Deviation: {std(results):.3f}  Accuracy Scores: ({results})' )
+    # print( f'Averaged accuracy: {sum(results)/len(results):.3f}')
 
     # make a prediction for new data
     # row = [3, 3, 6, 7, 8, 2, 11, 11, 1, 3]
@@ -360,16 +400,35 @@ def manage_toy_dataset_processing():
        'Jazzy Jeff', 'Popsicle', 'Rocky', '60s', '70s', '80s', '90s']
     '''
 
-    # FOR NEXT TIME: Create process to allow testing row in a more sensible way (i.e. using the same one-hot encoding process as the training data)
-    # BJD Has an idea involving a dictionary
 
-    row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
-    print(f'Test row: blues, Blue Note Rock, 70s')
-    newX = asarray([row])
-    yhat = model.predict(newX)
-    print('has_guitar, has_saxophone, has_vocals')
-    print('Predicted: %s' % yhat[0])
+    print(f'{global_feature_columns = }')
+    # sys.exit("Stopping for testing")
 
+    #FOR NEXT TIME: Revise one_hot_encode_test_row() to take into account all the columns (we're using a global variable to store the column names)
+
+    # row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
+    test_rows = [
+                {'genre': 'blues', 'artist': 'Blue Note Rock', 'decade': '70s'},
+                {'genre': 'country', 'artist': 'Country Joe', 'decade': '80s'},
+                {'genre': 'jazz', 'artist': 'Jazz on the Rocks', 'decade': '90s'},
+                {'genre': 'pop', 'artist': 'Country of Pop', 'decade': '60s'},
+                {'genre': 'rock', 'artist': 'Popsicle', 'decade': '70s'}
+                ]
+
+    for test_row in test_rows:
+        print(f'Test row: {test_row}')
+
+        encoded_test_row = one_hot_encode_test_row(test_row=test_row)
+
+        # newX = asarray([row])
+        newX = encoded_test_row.values
+        yhat = model.predict(newX)
+        print('             has_guitar, has_saxophone, has_vocals')
+        print(f'Predicted:    ',end='')
+        for i in range(yhat.shape[1]):
+            print(f'{yhat[0][i]:.2f}', end='        ')
+        print()
+          
     ## end of manage_toy_dataset_processing()
     
 

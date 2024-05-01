@@ -1,0 +1,1001 @@
+genre,artist,decade,has_guitar,has_saxophone,has_vocals
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
+rock,Rocky,60s,1,0,1
+pop,Popsicle,70s,0,0,1
+jazz,Jazzy Jeff,80s,0,1,1
+blues,Blueman Group,90s,1,1,0
+country,Country Joe,60s,1,0,1
+rock,Jazz on the Rocks,70s,1,0,0
+pop,Blue Note Rock,80s,0,0,0
+jazz,Country of Pop,90s,0,1,0
+blues,Rocky,60s,1,1,1
+country,Popsicle,70s,1,0,1
+rock,Jazzy Jeff,80s,1,0,1
+pop,Blueman Group,90s,0,0,0
+jazz,Country Joe,60s,0,1,1
+blues,Jazz on the Rocks,70s,1,1,0
+country,Blue Note Rock,80s,1,0,0
+rock,Country of Pop,90s,1,0,0
+pop,Rocky,60s,0,0,1
+jazz,Popsicle,70s,0,1,1
+blues,Jazzy Jeff,80s,1,1,1
+country,Blueman Group,90s,1,0,0
+rock,Country Joe,60s,1,0,1
+pop,Jazz on the Rocks,70s,0,0,0
+jazz,Blue Note Rock,80s,0,1,0
+blues,Country of Pop,90s,1,1,0
+country,Rocky,60s,1,0,1
+rock,Popsicle,70s,1,0,1
+pop,Jazzy Jeff,80s,0,0,1
+jazz,Blueman Group,90s,0,1,0
+blues,Country Joe,60s,1,1,1
+country,Jazz on the Rocks,70s,1,0,0
+rock,Blue Note Rock,80s,1,0,0
+pop,Country of Pop,90s,0,0,0
+jazz,Rocky,60s,0,1,1
+blues,Popsicle,70s,1,1,1
+country,Jazzy Jeff,80s,1,0,1
+rock,Blueman Group,90s,1,0,0
+pop,Country Joe,60s,0,0,1
+jazz,Jazz on the Rocks,70s,0,1,0
+blues,Blue Note Rock,80s,1,1,0
+country,Country of Pop,90s,1,0,0
