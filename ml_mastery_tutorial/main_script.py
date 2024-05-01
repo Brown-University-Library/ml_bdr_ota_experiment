@@ -157,6 +157,15 @@ def create_toy_dataset():
 
     # end def create_toy_dataset()
 
+def read_in_dataset(dataset_path: str | None = None) -> pandas.DataFrame:
+    """
+    Reads in the real data from a json file and 
+    returns a pandas dataframe.
+    """
+    if dataset_path is None:
+        raise ValueError("You must provide a dataset path")
+    df = pandas.read_json(dataset_path)
+    return df
 
 def one_hot_encode(df, column_name):
     """ One-hot encodes a column in a dataframe.
@@ -206,15 +215,36 @@ def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
     # print(f'After: \n{temp_df}')
     return temp_df
 
+'''
+    'pid','genre','keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim'
+'''
 
 def get_dataset():
     """ Creates a toy-dataset in a dataframe.
         Then one-hot encodes the categorical features.
         Then converts the dataframe to back to numpy arrays.
         Called by manage_toy_dataset_processing() """
-    df = create_toy_dataset()
+    # df = create_toy_dataset()
+    df = read_in_dataset('../source_data/OtA_raw.json')
+    print(f'df.head():\n{df.head()}')
+
+    # Remove columns that are not needed
+    '''
+    Keeping only:
+    'pid','genre','keyword', 
+    'mods_location_physical_location_ssim', 
+    'mods_language_code_ssim', 'mods_subject_broad_theme_ssim'
+    '''
+    df = df[['pid', 'genre', 'keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
+    print(f'df.head() after removing columns:\n{df.head()}')
+    print(f'Columns in df:\n{df.columns}')
+
+    ###
+    # Remember to deal with the pid column better later
+    ###
+
     # one-hot encode the categorical features
-    feature_columns = df.columns[:-3] # all columns except the last 3
+    feature_columns = df.columns[1:-1] # all columns except the label(s) and pids
     print(f'feature_columns: {feature_columns}')
     for column_name in feature_columns:
         df = one_hot_encode(df, column_name)
@@ -222,8 +252,14 @@ def get_dataset():
     print(f'one-hot encoded df:\n')
     print(df.head())
 
-    updated_feature_columns = df.columns[3:] # all columns except the first 3 (first 3 are labels)
+    updated_feature_columns = df.columns[1:] # all columns except the first (first is label)
     print(f'updated_feature_columns: {updated_feature_columns}')
+
+    sys.exit("Stopping for testing")
+    # !!!!!!!!!!!!!!!!
+    # MARK: Stopping Here
+    # Probably need to handle some of the values which are currently lists?
+    # !!!!!!!!!!!!!!!!
 
     # Assign updated_feature_columns to global variable
     global global_feature_columns
