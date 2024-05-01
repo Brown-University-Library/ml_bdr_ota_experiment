@@ -299,6 +299,8 @@ def get_model(n_inputs, n_outputs):
     model = Sequential()
     # add a dense layer with 20 units, using 'relu' activation function
     model.add(Dense(20, input_dim=n_inputs, kernel_initializer='he_uniform', activation='relu'))
+    # add a dense layer with 10 units, using 'relu' activation function #TEST 
+    model.add(Dense(10, kernel_initializer='he_uniform', activation='relu'))
     # add a dense layer with n_outputs units, using 'sigmoid' activation function
     model.add(Dense(n_outputs, activation='sigmoid'))
     # compile the model with binary cross-entropy loss and adam optimizer
@@ -398,8 +400,6 @@ def manage_toy_dataset_processing():
        'Jazzy Jeff', 'Popsicle', 'Rocky', '60s', '70s', '80s', '90s']
     '''
 
-    # FOR NEXT TIME: Create process to allow testing row in a more sensible way (i.e. using the same one-hot encoding process as the training data)
-    # BJD Has an idea involving a dictionary
 
     print(f'{global_feature_columns = }')
     # sys.exit("Stopping for testing")
