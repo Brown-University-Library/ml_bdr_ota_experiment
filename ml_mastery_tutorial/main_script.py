@@ -2,15 +2,17 @@
 import sys
 
 ## third-party
-import pandas
+import pandas as pd
 from keras.layers import Dense
 from keras.models import Sequential
+import numpy as np
 from numpy import asarray
 from numpy import std
 from sklearn.datasets import make_multilabel_classification
-from sklearn.datasets import make_multilabel_classification
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import RepeatedKFold
+from sklearn.preprocessing import MultiLabelBinarizer
+from scipy import sparse
 
 # # Global Variable in use!!
 # # global_feature_columns
@@ -130,7 +132,7 @@ def create_toy_dataset():
     X = asarray(X)
     y = asarray(y)
     # convert to pandas dataframe
-    df = pandas.DataFrame(X, columns=['genre', 'artist', 'decade'])
+    df = pd.DataFrame(X, columns=['genre', 'artist', 'decade'])
     # convert the values to strings
     df = df.astype('string')
     # print info about the dataframe
@@ -157,35 +159,64 @@ def create_toy_dataset():
 
     # end def create_toy_dataset()
 
-def read_in_dataset(dataset_path: str | None = None) -> pandas.DataFrame:
+def read_in_dataset(dataset_path: str | None = None) -> pd.DataFrame:
     """
     Reads in the real data from a json file and 
     returns a pandas dataframe.
     """
     if dataset_path is None:
         raise ValueError("You must provide a dataset path")
-    df = pandas.read_json(dataset_path)
+    df = pd.read_json(dataset_path)
     return df
 
-def one_hot_encode(df, column_name):
-    """ One-hot encodes a column in a dataframe.
-        For reference:
-            One-hot encoding transforms categorical data, like colors, into a format 
-            that machine learning models can understand—using binary vectors. Imagine we have a 
-            dataset with the column "Color" that contains three records: "Red", "Blue", and "Green". 
-            One-hot encoding would create three new columns, one for each color. For the record 
-            with "Red", the "Red" column would have a "1", and the "Blue" and "Green" columns would 
-            have "0"s. This binary representation allows algorithms to process the categorical data 
-            without assuming an order or hierarchy among the colors. (chatgpt4)
-        Called by get_dataset() """
-    # one-hot encode the column
-    one_hot = pandas.get_dummies(df[column_name], dtype='int64')
+def one_hot_encode(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
+    """ 
+    One-hot encodes a column with potential list values in a dataframe.
+    This version handles both scalar and list values by ensuring all data is 
+    treated as lists.
+    """
+    # Ensure all data in the column are lists
+    df[column_name] = df[column_name].apply(lambda x: x if isinstance(x, list) else [x])
+
+    # Initialize MultiLabelBinarizer
+    mlb = MultiLabelBinarizer()
+
+    # Fit the MultiLabelBinarizer and transform the data
+    binarized_data: np.ndarray | sparse.csr_matrix = mlb.fit_transform(df[column_name])
+
+    # Create a new dataframe with the one-hot encoded data
+    one_hot = pd.DataFrame(binarized_data, columns=mlb.classes_, dtype='int64')
+
+    # Print debug information
     print(f'one_hot for column {column_name}:\n{one_hot}')
-    # drop the original column
+
+    # Drop the original column
     df = df.drop(column_name, axis=1)
-    # join the new one-hot encoded columns
+
+    # Join the new one-hot encoded columns
     df = df.join(one_hot)
+    
     return df
+
+# def one_hot_encode(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
+#     """ One-hot encodes a column in a dataframe.
+#         For reference:
+#             One-hot encoding transforms categorical data, like colors, into a format 
+#             that machine learning models can understand—using binary vectors. Imagine we have a 
+#             dataset with the column "Color" that contains three records: "Red", "Blue", and "Green". 
+#             One-hot encoding would create three new columns, one for each color. For the record 
+#             with "Red", the "Red" column would have a "1", and the "Blue" and "Green" columns would 
+#             have "0"s. This binary representation allows algorithms to process the categorical data 
+#             without assuming an order or hierarchy among the colors. (chatgpt4)
+#         Called by get_dataset() """
+#     # one-hot encode the column
+#     one_hot: pd.DataFrame = pd.get_dummies(df[column_name], dtype='int64')
+#     print(f'one_hot for column {column_name}:\n{one_hot}')
+#     # drop the original column
+#     df = df.drop(column_name, axis=1)
+#     # join the new one-hot encoded columns
+#     df = df.join(one_hot)
+#     return df
 
 # def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
 #     temp_df = pandas.DataFrame(test_row, index=[0])
@@ -199,9 +230,9 @@ def one_hot_encode(df, column_name):
 
 #     return temp_df
 
-def one_hot_encode_test_row(test_row: dict) -> pandas.DataFrame:
+def one_hot_encode_test_row(test_row: dict) -> pd.DataFrame:
     # Create a dataframe from the test_row dictionary using the global_feature_columns as the columns
-    temp_df = pandas.DataFrame(columns=global_feature_columns)
+    temp_df = pd.DataFrame(columns=global_feature_columns)
     # Create a row with all False values
     temp_df.loc[0] = False
     # print(f'------\n{temp_df = }')
@@ -246,7 +277,16 @@ def get_dataset():
     # one-hot encode the categorical features
     feature_columns = df.columns[1:-1] # all columns except the label(s) and pids
     print(f'feature_columns: {feature_columns}')
+
+    # Convert NaN values to ['']
+    df = df.fillna('')
+    df = df.map(lambda x: x if isinstance(x, list) else [x])
+
+    # Print all the unique values in 'genre', after temporarily converting the values to strings
+    print(f'Unique values in genre: {df["genre"].astype(str).unique()}')
+
     for column_name in feature_columns:
+        print(f'{column_name = }')
         df = one_hot_encode(df, column_name)
     # df = one_hot_encode(df, 'genre')
     print(f'one-hot encoded df:\n')
@@ -258,7 +298,7 @@ def get_dataset():
     sys.exit("Stopping for testing")
     # !!!!!!!!!!!!!!!!
     # MARK: Stopping Here
-    # Probably need to handle some of the values which are currently lists?
+    # ValueError: columns overlap but no suffix specified...
     # !!!!!!!!!!!!!!!!
 
     # Assign updated_feature_columns to global variable
