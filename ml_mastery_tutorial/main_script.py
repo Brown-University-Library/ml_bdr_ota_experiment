@@ -14,6 +14,8 @@ from sklearn.model_selection import RepeatedKFold
 from sklearn.preprocessing import MultiLabelBinarizer
 from scipy import sparse
 
+from icecream import ic
+
 # # Global Variable in use!!
 # # global_feature_columns
 
@@ -169,7 +171,37 @@ def read_in_dataset(dataset_path: str | None = None) -> pd.DataFrame:
     df = pd.read_json(dataset_path)
     return df
 
-def one_hot_encode(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
+# MARK: Write this function
+# def pick_most_common_values(df: pd.DataFrame, column_name: str, n_values: int
+#                             ) -> pd.DataFrame:
+#     """
+#     Picks the n most common values in a column and removes the rest.
+
+#     Args:
+#         df: The dataframe to process.
+#         column_name: The name of the column to process.
+#         n_values: The number of most common values to keep.
+
+#     Returns:
+#         The dataframe with the n most common values in the column and the 
+#         rest removed.
+#     """
+#     # Get the n most common values, with counts in the column
+#     most_common_values = df[column_name].value_counts().nlargest(n_values).index.tolist()
+
+#     # Filter the dataframe to only include the n most common values
+#     df = df[df[column_name].isin(most_common_values)]
+
+#     # Print the most common values and their counts for debugging
+#     ic(most_common_values)
+#     ic(df[column_name].value_counts())
+
+#     return df
+
+    
+
+def one_hot_encode(df: pd.DataFrame, column_name: str
+                   ) -> pd.DataFrame:
     """ 
     One-hot encodes a column with potential list values in a dataframe.
     This version handles both scalar and list values by ensuring all data is 
@@ -183,9 +215,12 @@ def one_hot_encode(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
 
     # Fit the MultiLabelBinarizer and transform the data
     binarized_data: np.ndarray | sparse.csr_matrix = mlb.fit_transform(df[column_name])
+    ic(binarized_data)
 
     # Create a new dataframe with the one-hot encoded data
-    one_hot = pd.DataFrame(binarized_data, columns=mlb.classes_, dtype='int64')
+    one_hot = pd.DataFrame(binarized_data, columns=mlb.classes_
+                           , dtype='int64'
+                           )
 
     # Print debug information
     print(f'one_hot for column {column_name}:\n{one_hot}')
@@ -194,7 +229,7 @@ def one_hot_encode(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
     df = df.drop(column_name, axis=1)
 
     # Join the new one-hot encoded columns
-    df = df.join(one_hot)
+    df = df.join(one_hot, rsuffix=column_name)
     
     return df
 
@@ -285,6 +320,10 @@ def get_dataset():
     # Print all the unique values in 'genre', after temporarily converting the values to strings
     print(f'Unique values in genre: {df["genre"].astype(str).unique()}')
 
+    # df = pick_most_common_values(df, 'keyword', 10)
+    # sys.exit("Stopping for testing")
+
+    ic(feature_columns)
     for column_name in feature_columns:
         print(f'{column_name = }')
         df = one_hot_encode(df, column_name)
@@ -298,7 +337,7 @@ def get_dataset():
     sys.exit("Stopping for testing")
     # !!!!!!!!!!!!!!!!
     # MARK: Stopping Here
-    # ValueError: columns overlap but no suffix specified...
+    # Need to write/revisit pick_most_common_values() function
     # !!!!!!!!!!!!!!!!
 
     # Assign updated_feature_columns to global variable
