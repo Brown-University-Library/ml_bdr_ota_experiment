@@ -338,6 +338,16 @@ def get_dataset():
     # !!!!!!!!!!!!!!!!
     # MARK: Stopping Here
     # Need to write/revisit pick_most_common_values() function
+    #
+    # - Using the full data is too memory-intensive
+    # - We know that a sparse matrix format could work, but initial attempts to use it
+    #   have not been successful
+    # - For now we decided to prune the data in a simpler, more manual way
+    # - So next step is to write the pick_most_common_values() function
+    #     or look through/rewrite the code already written for it (written by
+    #     copilot, without much review yet)
+    # - Initial ideas are to take the top n most common values, or remove all
+    #   values that occur less than x times
     # !!!!!!!!!!!!!!!!
 
     # Assign updated_feature_columns to global variable
