@@ -173,7 +173,7 @@ def read_in_dataset(dataset_path: str | None = None) -> pd.DataFrame:
 
 # MARK: Write this function
 def pick_most_common_values(df: pd.DataFrame, column_name: str, n_values: int
-                            ) -> pd.DataFrame:
+                            ) -> dict[str, int]:
     """
     Build a dictionary of the most common values in a column. Values will be
     lists, even when there is only one value. We want the values from within
@@ -188,13 +188,11 @@ def pick_most_common_values(df: pd.DataFrame, column_name: str, n_values: int
     Returns:
         The dataframe with the column values pruned to the top n_values.
 
-    Example: if the row-1 value is ['a','b','c'] and the row-2 value is 
+    Ultimate Goal: if the row-1 value is ['a','b','c'] and the row-2 value is 
     ['c','d','e'] -- and we determine that 'c' doesn't meet the 
     threshold-count we determine, then row-1 would be re-written 
     to: ['a','b'] and row-2 would be re-written to: ['d','e'].
     """
-
-
     value_counts: dict[str, int] = {}
 
     # Iterate through the rows in the column
@@ -223,24 +221,48 @@ def pick_most_common_values(df: pd.DataFrame, column_name: str, n_values: int
         sorted_values.keys())[:n_values]}
 
     # Print debug information
-    print(f'{top_values = }')
+    ic(len(value_counts))
+    ic(f'{top_values = }')
 
-    # Iterate through the rows in the column
-    for index, row in df.iterrows():
-        # If the value is a list, iterate through the list
-        if isinstance(row[column_name], list):
-            for value in row[column_name]:
-                if value not in top_values:
-                    row[column_name].remove(value)
-        # If the value is not a list, check if it's in the top_values
-        else:
-            if row[column_name] not in top_values:
-                row[column_name] = ''
+    # # Iterate through the rows in the column
+    # for index, row in df.iterrows():
+    #     # If the value is a list, iterate through the list
+    #     if isinstance(row[column_name], list):
+    #         for value in row[column_name]:
+    #             if value not in top_values:
+    #                 row[column_name].remove(value)
+    #     # If the value is not a list, check if it's in the top_values
+    #     else:
+    #         if row[column_name] not in top_values:
+    #             row[column_name] = ''
 
-    # Print debug information
-    print(f'{df[column_name].value_counts()}')
+    # # Print debug information
+    # print(f'{df[column_name].value_counts()}')
 
-    return df
+    return top_values
+
+def apply_common_value_filter(row: pd.Series, column_name: str, 
+                            common_values: dict[str, int]) -> pd.Series:
+    """
+    Filters out values in a row that are not in the common_values dictionary.
+
+    Args:
+        row: The row to process.
+        column_name: The name of the column to process.
+
+    Returns:
+        The row with the column values pruned to the common_values.
+    """
+    # We expect the values to be lists, 
+    # so we'll convert them to lists if they're not
+    if not isinstance(row[column_name], list):
+        row[column_name] = [row[column_name]]
+
+    # Filter out values that are not in the common_values dictionary
+    row[column_name] = [value for value in row[column_name]
+                        if value in common_values]
+    
+    return row
 
 def one_hot_encode(df: pd.DataFrame, column_name: str
                    ) -> pd.DataFrame:
@@ -362,9 +384,22 @@ def get_dataset():
     # Print all the unique values in 'genre', after temporarily converting the values to strings
     print(f'Unique values in genre: {df["genre"].astype(str).unique()}')
 
-    df = pick_most_common_values(df, 'keyword', 10)
-    sys.exit("Stopping for testing")
+    # Get the top n most common values in the 'keyword' column
+    top_keyword_values = pick_most_common_values(df, 'keyword', 1000)
 
+    # Apply the common value filter to the 'keyword' column
+    df = df.apply(
+        lambda x: apply_common_value_filter(x, 'keyword', 
+                                            top_keyword_values), axis=1)
+    
+    ic(df['keyword'])
+
+
+    sys.exit("Stopping for testing")
+    # !!!!!!!!!!!!!!!!
+    # MARK: Stopping Here
+    # Need to check/filter rest of the columns
+    # !!!!!!!!!!!!!!!!
     ic(feature_columns)
     for column_name in feature_columns:
         print(f'{column_name = }')
@@ -377,20 +412,7 @@ def get_dataset():
     print(f'updated_feature_columns: {updated_feature_columns}')
 
     sys.exit("Stopping for testing")
-    # !!!!!!!!!!!!!!!!
-    # MARK: Stopping Here
-    # Need to write/revisit pick_most_common_values() function
-    #
-    # - Using the full data is too memory-intensive
-    # - We know that a sparse matrix format could work, but initial attempts to use it
-    #   have not been successful
-    # - For now we decided to prune the data in a simpler, more manual way
-    # - So next step is to write the pick_most_common_values() function
-    #     or look through/rewrite the code already written for it (written by
-    #     copilot, without much review yet)
-    # - Initial ideas are to take the top n most common values, or remove all
-    #   values that occur less than x times
-    # !!!!!!!!!!!!!!!!
+
 
     # Assign updated_feature_columns to global variable
     global global_feature_columns
