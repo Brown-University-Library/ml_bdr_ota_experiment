@@ -220,9 +220,9 @@ def pick_most_common_values(df: pd.DataFrame, column_name: str, n_values: int
     top_values = {k: sorted_values[k] for k in list(
         sorted_values.keys())[:n_values]}
 
-    # Print debug information
-    ic(len(value_counts))
-    ic(f'{top_values = }')
+    # # Print debug information
+    # ic(len(value_counts))
+    # ic(f'{top_values = }')
 
     # # Iterate through the rows in the column
     # for index, row in df.iterrows():
@@ -293,7 +293,7 @@ def one_hot_encode(df: pd.DataFrame, column_name: str
     df = df.drop(column_name, axis=1)
 
     # Join the new one-hot encoded columns
-    df = df.join(one_hot, rsuffix=column_name)
+    df = df.join(one_hot, rsuffix=f'_{column_name}')
     
     return df
 
@@ -384,6 +384,8 @@ def get_dataset():
     # Print all the unique values in 'genre', after temporarily converting the values to strings
     print(f'Unique values in genre: {df["genre"].astype(str).unique()}')
 
+    ic('Before top_values:',df['keyword'])
+
     # Get the top n most common values in the 'keyword' column
     top_keyword_values = pick_most_common_values(df, 'keyword', 1000)
 
@@ -392,14 +394,11 @@ def get_dataset():
         lambda x: apply_common_value_filter(x, 'keyword', 
                                             top_keyword_values), axis=1)
     
-    ic(df['keyword'])
+    ic('After top_values:',df['keyword'])
 
 
-    sys.exit("Stopping for testing")
-    # !!!!!!!!!!!!!!!!
-    # MARK: Stopping Here
-    # Need to check/filter rest of the columns
-    # !!!!!!!!!!!!!!!!
+    # sys.exit("Stopping for testing")
+
     ic(feature_columns)
     for column_name in feature_columns:
         print(f'{column_name = }')
@@ -411,9 +410,28 @@ def get_dataset():
     updated_feature_columns = df.columns[1:] # all columns except the first (first is label)
     print(f'updated_feature_columns: {updated_feature_columns}')
 
+    # Print all columns with the word 'keyword' in them
+    print('Columns with "keyword" in them: '
+          f'{df.columns[df.columns.str.contains("keyword")]}')
+
     sys.exit("Stopping for testing")
-
-
+    '''
+    !!!!!!!!!!!!!!!!
+    MARK: Stopping Here
+    1. Need to determine which of the other columns to filter (if any)
+    2. Look into how columns are being joined to the dataframe (make
+       sure duplicate names are not being merged...including empty values)
+       ** Actually we checked and we did it right! In the one_hot_encode()
+         function, we used the rsuffix parameter to add a suffix to the column
+            names that were duplicated. **
+    3. Determine what we've done and still need to do with the 
+        mods_subject_broad_theme_ssim column
+        a. We need to remove the rows that have empty values for training
+        b. We need to one-hot encode the values
+        c. Other???
+    4. Figure out how to procede with real data    
+    !!!!!!!!!!!!!!!!
+    '''
     # Assign updated_feature_columns to global variable
     global global_feature_columns
     global_feature_columns = updated_feature_columns
