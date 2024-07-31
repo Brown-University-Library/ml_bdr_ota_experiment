@@ -349,6 +349,17 @@ def one_hot_encode_test_row(test_row: dict) -> pd.DataFrame:
     'pid','genre','keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim'
 '''
 
+def filter_empty(x):
+    ic(x)
+    ic(type(x))
+    ic(len(x))
+    length = len(x)
+    if length < 1:
+        print(len(x))
+    if length > 1:
+        return True
+    return False
+
 def get_dataset():
     """ Creates a toy-dataset in a dataframe.
         Then one-hot encodes the categorical features.
@@ -413,6 +424,18 @@ def get_dataset():
     # Print all columns with the word 'keyword' in them
     print('Columns with "keyword" in them: '
           f'{df.columns[df.columns.str.contains("keyword")]}')
+
+    ic(df['mods_subject_broad_theme_ssim'].map(filter_empty) )
+    
+    # df = df[df['mods_subject_broad_theme_ssim'].map(len) > 0]
+
+    ic(df)
+
+    '''
+    Last time we were having trouble filtering out the rows with empty values in the
+    mods_subject_broad_theme_ssim column. The issue is that those rows contain a single
+    value of an empty string, rather than an empty list.
+    '''
 
     sys.exit("Stopping for testing")
     '''
