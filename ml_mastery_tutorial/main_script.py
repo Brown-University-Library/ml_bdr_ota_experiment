@@ -350,15 +350,30 @@ def one_hot_encode_test_row(test_row: dict) -> pd.DataFrame:
 '''
 
 def filter_empty(x):
-    ic(x)
-    ic(type(x))
-    ic(len(x))
+    '''
+    This function is used to filter out rows that have empty values in the
+    mods_subject_broad_theme_ssim column.
+
+    Args:
+        x: The value to check.
+
+    Returns:
+        True if the value is not empty, False otherwise.
+    '''
+    # ic(x)
+    # ic(type(x))
+    # ic(len(x))
+    # ic(type(x[0]))
     length = len(x)
-    if length < 1:
-        print(len(x))
-    if length > 1:
-        return True
-    return False
+    if length < 2:
+        # print('|||')
+        first_element_length = len(x[0])
+        # ic(first_element_length)
+        if first_element_length < 1:
+            # print('Will be removed')
+            # sys.exit("Found One!!")
+            return False
+    return True
 
 def get_dataset():
     """ Creates a toy-dataset in a dataframe.
@@ -384,13 +399,18 @@ def get_dataset():
     # Remember to deal with the pid column better later
     ###
 
-    # one-hot encode the categorical features
-    feature_columns = df.columns[1:-1] # all columns except the label(s) and pids
-    print(f'feature_columns: {feature_columns}')
-
     # Convert NaN values to ['']
     df = df.fillna('')
     df = df.map(lambda x: x if isinstance(x, list) else [x])
+
+    # Remove rows with empty values in the 'mods_subject_broad_theme_ssim' column
+    df = df[df['mods_subject_broad_theme_ssim'].map(filter_empty)]
+
+    ## one-hot encode the categorical features
+
+    # Get the feature columns
+    feature_columns = df.columns[1:-1] # all columns except the label(s) and pids
+    print(f'feature_columns: {feature_columns}')
 
     # Print all the unique values in 'genre', after temporarily converting the values to strings
     print(f'Unique values in genre: {df["genre"].astype(str).unique()}')
@@ -425,32 +445,44 @@ def get_dataset():
     print('Columns with "keyword" in them: '
           f'{df.columns[df.columns.str.contains("keyword")]}')
 
-    ic(df['mods_subject_broad_theme_ssim'].map(filter_empty) )
+    # Split out the mods_subject_broad_theme_ssim column into a separate dataframe
+    df_labels = pd.DataFrame(df['mods_subject_broad_theme_ssim'])
+
+    # Drop the mods_subject_broad_theme_ssim column from the main dataframe
+    df = df.drop('mods_subject_broad_theme_ssim', axis=1)
+
+    # One-hot encode the mods_subject_broad_theme_ssim column
+    df_labels = one_hot_encode(df_labels, 'mods_subject_broad_theme_ssim')
     
-    # df = df[df['mods_subject_broad_theme_ssim'].map(len) > 0]
 
     ic(df)
+    ic(df_labels)
 
-    '''
-    Last time we were having trouble filtering out the rows with empty values in the
-    mods_subject_broad_theme_ssim column. The issue is that those rows contain a single
-    value of an empty string, rather than an empty list.
-    '''
+    # Print the first row in detail of both dataframes
+    for column_name in df.columns[:50]:
+        print(f'{column_name}:  {df.iloc[0][column_name]}')
+        print(f'{column_name}:  {df.iloc[20129][column_name]}')
+
 
     sys.exit("Stopping for testing")
     '''
     !!!!!!!!!!!!!!!!
     MARK: Stopping Here
+
+    We discovered that a large number of rows at the end of the df are full
+    of NaN values. We need to figure out why
+
     1. Need to determine which of the other columns to filter (if any)
+        ** Come back to this later **
     2. Look into how columns are being joined to the dataframe (make
        sure duplicate names are not being merged...including empty values)
-       ** Actually we checked and we did it right! In the one_hot_encode()
-         function, we used the rsuffix parameter to add a suffix to the column
-            names that were duplicated. **
+       ** Done **
     3. Determine what we've done and still need to do with the 
         mods_subject_broad_theme_ssim column
         a. We need to remove the rows that have empty values for training
+            ** Done **
         b. We need to one-hot encode the values
+            ** Done sort of ** See above
         c. Other???
     4. Figure out how to procede with real data    
     !!!!!!!!!!!!!!!!
