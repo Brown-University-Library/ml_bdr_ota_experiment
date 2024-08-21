@@ -406,6 +406,16 @@ def get_dataset():
     # Remove rows with empty values in the 'mods_subject_broad_theme_ssim' column
     df = df[df['mods_subject_broad_theme_ssim'].map(filter_empty)]
 
+    # Reset the index
+    '''
+    We needed to do this so that the dataframes returned by one_hot_encode
+    would have the same index as the original dataframe. Without doing this,
+    we found that the final dataframe had a large number of rows at the end
+    that were full of NaN values. This also allows the final values to remain
+    ints instead of being converted to floats.
+    '''
+    df = df.reset_index(drop=True)
+
     ## one-hot encode the categorical features
 
     # Get the feature columns
@@ -471,6 +481,7 @@ def get_dataset():
 
     We discovered that a large number of rows at the end of the df are full
     of NaN values. We need to figure out why
+        ** Done **
 
     1. Need to determine which of the other columns to filter (if any)
         ** Come back to this later **
