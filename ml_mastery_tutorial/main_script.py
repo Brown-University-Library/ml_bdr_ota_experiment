@@ -468,13 +468,13 @@ def get_dataset():
     ic(df)
     ic(df_labels)
 
-    # Print the first row in detail of both dataframes
-    for column_name in df.columns[:50]:
-        print(f'{column_name}:  {df.iloc[0][column_name]}')
-        print(f'{column_name}:  {df.iloc[20129][column_name]}')
+    # # Print the first row in detail of both dataframes
+    # for column_name in df.columns[:50]:
+    #     print(f'{column_name}:  {df.iloc[0][column_name]}')
+    #     print(f'{column_name}:  {df.iloc[20129][column_name]}')
 
 
-    sys.exit("Stopping for testing")
+
     '''
     !!!!!!!!!!!!!!!!
     MARK: Stopping Here
@@ -508,9 +508,23 @@ def get_dataset():
     print(df.info())
     print('-'*40)
 
+    # # convert the dataframe to numpy arrays
+    # X = df[updated_feature_columns].values
+    # y = df[['has_guitar', 'has_saxophone', 'has_vocals']].values
+    # # print X for debugging
+    # print('   X   ')
+    # print('-'*40)
+    # print(X)
+    # print('-'*40)
+
+    # Remove mods_subject_broad_theme_ssim from the updated_feature_columns
+    updated_feature_columns = updated_feature_columns[1:]
+    ic(updated_feature_columns)
+
     # convert the dataframe to numpy arrays
     X = df[updated_feature_columns].values
-    y = df[['has_guitar', 'has_saxophone', 'has_vocals']].values
+    y = df_labels.values
+
     # print X for debugging
     print('   X   ')
     print('-'*40)
@@ -524,6 +538,7 @@ def get_dataset():
     print('-'*40)
 
     return X, y
+
 
     ## end def get_dataset()
 
@@ -630,9 +645,9 @@ def manage_original_dataset_processing():
     ## end def manage_original_dataset_processing()
 
 
-## manage toy-dataset processing ------------------------------------
-def manage_toy_dataset_processing():
-    """ Manages the toy dataset processing.
+## manage dataset processing ------------------------------------
+def manage_dataset_processing():
+    """ Manages the dataset processing.
         Called by dundermain. """
     # load dataset
     X, y = get_dataset()
@@ -646,10 +661,10 @@ def manage_toy_dataset_processing():
     # print the shape of the dataset
     print(f'X.shape: {X.shape}, y.shape: {y.shape}')
 
-    # use one_hot_encode to encode the categorical features
 
 
-    # sys.exit("Stopping for testing")
+
+
 
     # get model
     model = get_model(n_inputs, n_outputs)
@@ -660,49 +675,52 @@ def manage_toy_dataset_processing():
     print( 'finished manager model.fit()' )
 
 
-    # # # evaluate the model
-    # results = evaluate_model(X, y)
-    # print( f'Standard Deviation: {std(results):.3f}  Accuracy Scores: ({results})' )
-    # print( f'Averaged accuracy: {sum(results)/len(results):.3f}')
 
-    # make a prediction for new data
-    # row = [3, 3, 6, 7, 8, 2, 11, 11, 1, 3]
-    '''
-     ['blues', 'country', 'jazz', 'pop', 'rock', 'Blue Note Rock',
-       'Blueman Group', 'Country Joe', 'Country of Pop', 'Jazz on the Rocks',
-       'Jazzy Jeff', 'Popsicle', 'Rocky', '60s', '70s', '80s', '90s']
-    '''
+    # # evaluate the model
+    results = evaluate_model(X, y)
+    print( f'Standard Deviation: {std(results):.3f}  Accuracy Scores: ({results})' )
+    print( f'Averaged accuracy: {sum(results)/len(results):.3f}')
+
+    return model
+
+    # # make a prediction for new data
+    # # row = [3, 3, 6, 7, 8, 2, 11, 11, 1, 3]
+    # '''
+    #  ['blues', 'country', 'jazz', 'pop', 'rock', 'Blue Note Rock',
+    #    'Blueman Group', 'Country Joe', 'Country of Pop', 'Jazz on the Rocks',
+    #    'Jazzy Jeff', 'Popsicle', 'Rocky', '60s', '70s', '80s', '90s']
+    # '''
 
 
-    print(f'{global_feature_columns = }')
-    # sys.exit("Stopping for testing")
+    # print(f'{global_feature_columns = }')
+    # # sys.exit("Stopping for testing")
 
-    #FOR NEXT TIME: Revise one_hot_encode_test_row() to take into account all the columns (we're using a global variable to store the column names)
+    # #FOR NEXT TIME: Revise one_hot_encode_test_row() to take into account all the columns (we're using a global variable to store the column names)
 
-    # row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
-    test_rows = [
-                {'genre': 'blues', 'artist': 'Blue Note Rock', 'decade': '70s'},
-                {'genre': 'country', 'artist': 'Country Joe', 'decade': '80s'},
-                {'genre': 'jazz', 'artist': 'Jazz on the Rocks', 'decade': '90s'},
-                {'genre': 'pop', 'artist': 'Country of Pop', 'decade': '60s'},
-                {'genre': 'rock', 'artist': 'Popsicle', 'decade': '70s'}
-                ]
+    # # row = [True, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, False]
+    # test_rows = [
+    #             {'genre': 'blues', 'artist': 'Blue Note Rock', 'decade': '70s'},
+    #             {'genre': 'country', 'artist': 'Country Joe', 'decade': '80s'},
+    #             {'genre': 'jazz', 'artist': 'Jazz on the Rocks', 'decade': '90s'},
+    #             {'genre': 'pop', 'artist': 'Country of Pop', 'decade': '60s'},
+    #             {'genre': 'rock', 'artist': 'Popsicle', 'decade': '70s'}
+    #             ]
 
-    for test_row in test_rows:
-        print(f'Test row: {test_row}')
+    # for test_row in test_rows:
+    #     print(f'Test row: {test_row}')
 
-        encoded_test_row = one_hot_encode_test_row(test_row=test_row)
+    #     encoded_test_row = one_hot_encode_test_row(test_row=test_row)
 
-        # newX = asarray([row])
-        newX = encoded_test_row.values
-        yhat = model.predict(newX)
-        print('             has_guitar, has_saxophone, has_vocals')
-        print(f'Predicted:    ',end='')
-        for i in range(yhat.shape[1]):
-            print(f'{yhat[0][i]:.2f}', end='        ')
-        print()
+    #     # newX = asarray([row])
+    #     newX = encoded_test_row.values
+    #     yhat = model.predict(newX)
+    #     print('             has_guitar, has_saxophone, has_vocals')
+    #     print(f'Predicted:    ',end='')
+    #     for i in range(yhat.shape[1]):
+    #         print(f'{yhat[0][i]:.2f}', end='        ')
+    #     print()
           
-    ## end of manage_toy_dataset_processing()
+    # ## end of manage_toy_dataset_processing()
     
 
 ## ------------------------------------------------------------------
@@ -714,4 +732,10 @@ if __name__ == "__main__":
     - add `manage_full_real_dataset_processing()`
     """
     # manage_original_dataset_processing()
-    manage_toy_dataset_processing()
+    model = manage_dataset_processing()
+
+    # save the model
+    model.save('model.h5')
+    # save the model to a file
+
+
