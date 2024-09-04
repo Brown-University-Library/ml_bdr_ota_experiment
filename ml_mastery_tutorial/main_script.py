@@ -16,6 +16,8 @@ from scipy import sparse
 
 from icecream import ic
 
+from hashlib import md5
+
 # # Global Variable in use!!
 # # global_feature_columns
 
@@ -403,6 +405,9 @@ def get_dataset():
     df = df.fillna('')
     df = df.map(lambda x: x if isinstance(x, list) else [x])
 
+    # Save the dataframe to a csv file
+    df.to_csv('cleaned_dataset.csv', index=False)
+
     # Remove rows with empty values in the 'mods_subject_broad_theme_ssim' column
     df = df[df['mods_subject_broad_theme_ssim'].map(filter_empty)]
 
@@ -651,6 +656,15 @@ def manage_dataset_processing():
         Called by dundermain. """
     # load dataset
     X, y = get_dataset()
+
+    # confirm dataset is cleaned the same over multiple runs
+    X_bytes = X.tobytes()
+    assert md5(X_bytes).hexdigest() == 'c242519776e782520a61563cdd63a214', \
+        f'X hash is {md5(X_bytes).hexdigest()}'
+    y_bytes = y.tobytes()
+    assert md5(y_bytes).hexdigest() == 'd8c459c8dcd0625b555e71db7a992309', \
+        f'y hash is {md5(y_bytes).hexdigest()}'
+
     # # validate dataset
     # if validate_dataset(X, y):
     #     print("Dataset is valid")
@@ -676,10 +690,10 @@ def manage_dataset_processing():
 
 
 
-    # # evaluate the model
-    results = evaluate_model(X, y)
-    print( f'Standard Deviation: {std(results):.3f}  Accuracy Scores: ({results})' )
-    print( f'Averaged accuracy: {sum(results)/len(results):.3f}')
+    # # # evaluate the model
+    # results = evaluate_model(X, y)
+    # print( f'Standard Deviation: {std(results):.3f}  Accuracy Scores: ({results})' )
+    # print( f'Averaged accuracy: {sum(results)/len(results):.3f}')
 
     return model
 
