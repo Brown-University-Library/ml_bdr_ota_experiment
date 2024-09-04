@@ -735,7 +735,7 @@ if __name__ == "__main__":
     model = manage_dataset_processing()
 
     # save the model
-    model.save('model.h5')
+    model.save('model.keras')
     # save the model to a file
 
 
