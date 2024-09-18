@@ -1,9 +1,11 @@
-
+import sys
 
 import numpy as np
 
 from keras.layers import Dense
 from keras.models import Sequential
+
+from icecream import ic
 
 def open_dataset():
     '''
@@ -15,7 +17,8 @@ def open_dataset():
     '''
     # load the dataset
     data = np.load('dataset.npz')
-    X, y = data['arr_0'], data['arr_1']
+    X, y = data['X'], data['y']
+    ic(X.shape, y.shape)
     return X, y
 
 def get_model(n_inputs, n_outputs):
@@ -65,6 +68,7 @@ def manage_training(X, y):
 if __name__ == '__main__':
     # open the dataset
     X, y = open_dataset()
+    sys.exit('Stopping here for now.')
     # manage the training process
     model = manage_training(X, y)
     # save the model
