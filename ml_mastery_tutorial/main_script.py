@@ -585,7 +585,7 @@ def validate_dataset(X, y): # For the toy dataset created by us (music dataset)
 
 def get_model(n_inputs, n_outputs):
     """ Creates and compiles a Sequential neural network model 
-            with a ReLU-activated layer and a sigmoid output layer for classification.
+        with a ReLU-activated layer and a sigmoid output layer for classification.
         See the ml_mastery_tutorial README_ml_mastery.md` for great information.
         Called by both manage_original_dataset_processing() and manage_toy_dataset_processing() """
     # create a sequential model
