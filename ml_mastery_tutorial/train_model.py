@@ -68,7 +68,6 @@ def manage_training(X, y):
 if __name__ == '__main__':
     # open the dataset
     X, y = open_dataset()
-    sys.exit('Stopping here for now.')
     # manage the training process
     model = manage_training(X, y)
     # save the model
