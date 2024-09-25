@@ -21,7 +21,7 @@ def open_dataset():
     ic(X.shape, y.shape)
     return X, y
 
-def get_model(n_inputs, n_outputs):
+def build_model(n_inputs, n_outputs):
     """ Creates and compiles a Sequential neural network model 
             with a ReLU-activated layer and a sigmoid output layer for classification.
         See the ml_mastery_tutorial README_ml_mastery.md` for great information.
@@ -49,7 +49,7 @@ def manage_training(X, y):
 
 
     # get model
-    model = get_model(n_inputs, n_outputs)
+    model = build_model(n_inputs, n_outputs)
     # fit the model on all data
     print( 'running manager model.fit()' )
     # model.fit(X, y, verbose=0, epochs=100)
