@@ -172,6 +172,23 @@ def one_hot_encode(df: pd.DataFrame, column_name: str
     
     return df
 
+def basic_cleaning(df: pd.DataFrame) -> pd.DataFrame:
+    """ Removes unwanted columns from the dataframe. """
+    # Remove columns that are not needed
+    '''
+    Keeping only:
+    'pid','genre','keyword', 
+    'mods_location_physical_location_ssim', 
+    'mods_language_code_ssim',
+    'mods_subject_broad_theme_ssim'
+    '''
+    df = df[['pid', 'genre', 'keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
+    
+    # Convert NaN values to ['']
+    df = df.fillna('')
+    df = df.map(lambda x: x if isinstance(x, list) else [x])
+
+    return df
 
 def get_dataset():
     """ 
@@ -184,23 +201,13 @@ def get_dataset():
     print(f'df.head():\n{df.head()}')
 
     # Remove columns that are not needed
-    '''
-    Keeping only:
-    'pid','genre','keyword', 
-    'mods_location_physical_location_ssim', 
-    'mods_language_code_ssim', 'mods_subject_broad_theme_ssim'
-    '''
-    df = df[['pid', 'genre', 'keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
+    df = basic_cleaning(df)
     print(f'df.head() after removing columns:\n{df.head()}')
     print(f'Columns in df:\n{df.columns}')
 
     ###
     # Remember to deal with the pid column better later
     ###
-
-    # Convert NaN values to ['']
-    df = df.fillna('')
-    df = df.map(lambda x: x if isinstance(x, list) else [x])
 
     # Save the dataframe to a csv file
     df.to_csv('cleaned_dataset.csv', index=False)
