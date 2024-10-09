@@ -4,3 +4,4 @@ __pycache__
 *.pyc
 source_data/OtA_raw.json
 source_data/OtA_raw.json
+*ZoneIdentifier
