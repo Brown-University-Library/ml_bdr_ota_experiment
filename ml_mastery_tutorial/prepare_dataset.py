@@ -1,4 +1,5 @@
 from hashlib import md5
+import pickle
 
 import pandas as pd
 import numpy as np
@@ -205,6 +206,10 @@ def get_dataset():
     print(f'df.head() after removing columns:\n{df.head()}')
     print(f'Columns in df:\n{df.columns}')
 
+    # Save 25 rows of the dataframe to a json file
+    with open('df_25.json', 'w') as f:
+        df.head(25).to_json(f, orient='records')
+
     ###
     # Remember to deal with the pid column better later
     ###
@@ -329,6 +334,12 @@ def get_dataset():
     # Remove mods_subject_broad_theme_ssim from the updated_feature_columns
     updated_feature_columns = updated_feature_columns[1:]
     ic(updated_feature_columns)
+
+    # pickle the updated_feature_columns for use in the prediction script
+    with open('features.pkl', 'wb') as f:
+        pickle.dump(updated_feature_columns, f)
+    
+    print('updated_feature_columns pickled')
 
     # convert the dataframe to numpy arrays
     X = df[updated_feature_columns].values

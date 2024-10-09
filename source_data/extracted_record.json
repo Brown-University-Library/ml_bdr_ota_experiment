@@ -1,0 +1,185 @@
+[{
+  "pid": "bdr:334627",
+  "fed_created_dsi": "2014-03-19T18:37:22.489Z",
+  "object_created_dsi": "2014-03-19T18:37:22.489Z",
+  "fed_last_modified_dsi": "2021-11-22T13:39:47.370Z",
+  "object_last_modified_dsi": "2021-11-22T13:39:47.370Z",
+  "storage_location_ssi": "ocfl",
+  "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"756fdddeea254d00f61b67bf57beecaebf50974ddbeac2d741e7a66831d9cdd948ec1a05c83a7f44fc4b3362f4a6b2d6de16942f4857dcbac812da10e589b924\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 8555, \"checksum\": \"783f7f4e6bb92f67e0fee6c7ab45900838b2a69b2ac0f62b6e4fb03fdedabdbebab642bcefdd78c5c44504b5cf1ca2f18c86d5a91e0a5c9e0fa509f47604a766\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T17:03:28.013000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"7dbc431d5b0f8405a95fc29cd4ea38e3064793cef843ef2726dd2a3f6f10f83f016d51b6dbeb0cc17605cee9ea0726fe6c4691ffe113b0aaaa6b767dd8e33d79\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:39:47.370270Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2318, \"checksum\": \"905f45eeb0965fc8b0453298468cfe4af5c2d0a529ff4669b2f4eb73ff36eb298a267bcfde119f326ec02b1c02270640e389d0a2bdbba1fcdbed957ff3fb3c43\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:12.992000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 363, \"checksum\": \"99e2fb51054535d0c4f4532f766fad93c8a372f5bfc63fe563d3c8b055e9d1f245ce2f41202a95c44c628d01308951d4465cd16a9885f6c76d56535991fae274\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}}",
+  "fed_object_size_lsi": 13842,
+  "object_size_lsi": 13842,
+  "rel_content_models_ssim": [
+    "implicit-set",
+    "commonMetadata"
+  ],
+  "rel_object_type_ssi": "implicit-set",
+  "object_type": "implicit-set",
+  "rel_is_member_of_collection_ssim": [
+    "bdr:318399"
+  ],
+  "depositor": "Brown University Library: Digital Production Services",
+  "depositor_email": "digprod@brown.edu",
+  "deposit_date": "2014-03-19T00:00:00Z",
+  "collection_date": "2014-03-19T00:00:00Z",
+  "ir_collection_id": [
+    644
+  ],
+  "ir_collection_name": [
+    "History",
+    "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+  ],
+  "_display_public_bsi": true,
+  "_display_brown_bsi": false,
+  "_display_private_bsi": false,
+  "mods_dateIssued_ssim": [
+    "1963-08-29"
+  ],
+  "mods_dateAll_ssim": [
+    "1963-08-29"
+  ],
+  "dateIssued_year_ssim": [
+    "1963"
+  ],
+  "dateIssued_month_ssim": [
+    "08"
+  ],
+  "dateIssued_month_text_ssim": [
+    "August"
+  ],
+  "mods_dateAll_year_ssim": [
+    "1963"
+  ],
+  "dateIssued": "1963-08-29T00:00:00Z",
+  "date_dsi": "1963-08-29T00:00:00Z",
+  "identifier": [
+    "POL 2-1 BRAZ",
+    "A-296"
+  ],
+  "mods_id_subjectnumeric_code_ssim": [
+    "POL 2-1 BRAZ"
+  ],
+  "mods_id_document_no_ssim": [
+    "A-296"
+  ],
+  "mods_location_physical_location_ssim": [
+    "United States. National Archives and Records Administration"
+  ],
+  "mods_location_copy_info_note_box_name_ssim": [
+    "Box Number 3833"
+  ],
+  "mods_location_copy_info_note_ssim": [
+    "Box Number 3833",
+    "POL 2-1 BRAZ 9/1/63",
+    "59",
+    "A1 1613-A"
+  ],
+  "mods_location_copy_info_note_folder_title_ssim": [
+    "POL 2-1 BRAZ 9/1/63"
+  ],
+  "mods_location_copy_info_note_record_group_ssim": [
+    "59"
+  ],
+  "mods_location_copy_info_note_entry_number_ssim": [
+    "A1 1613-A"
+  ],
+  "genre": [
+    "airgrams"
+  ],
+  "mods_genre_local_ssim": [
+    "airgrams"
+  ],
+  "genre_local": [
+    "airgrams"
+  ],
+  "name": [
+    "State",
+    "Rio de Janeiro (Brazil)",
+    "Keppel, J.",
+    "Mein, John Gordon"
+  ],
+  "mods_role_ssim": [
+    "addressee",
+    "distribution place",
+    "drafter"
+  ],
+  "mods_role_addressee_ssim": [
+    "State"
+  ],
+  "mods_name_nonplace_ssim": [
+    "State",
+    "Keppel, J.",
+    "Mein, John Gordon"
+  ],
+  "contributor": [
+    "State",
+    "Rio de Janeiro (Brazil)",
+    "Keppel, J."
+  ],
+  "contributor_string": [
+    "State",
+    "Rio de Janeiro (Brazil)",
+    "Keppel, J."
+  ],
+  "contributor_display": [
+    "State (addressee)",
+    "Rio de Janeiro (Brazil) (distribution place)",
+    "Keppel, J. (drafter)",
+    "Mein, John Gordon"
+  ],
+  "mods_role_distribution_place_ssim": [
+    "Rio de Janeiro (Brazil)"
+  ],
+  "mods_name_place_ssim": [
+    "Rio de Janeiro (Brazil)"
+  ],
+  "mods_role_drafter_ssim": [
+    "Keppel, J."
+  ],
+  "keyword": [
+    "Rio Rally",
+    "UDN",
+    "U.S. PL 480 Funds",
+    "IBAD Inquiry",
+    "Students"
+  ],
+  "mods_subject_ssim": [
+    "Rio Rally",
+    "UDN",
+    "U.S. PL 480 Funds",
+    "IBAD Inquiry",
+    "Students"
+  ],
+  "mods_subject_local_ssim": [
+    "Rio Rally",
+    "UDN",
+    "U.S. PL 480 Funds",
+    "IBAD Inquiry",
+    "Students"
+  ],
+  "mods_subject_joined_ssim": [
+    "Rio Rally",
+    "UDN",
+    "U.S. PL 480 Funds",
+    "IBAD Inquiry",
+    "Students"
+  ],
+  "mods_subject_joined_local_ssim": [
+    "Rio Rally",
+    "UDN",
+    "U.S. PL 480 Funds",
+    "IBAD Inquiry",
+    "Students"
+  ],
+  "mods_title_full_tsim": [
+    "Weeka 35"
+  ],
+  "mods_title_full_primary_tsi": "Weeka 35",
+  "primary_title": "Weeka 35",
+  "primary_title_txt_en_split": "Weeka 35",
+  "resource_type_ssi": "other",
+  "timestamp": "2021-11-22T13:39:48.212Z",
+  "image_parent_bsi": true,
+  "iiif_resource_bsi": true,
+  "title_si": "Weeka 35"
+}
+]

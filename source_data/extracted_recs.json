@@ -1,0 +1,4991 @@
+[
+  {
+    "pid": "bdr:334627",
+    "fed_created_dsi": "2014-03-19T18:37:22.489Z",
+    "object_created_dsi": "2014-03-19T18:37:22.489Z",
+    "fed_last_modified_dsi": "2021-11-22T13:39:47.370Z",
+    "object_last_modified_dsi": "2021-11-22T13:39:47.370Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"756fdddeea254d00f61b67bf57beecaebf50974ddbeac2d741e7a66831d9cdd948ec1a05c83a7f44fc4b3362f4a6b2d6de16942f4857dcbac812da10e589b924\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 8555, \"checksum\": \"783f7f4e6bb92f67e0fee6c7ab45900838b2a69b2ac0f62b6e4fb03fdedabdbebab642bcefdd78c5c44504b5cf1ca2f18c86d5a91e0a5c9e0fa509f47604a766\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T17:03:28.013000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"7dbc431d5b0f8405a95fc29cd4ea38e3064793cef843ef2726dd2a3f6f10f83f016d51b6dbeb0cc17605cee9ea0726fe6c4691ffe113b0aaaa6b767dd8e33d79\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:39:47.370270Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2318, \"checksum\": \"905f45eeb0965fc8b0453298468cfe4af5c2d0a529ff4669b2f4eb73ff36eb298a267bcfde119f326ec02b1c02270640e389d0a2bdbba1fcdbed957ff3fb3c43\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:12.992000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 363, \"checksum\": \"99e2fb51054535d0c4f4532f766fad93c8a372f5bfc63fe563d3c8b055e9d1f245ce2f41202a95c44c628d01308951d4465cd16a9885f6c76d56535991fae274\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:37:22.489000Z\"}}",
+    "fed_object_size_lsi": 13842,
+    "object_size_lsi": 13842,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1963-08-29"
+    ],
+    "mods_dateAll_ssim": [
+      "1963-08-29"
+    ],
+    "dateIssued_year_ssim": [
+      "1963"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1963"
+    ],
+    "dateIssued": "1963-08-29T00:00:00Z",
+    "date_dsi": "1963-08-29T00:00:00Z",
+    "identifier": [
+      "POL 2-1 BRAZ",
+      "A-296"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2-1 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-296"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 3833"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 3833",
+      "POL 2-1 BRAZ 9/1/63",
+      "59",
+      "A1 1613-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2-1 BRAZ 9/1/63"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1613-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Keppel, J.",
+      "Mein, John Gordon"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Keppel, J.",
+      "Mein, John Gordon"
+    ],
+    "contributor": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Keppel, J."
+    ],
+    "contributor_string": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Keppel, J."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Rio de Janeiro (Brazil) (distribution place)",
+      "Keppel, J. (drafter)",
+      "Mein, John Gordon"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Keppel, J."
+    ],
+    "keyword": [
+      "Rio Rally",
+      "UDN",
+      "U.S. PL 480 Funds",
+      "IBAD Inquiry",
+      "Students"
+    ],
+    "mods_subject_ssim": [
+      "Rio Rally",
+      "UDN",
+      "U.S. PL 480 Funds",
+      "IBAD Inquiry",
+      "Students"
+    ],
+    "mods_subject_local_ssim": [
+      "Rio Rally",
+      "UDN",
+      "U.S. PL 480 Funds",
+      "IBAD Inquiry",
+      "Students"
+    ],
+    "mods_subject_joined_ssim": [
+      "Rio Rally",
+      "UDN",
+      "U.S. PL 480 Funds",
+      "IBAD Inquiry",
+      "Students"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Rio Rally",
+      "UDN",
+      "U.S. PL 480 Funds",
+      "IBAD Inquiry",
+      "Students"
+    ],
+    "mods_title_full_tsim": [
+      "Weeka 35"
+    ],
+    "mods_title_full_primary_tsi": "Weeka 35",
+    "primary_title": "Weeka 35",
+    "primary_title_txt_en_split": "Weeka 35",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:39:48.212Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weeka 35"
+  },
+  {
+    "pid": "bdr:334749",
+    "fed_created_dsi": "2014-03-19T18:41:34.774Z",
+    "object_created_dsi": "2014-03-19T18:41:34.774Z",
+    "fed_last_modified_dsi": "2021-11-22T13:42:23.691Z",
+    "object_last_modified_dsi": "2021-11-22T13:42:23.691Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:41:34.774000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 364, \"checksum\": \"0ab49d9baf11d372801f0ba928d141bd1068af4cc60057353860e3ce7d16b691f5ba98ed9f72c05d21ec929e1dd991cc55be9317838c8d35e163452a9a83f3ef\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:41:34.774000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:41:34.774000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"4cc556da92b6bb8132e9cac1e8fe77245913b05e4cad8e1ef39c2781f7cf6acccd05e96c16778ef5fb934306b1502e1e8dfbe4406c3be02643f2510b7201ad58\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:42:23.691175Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6941, \"checksum\": \"4f1b957003ca25ee4999d48066b2a66f09acae58e5b67a7f6b9e2662dfc94b5e5cc21a5d23484b670870ec31258f39bfbcfa395fb7a70720a71782f3ce72eeaa\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:46:36.846000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:41:34.774000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"6060674cba384696d06e3db5b2eee6da7b07b493989e4307ed609da291a401325f7576b328e53e8bd9a1500722d097ef7346f8ae48dc67100c43b88e10da09c9\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:41:34.774000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2749, \"checksum\": \"bba712055ba99e2112c0e9c281434d8cef5b0342bd59b67006be8f4f1b53a6a285663c90ae4dadd2afa640be2af94ed3e052b2ecaaaf89b6c55c520a0ab14f6d\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:21.878000Z\"}}",
+    "fed_object_size_lsi": 12660,
+    "object_size_lsi": 12660,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1963-05-31"
+    ],
+    "mods_dateAll_ssim": [
+      "1963-05-31"
+    ],
+    "dateIssued_year_ssim": [
+      "1963"
+    ],
+    "dateIssued_month_ssim": [
+      "05"
+    ],
+    "dateIssued_month_text_ssim": [
+      "May"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1963"
+    ],
+    "dateIssued": "1963-05-31T00:00:00Z",
+    "date_dsi": "1963-05-31T00:00:00Z",
+    "identifier": [
+      "POL 2-1 BRAZ",
+      "A-1383"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2-1 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-1383"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 3833"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 3833",
+      "POL 2-1 BRAZ 2/1/63",
+      "59",
+      "A1 1613-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2-1 BRAZ 2/1/63"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1613-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Mein, John Gordon"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Mein, John Gordon"
+    ],
+    "contributor": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "contributor_string": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Rio de Janeiro (Brazil) (distribution place)",
+      "Mein, John Gordon"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "keyword": [
+      "agrarian reform",
+      "Three Year Plan",
+      "utility companies",
+      "strike",
+      "Kruel",
+      "Osvino",
+      "Goulart",
+      "Brizola",
+      "Lacerda",
+      "UST",
+      "CGT"
+    ],
+    "mods_subject_ssim": [
+      "agrarian reform",
+      "Three Year Plan",
+      "utility companies",
+      "strike",
+      "Kruel",
+      "Osvino",
+      "Goulart",
+      "Brizola",
+      "Lacerda",
+      "UST",
+      "CGT"
+    ],
+    "mods_subject_local_ssim": [
+      "agrarian reform",
+      "Three Year Plan",
+      "utility companies",
+      "strike",
+      "Kruel",
+      "Osvino",
+      "Goulart",
+      "Brizola",
+      "Lacerda",
+      "UST",
+      "CGT"
+    ],
+    "mods_subject_joined_ssim": [
+      "agrarian reform",
+      "Three Year Plan",
+      "utility companies",
+      "strike",
+      "Kruel",
+      "Osvino",
+      "Goulart",
+      "Brizola",
+      "Lacerda",
+      "UST",
+      "CGT"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "agrarian reform",
+      "Three Year Plan",
+      "utility companies",
+      "strike",
+      "Kruel",
+      "Osvino",
+      "Goulart",
+      "Brizola",
+      "Lacerda",
+      "UST",
+      "CGT"
+    ],
+    "mods_title_full_tsim": [
+      "Weeka 22"
+    ],
+    "mods_title_full_primary_tsi": "Weeka 22",
+    "primary_title": "Weeka 22",
+    "primary_title_txt_en_split": "Weeka 22",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:42:24.424Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weeka 22"
+  },
+  {
+    "pid": "bdr:334803",
+    "fed_created_dsi": "2014-03-19T18:42:41.810Z",
+    "object_created_dsi": "2014-03-19T18:42:41.810Z",
+    "fed_last_modified_dsi": "2021-11-22T13:43:33.333Z",
+    "object_last_modified_dsi": "2021-11-22T13:43:33.333Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:42:41.810000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 5063, \"checksum\": \"0277696bd737368037ea1340823c1f04953b8c65f8bb63b1183be543ffff7f144077ea03ff234264883ffee17d34320a2d9bfb97465d50a7586b3c1ae9b3dac1\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2018-08-07T17:23:34.630000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:42:41.810000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:42:41.810000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 364, \"checksum\": \"74afb07c768a386243ea88a756e545ef0033b79ebb26bcb6f1062a50858867073a23c61d7616ede44174ec9984604e202eb369d9131291b0c85fd5a5d504d753\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:42:41.810000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"75f1acfa9618e52eec7184123542f5ee9ac5622845c6009056fb76f4b808dae42fd74dc188fed2e5c09aa6e984586064304b2f47143d990bf2e93acbcfcad8e4\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:42:41.810000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6774, \"checksum\": \"83fe029fc729791c6f3a374baa44f0d7dcc2c71bfbb000c6486f16e0f987e9cb02b7fd8952e6f648593c88609a2de1d98686dc623c2ffc8ddb7db46518105ebf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-21T21:00:55.892000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"f5c93666b6cf1a1f1227aa3a1c8b032b24ba0432c1d5b5ee21acde461732850a628d3a572c9a97c9cb623801423eab37088a9276c2004915b40c30bb18f12c6e\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:43:33.333893Z\"}}",
+    "fed_object_size_lsi": 14807,
+    "object_size_lsi": 14807,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1963-04-25"
+    ],
+    "mods_dateAll_ssim": [
+      "1963-04-25"
+    ],
+    "dateIssued_year_ssim": [
+      "1963"
+    ],
+    "dateIssued_month_ssim": [
+      "04"
+    ],
+    "dateIssued_month_text_ssim": [
+      "April"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1963"
+    ],
+    "dateIssued": "1963-04-25T00:00:00Z",
+    "date_dsi": "1963-04-25T00:00:00Z",
+    "identifier": [
+      "POL 2-1 BRAZ",
+      "A-1220"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2-1 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-1220"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 3833"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 3833",
+      "POL 2-1 BRAZ 2/1/63",
+      "59",
+      "A1 1613-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2-1 BRAZ 2/1/63"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1613-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Beal, W.",
+      "Micelotta, F.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "Bentley, R.",
+      "Friedman, T.",
+      "Keyser, C. D.",
+      "Fishburn, J. T.",
+      "Goldstein, B. A.",
+      "Shapiro, H.",
+      "Mein, John Gordon"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Beal, W.",
+      "Micelotta, F.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "Bentley, R.",
+      "Friedman, T.",
+      "Keyser, C. D.",
+      "Fishburn, J. T.",
+      "Goldstein, B. A.",
+      "Shapiro, H.",
+      "Mein, John Gordon"
+    ],
+    "contributor": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Beal, W.",
+      "Micelotta, F.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "Bentley, R.",
+      "Friedman, T.",
+      "Keyser, C. D.",
+      "Fishburn, J. T.",
+      "Goldstein, B. A.",
+      "Shapiro, H."
+    ],
+    "contributor_string": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Beal, W.",
+      "Micelotta, F.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "Bentley, R.",
+      "Friedman, T.",
+      "Keyser, C. D.",
+      "Fishburn, J. T.",
+      "Goldstein, B. A.",
+      "Shapiro, H."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Rio de Janeiro (Brazil) (distribution place)",
+      "Beal, W. (drafter)",
+      "Micelotta, F. (drafter)",
+      "Weiner, H. (drafter)",
+      "Zweifel, D. (drafter)",
+      "Bentley, R. (drafter)",
+      "Friedman, T. (drafter)",
+      "Keyser, C. D. (drafter)",
+      "Fishburn, J. T. (drafter)",
+      "Goldstein, B. A. (drafter)",
+      "Shapiro, H. (drafter)",
+      "Mein, John Gordon"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Beal, W.",
+      "Micelotta, F.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "Bentley, R.",
+      "Friedman, T.",
+      "Keyser, C. D.",
+      "Fishburn, J. T.",
+      "Goldstein, B. A.",
+      "Shapiro, H."
+    ],
+    "keyword": [
+      "trade and payments",
+      "agrarian reform",
+      "Brazil-USSR",
+      "OAS",
+      "Dantas",
+      "Goulart",
+      "Chile",
+      "Goiás",
+      "petroleum",
+      "Guanabara",
+      "catholic",
+      "CNTI",
+      "Osvino",
+      "UNESCO",
+      "aeronautical club",
+      "Afonso",
+      "Borges"
+    ],
+    "mods_subject_ssim": [
+      "trade and payments",
+      "agrarian reform",
+      "Brazil-USSR",
+      "OAS",
+      "Dantas",
+      "Goulart",
+      "Chile",
+      "Goiás",
+      "petroleum",
+      "Guanabara",
+      "catholic",
+      "CNTI",
+      "Osvino",
+      "UNESCO",
+      "aeronautical club",
+      "Afonso",
+      "Borges"
+    ],
+    "mods_subject_local_ssim": [
+      "trade and payments",
+      "agrarian reform",
+      "Brazil-USSR",
+      "OAS",
+      "Dantas",
+      "Goulart",
+      "Chile",
+      "Goiás",
+      "petroleum",
+      "Guanabara",
+      "catholic",
+      "CNTI",
+      "Osvino",
+      "UNESCO",
+      "aeronautical club",
+      "Afonso",
+      "Borges"
+    ],
+    "mods_subject_joined_ssim": [
+      "trade and payments",
+      "agrarian reform",
+      "Brazil-USSR",
+      "OAS",
+      "Dantas",
+      "Goulart",
+      "Chile",
+      "Goiás",
+      "petroleum",
+      "Guanabara",
+      "catholic",
+      "CNTI",
+      "Osvino",
+      "UNESCO",
+      "aeronautical club",
+      "Afonso",
+      "Borges"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "trade and payments",
+      "agrarian reform",
+      "Brazil-USSR",
+      "OAS",
+      "Dantas",
+      "Goulart",
+      "Chile",
+      "Goiás",
+      "petroleum",
+      "Guanabara",
+      "catholic",
+      "CNTI",
+      "Osvino",
+      "UNESCO",
+      "aeronautical club",
+      "Afonso",
+      "Borges"
+    ],
+    "mods_title_full_tsim": [
+      "Joint Weeka 17"
+    ],
+    "mods_title_full_primary_tsi": "Joint Weeka 17",
+    "primary_title": "Joint Weeka 17",
+    "primary_title_txt_en_split": "Joint Weeka 17",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:43:34.127Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Joint Weeka 17"
+  },
+  {
+    "pid": "bdr:334827",
+    "fed_created_dsi": "2014-03-19T18:43:12.378Z",
+    "object_created_dsi": "2014-03-19T18:43:12.378Z",
+    "fed_last_modified_dsi": "2021-11-22T13:44:02.682Z",
+    "object_last_modified_dsi": "2021-11-22T13:44:02.682Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:43:12.378000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:43:12.378000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:43:12.378000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"a6f964c1b40085e864f08337e6a7f62fe08506f479d8f1dcb15632d948f7261256af82e4b71bd4aab790800b9e72bc49e298b5542a8be7bdc47c6c22cdd770d2\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:44:02.682587Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 364, \"checksum\": \"bd1e45f24332d139f66ce64266d0803716de7fe063018290c1dfe2ad9092eb9d9d8e5641c4e4b869aae13d24a0dc6ce447e0fc6aa96723e4acc816678b5cceb2\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:43:12.378000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"c0026f6c7dd9d05b1528bc65876e6a0d2996fef42038581b7525c952b38b66d8600724aba465bad34065a5f067b1089aee79e28317acb0404ac0fae1dc463867\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:43:12.378000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7115, \"checksum\": \"d3234a7e35f6a47e1bf00870ebdd8bc3672ec84281097a1e5d1d0bfb949d4bb0ab93b4b955371b7e9e77fabb051f53542396512e80d1cb710ca1c8a422a943f0\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-20T14:20:03.935000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 4506, \"checksum\": \"f8e1521c1a3d9f450db5ad0c4c4ff54eb8d8315fb894f020cd9fd643fe7a7926d60c388b0af51744f0be96d3a1e4bf8188c5e76fb2484fc0fa506978e400d110\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:26.812000Z\"}}",
+    "fed_object_size_lsi": 14591,
+    "object_size_lsi": 14591,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1963-04-04"
+    ],
+    "mods_dateAll_ssim": [
+      "1963-04-04"
+    ],
+    "dateIssued_year_ssim": [
+      "1963"
+    ],
+    "dateIssued_month_ssim": [
+      "04"
+    ],
+    "dateIssued_month_text_ssim": [
+      "April"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1963"
+    ],
+    "dateIssued": "1963-04-04T00:00:00Z",
+    "date_dsi": "1963-04-04T00:00:00Z",
+    "identifier": [
+      "POL 2-1 BRAZ",
+      "A-1140"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2-1 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-1140"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 3833"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 3833",
+      "POL 2-1 BRAZ 2/1/63",
+      "59",
+      "A1 1613-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2-1 BRAZ 2/1/63"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1613-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Bentley, R.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Zweifel, D.",
+      "Shapiro, H.",
+      "Walters, V. A.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Keppel, J.",
+      "Mein, John Gordon"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Bentley, R.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Zweifel, D.",
+      "Shapiro, H.",
+      "Walters, V. A.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Keppel, J.",
+      "Mein, John Gordon"
+    ],
+    "contributor": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Bentley, R.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Zweifel, D.",
+      "Shapiro, H.",
+      "Walters, V. A.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Keppel, J."
+    ],
+    "contributor_string": [
+      "State",
+      "Rio de Janeiro (Brazil)",
+      "Bentley, R.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Zweifel, D.",
+      "Shapiro, H.",
+      "Walters, V. A.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Keppel, J."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Rio de Janeiro (Brazil) (distribution place)",
+      "Bentley, R. (drafter)",
+      "Weiner, H. (drafter)",
+      "Micelotta, F. (drafter)",
+      "Zweifel, D. (drafter)",
+      "Shapiro, H. (drafter)",
+      "Walters, V. A. (drafter)",
+      "Ireland, J. (drafter)",
+      "Lucas, H. E. (drafter)",
+      "Keppel, J. (drafter)",
+      "Mein, John Gordon"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Bentley, R.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Zweifel, D.",
+      "Shapiro, H.",
+      "Walters, V. A.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Keppel, J."
+    ],
+    "keyword": [
+      "agrarian reform",
+      "Brizola",
+      "urban reform",
+      "Cardoso",
+      "UDN",
+      "Pernambuco",
+      "Goulart",
+      "Chile",
+      "Bidault",
+      "public transport",
+      "BAF",
+      "Lacerda",
+      "Osorio"
+    ],
+    "mods_subject_ssim": [
+      "agrarian reform",
+      "Brizola",
+      "urban reform",
+      "Cardoso",
+      "UDN",
+      "Pernambuco",
+      "Goulart",
+      "Chile",
+      "Bidault",
+      "public transport",
+      "BAF",
+      "Lacerda",
+      "Osorio"
+    ],
+    "mods_subject_local_ssim": [
+      "agrarian reform",
+      "Brizola",
+      "urban reform",
+      "Cardoso",
+      "UDN",
+      "Pernambuco",
+      "Goulart",
+      "Chile",
+      "Bidault",
+      "public transport",
+      "BAF",
+      "Lacerda",
+      "Osorio"
+    ],
+    "mods_subject_joined_ssim": [
+      "agrarian reform",
+      "Brizola",
+      "urban reform",
+      "Cardoso",
+      "UDN",
+      "Pernambuco",
+      "Goulart",
+      "Chile",
+      "Bidault",
+      "public transport",
+      "BAF",
+      "Lacerda",
+      "Osorio"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "agrarian reform",
+      "Brizola",
+      "urban reform",
+      "Cardoso",
+      "UDN",
+      "Pernambuco",
+      "Goulart",
+      "Chile",
+      "Bidault",
+      "public transport",
+      "BAF",
+      "Lacerda",
+      "Osorio"
+    ],
+    "mods_title_full_tsim": [
+      "Joint Weeka 14"
+    ],
+    "mods_title_full_primary_tsi": "Joint Weeka 14",
+    "primary_title": "Joint Weeka 14",
+    "primary_title_txt_en_split": "Joint Weeka 14",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:44:03.533Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Joint Weeka 14"
+  },
+  {
+    "pid": "bdr:334873",
+    "fed_created_dsi": "2014-03-19T18:44:11.147Z",
+    "object_created_dsi": "2014-03-19T18:44:11.147Z",
+    "fed_last_modified_dsi": "2021-11-22T13:45:02.854Z",
+    "object_last_modified_dsi": "2021-11-22T13:45:02.854Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:11.147000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"21caea9505d9ff901c0b0a0629678fb2ea810de74470926d52eeac5568b9ab60b47cea6246f6fc6ca12699fcda471e0428347b4cb6accdcf21e2d75f56378efd\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:45:02.854315Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:11.147000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:11.147000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"6ad477775182075514acb1c9bc59e36e1a603c702e161b0f8031288f42b601ef5ae92ba74af50cc637bd4f8599a679c738f1a510d3b1b3c1eb6dc5b8bffe18fb\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:11.147000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7478, \"checksum\": \"86fa1107e51aaeb87d647d955ce4de5b26fc67ca96bda9fff3cfedd5331040a8f8c1f9222b60953db0b5142b43977bcdf50d33f86772e59ebbebf9539b68f0ac\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-21T21:02:18.214000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 363, \"checksum\": \"b39b4a10fee93fab9ba970046a5052f75ecbd3d597b1c3c78a00cd9d2b59f406e1836104efb8be190c29649d10df66626d62c715bea269233b6028b0f24b9678\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:11.147000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 3973, \"checksum\": \"bcedcc90be55e2a48fa2308b578cfdeb107629b8b97999ccca7082f73f86dbae3b382ffdc4dfca4614ad2afeefd6a4b644bc574ce354f756d8d94e9168404bd5\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2018-08-07T19:54:31.608000Z\"}}",
+    "fed_object_size_lsi": 14420,
+    "object_size_lsi": 14420,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1963-03-05"
+    ],
+    "mods_dateAll_ssim": [
+      "1963-03-05"
+    ],
+    "dateIssued_year_ssim": [
+      "1963"
+    ],
+    "dateIssued_month_ssim": [
+      "03"
+    ],
+    "dateIssued_month_text_ssim": [
+      "March"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1963"
+    ],
+    "dateIssued": "1963-03-05T00:00:00Z",
+    "date_dsi": "1963-03-05T00:00:00Z",
+    "identifier": [
+      "POL 2-1 BRAZ",
+      "A-993"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2-1 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-993"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 3833"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 3833",
+      "POL 2-1 BRAZ 2/1/63",
+      "59",
+      "A1 1613-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2-1 BRAZ 2/1/63"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1613-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Brasília (Brazil)",
+      "Carson, C. C.",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "McLean, J. P.",
+      "shapiro, H.",
+      "Micelotta, F.",
+      "Ireland, J. M."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Carson, C. C.",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "McLean, J. P.",
+      "shapiro, H.",
+      "Micelotta, F.",
+      "Ireland, J. M."
+    ],
+    "contributor": [
+      "State",
+      "Brasília (Brazil)",
+      "Carson, C. C.",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "McLean, J. P.",
+      "shapiro, H.",
+      "Micelotta, F.",
+      "Ireland, J. M."
+    ],
+    "contributor_string": [
+      "State",
+      "Brasília (Brazil)",
+      "Carson, C. C.",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "McLean, J. P.",
+      "shapiro, H.",
+      "Micelotta, F.",
+      "Ireland, J. M."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Brasília (Brazil) (distribution place)",
+      "Carson, C. C. (drafter)",
+      "Keyser, C. D. (drafter)",
+      "Weiner, H. (drafter)",
+      "Zweifel, D. (drafter)",
+      "McLean, J. P. (drafter)",
+      "shapiro, H. (drafter)",
+      "Micelotta, F. (drafter)",
+      "Ireland, J. M. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Brasília (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Brasília (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Carson, C. C.",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Zweifel, D.",
+      "McLean, J. P.",
+      "shapiro, H.",
+      "Micelotta, F.",
+      "Ireland, J. M."
+    ],
+    "keyword": [
+      "Little Lobster War",
+      "Dantas",
+      "Goulart",
+      "administrative reform",
+      "Venezuela",
+      "Levy",
+      "Chile",
+      "Jânio Quadros",
+      "Kubitschek",
+      "Camargo"
+    ],
+    "mods_subject_ssim": [
+      "Little Lobster War",
+      "Dantas",
+      "Goulart",
+      "administrative reform",
+      "Venezuela",
+      "Levy",
+      "Chile",
+      "Jânio Quadros",
+      "Kubitschek",
+      "Camargo"
+    ],
+    "mods_subject_local_ssim": [
+      "Little Lobster War",
+      "Dantas",
+      "Goulart",
+      "administrative reform",
+      "Venezuela",
+      "Levy",
+      "Chile",
+      "Jânio Quadros",
+      "Kubitschek",
+      "Camargo"
+    ],
+    "mods_subject_joined_ssim": [
+      "Little Lobster War",
+      "Dantas",
+      "Goulart",
+      "administrative reform",
+      "Venezuela",
+      "Levy",
+      "Chile",
+      "Jânio Quadros",
+      "Kubitschek",
+      "Camargo"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Little Lobster War",
+      "Dantas",
+      "Goulart",
+      "administrative reform",
+      "Venezuela",
+      "Levy",
+      "Chile",
+      "Jânio Quadros",
+      "Kubitschek",
+      "Camargo"
+    ],
+    "mods_title_full_tsim": [
+      "Joint Weeka 10"
+    ],
+    "mods_title_full_primary_tsi": "Joint Weeka 10",
+    "primary_title": "Joint Weeka 10",
+    "primary_title_txt_en_split": "Joint Weeka 10",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:45:03.913Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Joint Weeka 10"
+  },
+  {
+    "pid": "bdr:334924",
+    "fed_created_dsi": "2014-03-19T20:42:10.727Z",
+    "object_created_dsi": "2014-03-19T20:42:10.727Z",
+    "fed_last_modified_dsi": "2021-11-22T13:46:09.487Z",
+    "object_last_modified_dsi": "2021-11-22T13:46:09.487Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:42:10.727000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"05a3ea9eab67f425d55431d5b9d0e099c1358722fc33d509eae4c07cacf2ffe78c2a08136fbf08c65c9047f119bdcf3b9cd6875c59e458e662c1c2a4a5ef8f2b\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:46:09.487581Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:42:10.727000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"3e67a90156a9188bde23f8faf1218dda1e4f5edc7ce9e45d6d774bf90971978bb9598725b47f170d19de395c363f5230f19a42193fec8a7436180ea9a79a8c88\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:42:10.727000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:42:10.727000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6528, \"checksum\": \"cbf7650acb9121b5d9b60989ba12654b38c98ff433b3be423e4d09ccb47e3cbf9efd237a8f1cc03c6b41e0a1eaad0745ec46950409a2945b87d8f3a5eee0ba6c\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-20T20:43:14.463000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 4332, \"checksum\": \"e9a439ba0418137188dfeb6ec10ad9f5d0ab443b414c565dda69a34f5d0147a4c2ee1cedb9e5968b0e7db223b08331a7cbcb4d6d637c3333b1e67ba2f25059d6\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:32.512000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"ebaba617ccd01a47a392dce0742714591279e0929a17b2306cf551bfda290d82e6b5ec2843c171ce4c0d3229cf925d5a49fac07f0ddaa80b98e7b24a718b200b\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:42:10.727000Z\"}}",
+    "fed_object_size_lsi": 13826,
+    "object_size_lsi": 13826,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-26"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-26"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-26T00:00:00Z",
+    "date_dsi": "1964-08-26T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-22"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-22"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Belo Horizonte (Brazil)",
+      "Okun, H. S."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Okun, H. S."
+    ],
+    "contributor": [
+      "State",
+      "Belo Horizonte (Brazil)",
+      "Okun, H. S."
+    ],
+    "contributor_string": [
+      "State",
+      "Belo Horizonte (Brazil)",
+      "Okun, H. S."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Belo Horizonte (Brazil) (distribution place)",
+      "Okun, H. S. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Belo Horizonte (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Belo Horizonte (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Okun, H. S."
+    ],
+    "other_title": [
+      "A-17",
+      "Weekly Summary No. 29",
+      "A-20",
+      "A-49",
+      "A-9",
+      "A-21"
+    ],
+    "keyword": [
+      "Stabilization",
+      "Magalhães Pinto",
+      "business",
+      "PSP",
+      "Minerals policy",
+      "Hanna Company",
+      "Operation Cleanup",
+      "Alliance for Progress",
+      "Juanita Castro Ruz"
+    ],
+    "mods_subject_ssim": [
+      "Stabilization",
+      "Magalhães Pinto",
+      "business",
+      "PSP",
+      "Minerals policy",
+      "Hanna Company",
+      "Operation Cleanup",
+      "Alliance for Progress",
+      "Juanita Castro Ruz"
+    ],
+    "mods_subject_local_ssim": [
+      "Stabilization",
+      "Magalhães Pinto",
+      "business",
+      "PSP",
+      "Minerals policy",
+      "Hanna Company",
+      "Operation Cleanup",
+      "Alliance for Progress",
+      "Juanita Castro Ruz"
+    ],
+    "mods_subject_joined_ssim": [
+      "Stabilization",
+      "Magalhães Pinto",
+      "business",
+      "PSP",
+      "Minerals policy",
+      "Hanna Company",
+      "Operation Cleanup",
+      "Alliance for Progress",
+      "Juanita Castro Ruz"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Stabilization",
+      "Magalhães Pinto",
+      "business",
+      "PSP",
+      "Minerals policy",
+      "Hanna Company",
+      "Operation Cleanup",
+      "Alliance for Progress",
+      "Juanita Castro Ruz"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 30 (August 12-24, 1964)"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 30 (August 12-24, 1964)",
+    "primary_title": "Weekly Summary No. 30 (August 12-24, 1964)",
+    "primary_title_txt_en_split": "Weekly Summary No. 30 (August 12-24, 1964)",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:46:10.321Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 30 (August 12-24, 1964)"
+  },
+  {
+    "pid": "bdr:334910",
+    "fed_created_dsi": "2014-03-19T18:44:55.942Z",
+    "object_created_dsi": "2014-03-19T18:44:55.942Z",
+    "fed_last_modified_dsi": "2021-11-22T13:45:51.875Z",
+    "object_last_modified_dsi": "2021-11-22T13:45:51.875Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:55.942000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:55.942000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:55.942000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"7a86a1bc74ec24f7863b1bb5cf97497cf2382fe2fa3da8c82d069785e9803d8ef4a789f96e93690e955a8f31356830a86af97ee416eb0b1ad20cf88ebcdb0435\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:55.942000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"a55f567c655e6e8e298b6a83b874a0d96a2a3468384db54cafe4fb51ba951bfc5de3e425abe7d89b92bff6e5c3e7198ee9de312909dd5a02e746f2dd59bf5b1a\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:45:51.875501Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 3687, \"checksum\": \"b51315ce6fba89f69a188f27e75ff33484b3ab8da0650ebdb87f29e29c1f7e9dad64254231cd03e9323b46ac9f976ec5495acd37a17a85d2cf03e315107c0280\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2018-08-07T19:09:02.292000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7695, \"checksum\": \"d3a8f9cf4a5cad495166bca1193bc8b6673985c68adbabfef8a81b7d9546b94ce38e1329122c04cbc0b35638900087cf598643e68400debb9e1ed604e4b24993\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:18:46.985000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 363, \"checksum\": \"ecc5964ae56265fdb20dc37410ce3ebb91121742cab6fde65748a93b0e5bc0750a5136bea8b6276646cd5ca6f4843f037664ec4c46595da299fc6fab8892944e\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T18:44:55.942000Z\"}}",
+    "fed_object_size_lsi": 14351,
+    "object_size_lsi": 14351,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1963-02-05"
+    ],
+    "mods_dateAll_ssim": [
+      "1963-02-05"
+    ],
+    "dateIssued_year_ssim": [
+      "1963"
+    ],
+    "dateIssued_month_ssim": [
+      "02"
+    ],
+    "dateIssued_month_text_ssim": [
+      "February"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1963"
+    ],
+    "dateIssued": "1963-02-05T00:00:00Z",
+    "date_dsi": "1963-02-05T00:00:00Z",
+    "identifier": [
+      "POL 2-1 BRAZ",
+      "A-899"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2-1 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-899"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 3833"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 3833",
+      "POL 2-1 BRAZ 2/1/63",
+      "59",
+      "A1 1613-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2-1 BRAZ 2/1/63"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1613-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Brasília (Brazil)",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Ransome, A. L.",
+      "Connelly, F. P.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Mein, John Gordon"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Ransome, A. L.",
+      "Connelly, F. P.",
+      "Ireland, J.",
+      "Lucas, H. E.",
+      "Mein, John Gordon"
+    ],
+    "contributor": [
+      "State",
+      "Brasília (Brazil)",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Ransome, A. L.",
+      "Connelly, F. P.",
+      "Ireland, J.",
+      "Lucas, H. E."
+    ],
+    "contributor_string": [
+      "State",
+      "Brasília (Brazil)",
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Ransome, A. L.",
+      "Connelly, F. P.",
+      "Ireland, J.",
+      "Lucas, H. E."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Brasília (Brazil) (distribution place)",
+      "Keyser, C. D. (drafter)",
+      "Weiner, H. (drafter)",
+      "Micelotta, F. (drafter)",
+      "Ransome, A. L. (drafter)",
+      "Connelly, F. P. (drafter)",
+      "Ireland, J. (drafter)",
+      "Lucas, H. E. (drafter)",
+      "Mein, John Gordon"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Brasília (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Brasília (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Keyser, C. D.",
+      "Weiner, H.",
+      "Micelotta, F.",
+      "Ransome, A. L.",
+      "Connelly, F. P.",
+      "Ireland, J.",
+      "Lucas, H. E."
+    ],
+    "keyword": [
+      "Goulart",
+      "Cuba",
+      "Peru",
+      "petroleum",
+      "nationalization",
+      "Petrobrás",
+      "Guanabara",
+      "Arrães"
+    ],
+    "mods_subject_ssim": [
+      "Goulart",
+      "Cuba",
+      "Peru",
+      "petroleum",
+      "nationalization",
+      "Petrobrás",
+      "Guanabara",
+      "Arrães"
+    ],
+    "mods_subject_local_ssim": [
+      "Goulart",
+      "Cuba",
+      "Peru",
+      "petroleum",
+      "nationalization",
+      "Petrobrás",
+      "Guanabara",
+      "Arrães"
+    ],
+    "mods_subject_joined_ssim": [
+      "Goulart",
+      "Cuba",
+      "Peru",
+      "petroleum",
+      "nationalization",
+      "Petrobrás",
+      "Guanabara",
+      "Arrães"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Goulart",
+      "Cuba",
+      "Peru",
+      "petroleum",
+      "nationalization",
+      "Petrobrás",
+      "Guanabara",
+      "Arrães"
+    ],
+    "mods_title_full_tsim": [
+      "Joint Weeka 6"
+    ],
+    "mods_title_full_primary_tsi": "Joint Weeka 6",
+    "primary_title": "Joint Weeka 6",
+    "primary_title_txt_en_split": "Joint Weeka 6",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:45:52.718Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Joint Weeka 6"
+  },
+  {
+    "pid": "bdr:334983",
+    "fed_created_dsi": "2014-03-19T20:44:02.369Z",
+    "object_created_dsi": "2014-03-19T20:44:02.369Z",
+    "fed_last_modified_dsi": "2021-11-22T13:47:24.663Z",
+    "object_last_modified_dsi": "2021-11-22T13:47:24.663Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:02.369000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2314, \"checksum\": \"0b8b0c210e502670a4a1ab29a6c7cde6fe2a63df1e03465d6e1f5941510fe1be9f02314f8e90017741ad2ac86bbc9a4f4f0afa1aa516a75f17138bff25cd84fb\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:39.351000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:02.369000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:02.369000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 5271, \"checksum\": \"b2e92951b011c914d2edaf64cf5f70d7fb5562dc3db62fd25228946ce596bdfd74719b81f7a8122d99f59ff920a19dadda4ada29906b73d91c7e6391319f3c16\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T14:18:55.834000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"e514a3f958715f80dd292f585cfb1b87a2321267126c94215f36c36b1dfc917be14b4766b18cf65836e885e850549903fc6cb5909a5d289a36a5ad5b42ad29b9\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:47:24.663444Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"ef38e16945430c89b89f7243ec806450970ef648764afed77c3921ab7bc0002ae65ead18363198179d44d40a0a57349aa5dd53808aa971d9f4625ce97f4d160b\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:02.369000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 362, \"checksum\": \"fddf9e18605d61ab65231a8590d3a3e0687fe5358769772028f3fc6dbb98c07a83657bed01acbe41e1aac0b48f514c55e904412b92e8a319b6a573d8f712233e\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:02.369000Z\"}}",
+    "fed_object_size_lsi": 10553,
+    "object_size_lsi": 10553,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-17"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-17"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-17T00:00:00Z",
+    "date_dsi": "1964-08-17T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "Rio 387"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "Rio 387"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "telegrams"
+    ],
+    "mods_genre_aat_ssim": [
+      "telegrams"
+    ],
+    "genre_aat": [
+      "telegrams"
+    ],
+    "name": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State"
+    ],
+    "contributor": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "contributor_string": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Rio de Janeiro (Brazil) (distribution place)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "other_title": [
+      "A-143"
+    ],
+    "keyword": [
+      "Growth",
+      "Private sector",
+      "Public sector"
+    ],
+    "mods_subject_ssim": [
+      "Growth",
+      "Private sector",
+      "Public sector"
+    ],
+    "mods_subject_local_ssim": [
+      "Growth",
+      "Private sector",
+      "Public sector"
+    ],
+    "mods_subject_joined_ssim": [
+      "Growth",
+      "Private sector",
+      "Public sector"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Growth",
+      "Private sector",
+      "Public sector"
+    ],
+    "mods_title_full_tsim": [
+      "Correction to Embassy A-143, August 7, 1964"
+    ],
+    "mods_title_full_primary_tsi": "Correction to Embassy A-143, August 7, 1964",
+    "primary_title": "Correction to Embassy A-143, August 7, 1964",
+    "primary_title_txt_en_split": "Correction to Embassy A-143, August 7, 1964",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:47:25.481Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Correction to Embassy A-143, August 7, 1964"
+  },
+  {
+    "pid": "bdr:334986",
+    "fed_created_dsi": "2014-03-19T20:44:06.109Z",
+    "object_created_dsi": "2014-03-19T20:44:06.109Z",
+    "fed_last_modified_dsi": "2021-11-22T13:47:27.915Z",
+    "object_last_modified_dsi": "2021-11-22T13:47:27.915Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:06.109000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2511, \"checksum\": \"06a220d4079c65b252ea9d3bf7c8dcf0df674392f8533a8c46e4acda476b8a03959fc16a1a08635c5420044b08192d6e566c062a901570b120d91d953f6314e3\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:39.938000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"219524ca27086f03e923695e43b56b9ae94b4a938089577d82c94ec61f402125f2cfa5b838a82cdb7be1be5ae12c75791ef0eccef64b25e0af9c0d64fa51ee83\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:47:27.915803Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:06.109000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:06.109000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"722d8aa79e8717d4d6787cd20d6d7d88ee676d586d1b31af87edd65a97c294b537304c633d43b90a1b6bbe0515724435ca1b29dff17b92db4901fca24b5bb9e2\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:06.109000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7404, \"checksum\": \"933a382cd5cc231150b6217680f8e197a79626a5d15593fe968a26e749e08827140deee4ac5a12d92f586a96f6c870f26bdacc683ff8d1e2bac0127fb9b0c77e\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T15:14:49.361000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 362, \"checksum\": \"ce1f7a652ed98b3507828e30bb6b752f0a37ee45e2073eb7f8cc9ebb929d05b0573942d2f186d346f43964662b4ade09ba5b4c80f49a2c4e8d5e2e964a77a327\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:44:06.109000Z\"}}",
+    "fed_object_size_lsi": 12883,
+    "object_size_lsi": 12883,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-17"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-17"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-17T00:00:00Z",
+    "date_dsi": "1964-08-17T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "Rio 374"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "Rio 374"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "telegrams"
+    ],
+    "mods_genre_aat_ssim": [
+      "telegrams"
+    ],
+    "genre_aat": [
+      "telegrams"
+    ],
+    "name": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State"
+    ],
+    "contributor": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "contributor_string": [
+      "State",
+      "Rio de Janeiro (Brazil)"
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Rio de Janeiro (Brazil) (distribution place)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Rio de Janeiro (Brazil)"
+    ],
+    "keyword": [
+      "Roberto Campos",
+      "Economic policy",
+      "Stabilization",
+      "hard-line",
+      "Wage policy"
+    ],
+    "mods_subject_ssim": [
+      "Roberto Campos",
+      "Economic policy",
+      "Stabilization",
+      "hard-line",
+      "Wage policy"
+    ],
+    "mods_subject_local_ssim": [
+      "Roberto Campos",
+      "Economic policy",
+      "Stabilization",
+      "hard-line",
+      "Wage policy"
+    ],
+    "mods_subject_joined_ssim": [
+      "Roberto Campos",
+      "Economic policy",
+      "Stabilization",
+      "hard-line",
+      "Wage policy"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Roberto Campos",
+      "Economic policy",
+      "Stabilization",
+      "hard-line",
+      "Wage policy"
+    ],
+    "mods_title_full_tsim": [
+      "Conversation with Roberto Campos on Political Developments Affecting Economic Policy"
+    ],
+    "mods_title_full_primary_tsi": "Conversation with Roberto Campos on Political Developments Affecting Economic Policy",
+    "primary_title": "Conversation with Roberto Campos on Political Developments Affecting Economic Policy",
+    "primary_title_txt_en_split": "Conversation with Roberto Campos on Political Developments Affecting Economic Policy",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:47:28.780Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Conversation with Roberto Campos on Political Developments Affecting Economic Policy"
+  },
+  {
+    "pid": "bdr:334977",
+    "fed_created_dsi": "2014-03-19T20:43:49.926Z",
+    "object_created_dsi": "2014-03-19T20:43:49.926Z",
+    "fed_last_modified_dsi": "2021-11-22T13:47:16.708Z",
+    "object_last_modified_dsi": "2021-11-22T13:47:16.708Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:43:49.926000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"21adaad17c821bab23a58b572cdc7fb2519a777312bb37d77d4f28133459d66865e5a792fe310422222dfe14b2bd67268af61d63c7009a9e4e90fe1e6d93c210\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:47:16.708124Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7815, \"checksum\": \"29d5ce528096f02b498cd1a70aa1b614aa7fa86c0cf0770cd19052e46ff2d54a0937716bd96f0c2422e4c0db52879b9649c1b33a2524a25b2c32bd0d6400afd0\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T14:42:52.469000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:43:49.926000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 359, \"checksum\": \"3bd9cda1613461cd4b3bd5399a251297082bc4af3a85020c630e8102fd410ddf0065405ff7269903e0ca071c49943b7e282a656d3f6bc5ebac0049992a730cfb\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:43:49.926000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:43:49.926000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2877, \"checksum\": \"99fe80ad41a747eca5122352e6e76429c68536ed9f08427e302ba81778a641f744922c34c9920212d6ef6d442d4afeb36c8d28817f3604a1cd1d5f2e1b2a295a\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:38.740000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"cc1dd2434beaa5f5495b9d135f6bd4b22890afc8f1d19d0d93f8c9616498bcf460dbeff294f446a340c31a328ed3f577649c704b38b47c31208b6769bfc97494\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:43:49.926000Z\"}}",
+    "fed_object_size_lsi": 13657,
+    "object_size_lsi": 13657,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-18"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-18"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-18T00:00:00Z",
+    "date_dsi": "1964-08-18T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-8"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-8"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Duffield, Thomas J."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Duffield, Thomas J."
+    ],
+    "contributor": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Duffield, Thomas J."
+    ],
+    "contributor_string": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Duffield, Thomas J."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil) (distribution place)",
+      "Duffield, Thomas J. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Duffield, Thomas J."
+    ],
+    "keyword": [
+      "Solano Borgres",
+      "Meneghetti",
+      "IRGA",
+      "Mário de Lima Beck",
+      "IDB",
+      "Germany",
+      "Miss Universe"
+    ],
+    "mods_subject_ssim": [
+      "Solano Borgres",
+      "Meneghetti",
+      "IRGA",
+      "Mário de Lima Beck",
+      "IDB",
+      "Germany",
+      "Miss Universe"
+    ],
+    "mods_subject_local_ssim": [
+      "Solano Borgres",
+      "Meneghetti",
+      "IRGA",
+      "Mário de Lima Beck",
+      "IDB",
+      "Germany",
+      "Miss Universe"
+    ],
+    "mods_subject_joined_ssim": [
+      "Solano Borgres",
+      "Meneghetti",
+      "IRGA",
+      "Mário de Lima Beck",
+      "IDB",
+      "Germany",
+      "Miss Universe"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Solano Borgres",
+      "Meneghetti",
+      "IRGA",
+      "Mário de Lima Beck",
+      "IDB",
+      "Germany",
+      "Miss Universe"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 7"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 7",
+    "primary_title": "Weekly Summary No. 7",
+    "primary_title_txt_en_split": "Weekly Summary No. 7",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:47:17.480Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 7"
+  },
+  {
+    "pid": "bdr:335037",
+    "fed_created_dsi": "2014-03-19T20:45:10.775Z",
+    "object_created_dsi": "2014-03-19T20:45:10.775Z",
+    "fed_last_modified_dsi": "2021-11-22T13:48:33.786Z",
+    "object_last_modified_dsi": "2021-11-22T13:48:33.786Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:10.775000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"1d9b69ffff88322475e1cd4e4816115ce3413b1a847dd68109be3efcb940e84c3a9353c2bbb89320a3a9e2c03a349bd7b25ba21b5dad583ff85a469865f9abd0\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:10.775000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:10.775000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:10.775000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6624, \"checksum\": \"81d8f15db5028a54b413f919b7e9abeb5de25ee1e4e4acd3f3195ce4469223b2fd4418c9bc1a8f3448bc398fa3cc992fe7ba435df5d54ad2deac010f3cf5d819\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T15:07:16.364000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 3780, \"checksum\": \"b1d29225df668de006a776f3b080c27790c6f867d698eb5c0976bd870190dd942049dc842bf3cc09574e19ad7843bf2921f825a72f6807f9d3fef898fca856a6\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:45.880000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"bcd94dcf6adca2913f5e449cf76f66d9152826f14e3a5867cb60ce983bddd1b4e2308da7c1c22ee878392283eef4917fb7790c6a5a4f8c1b5782fd1354a895e6\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:48:33.786616Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"dd38ef5a7a638711c58deaa1728f1800a9924a523af7ed56363743a9fc975e9e2d41e79bd5822d23ba9437f8f6bb7f906d534c56f985e4e888da676926d188a9\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:10.775000Z\"}}",
+    "fed_object_size_lsi": 13370,
+    "object_size_lsi": 13370,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-11"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-11"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-11T00:00:00Z",
+    "date_dsi": "1964-08-11T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-04"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-04"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Belém (Brazil)",
+      "Eisner, A. H.",
+      "Bloom, H."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Eisner, A. H.",
+      "Bloom, H."
+    ],
+    "contributor": [
+      "State",
+      "Belém (Brazil)",
+      "Eisner, A. H."
+    ],
+    "contributor_string": [
+      "State",
+      "Belém (Brazil)",
+      "Eisner, A. H."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Belém (Brazil) (distribution place)",
+      "Eisner, A. H. (drafter)",
+      "Bloom, H."
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Belém (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Belém (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Eisner, A. H."
+    ],
+    "other_title": [
+      "A-3"
+    ],
+    "keyword": [
+      "Amazonas",
+      "Acre",
+      "Inflation",
+      "Austerity",
+      "Federal projects",
+      "PSD",
+      "Pará",
+      "Governor Belo",
+      "Jarbas Passarinho",
+      "Expenditure law",
+      "Governor Reis"
+    ],
+    "mods_subject_ssim": [
+      "Amazonas",
+      "Acre",
+      "Inflation",
+      "Austerity",
+      "Federal projects",
+      "PSD",
+      "Pará",
+      "Governor Belo",
+      "Jarbas Passarinho",
+      "Expenditure law",
+      "Governor Reis"
+    ],
+    "mods_subject_local_ssim": [
+      "Amazonas",
+      "Acre",
+      "Inflation",
+      "Austerity",
+      "Federal projects",
+      "PSD",
+      "Pará",
+      "Governor Belo",
+      "Jarbas Passarinho",
+      "Expenditure law",
+      "Governor Reis"
+    ],
+    "mods_subject_joined_ssim": [
+      "Amazonas",
+      "Acre",
+      "Inflation",
+      "Austerity",
+      "Federal projects",
+      "PSD",
+      "Pará",
+      "Governor Belo",
+      "Jarbas Passarinho",
+      "Expenditure law",
+      "Governor Reis"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Amazonas",
+      "Acre",
+      "Inflation",
+      "Austerity",
+      "Federal projects",
+      "PSD",
+      "Pará",
+      "Governor Belo",
+      "Jarbas Passarinho",
+      "Expenditure law",
+      "Governor Reis"
+    ],
+    "mods_title_full_tsim": [
+      "Monthly Summary - July 1964"
+    ],
+    "mods_title_full_primary_tsi": "Monthly Summary - July 1964",
+    "primary_title": "Monthly Summary - July 1964",
+    "primary_title_txt_en_split": "Monthly Summary - July 1964",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:48:34.551Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Monthly Summary - July 1964"
+  },
+  {
+    "pid": "bdr:335071",
+    "fed_created_dsi": "2014-03-19T20:45:54.568Z",
+    "object_created_dsi": "2014-03-19T20:45:54.568Z",
+    "fed_last_modified_dsi": "2021-11-22T13:49:17.455Z",
+    "object_last_modified_dsi": "2021-11-22T13:49:17.455Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:54.568000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:54.568000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"3901e8966f5e6fef44a9a3871e79883a701ded720ae479caa1daeaa0139e0d71cc756b02d67824ced01e50f108bb8b230e1a6cc3e94b6d54e267f957dfed3d34\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:54.568000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"40bc5016a805f18b8d60a8dcbbcb54d55d6dd1c229973020f587a612f6515cd0f0360fa8deea188c99254bada70e5a2e6246c5915e22c1e194d998418ce4ac42\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:54.568000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:45:54.568000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"9cebcbb5cbbd8bf1cd2471e7a52f50a2b0548bfc5f0af8609358405450db0f3298f0621d42e56704aa5b09fd268e044e5cc9595fa1972a218d464f25adc787b5\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:49:17.455442Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7682, \"checksum\": \"ce238f2f3639a2091e9379987f6824a34a8358640458e90dd070b7fda01856b737bd35786da3c59890393a8dd68f93eeab6cf6a20351ac30e36901510a799d30\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T17:14:34.126000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 3080, \"checksum\": \"d9e04db288092ed35642e3893f4b09586fa44128cc73b5e72990907677b74158aa3df6ed039281ac74b56e9192ec64e7153844819b43d50daadf2f6cd357536b\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:49.105000Z\"}}",
+    "fed_object_size_lsi": 13728,
+    "object_size_lsi": 13728,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-06"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-06"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-06T00:00:00Z",
+    "date_dsi": "1964-08-06T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-19"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-19"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Recife (Brazil)",
+      "MacDougall, H. C.",
+      "Exton, F."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "MacDougall, H. C.",
+      "Exton, F."
+    ],
+    "contributor": [
+      "State",
+      "Recife (Brazil)",
+      "MacDougall, H. C.",
+      "Exton, F."
+    ],
+    "contributor_string": [
+      "State",
+      "Recife (Brazil)",
+      "MacDougall, H. C.",
+      "Exton, F."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Recife (Brazil) (distribution place)",
+      "MacDougall, H. C. (drafter)",
+      "Exton, F. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Recife (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Recife (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "MacDougall, H. C.",
+      "Exton, F."
+    ],
+    "keyword": [
+      "General Mourão",
+      "Admiral Heck",
+      "SUDENE",
+      "Sérgio Rezende",
+      "Labor-interventors",
+      "Labor Juntas",
+      "Northeast Navy"
+    ],
+    "mods_subject_ssim": [
+      "General Mourão",
+      "Admiral Heck",
+      "SUDENE",
+      "Sérgio Rezende",
+      "Labor-interventors",
+      "Labor Juntas",
+      "Northeast Navy"
+    ],
+    "mods_subject_local_ssim": [
+      "General Mourão",
+      "Admiral Heck",
+      "SUDENE",
+      "Sérgio Rezende",
+      "Labor-interventors",
+      "Labor Juntas",
+      "Northeast Navy"
+    ],
+    "mods_subject_joined_ssim": [
+      "General Mourão",
+      "Admiral Heck",
+      "SUDENE",
+      "Sérgio Rezende",
+      "Labor-interventors",
+      "Labor Juntas",
+      "Northeast Navy"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "General Mourão",
+      "Admiral Heck",
+      "SUDENE",
+      "Sérgio Rezende",
+      "Labor-interventors",
+      "Labor Juntas",
+      "Northeast Navy"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 53 (July 28 - August 3, 1964)"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 53 (July 28 - August 3, 1964)",
+    "primary_title": "Weekly Summary No. 53 (July 28 - August 3, 1964)",
+    "primary_title_txt_en_split": "Weekly Summary No. 53 (July 28 - August 3, 1964)",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:49:18.229Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 53 (July 28 - August 3, 1964)"
+  },
+  {
+    "pid": "bdr:335078",
+    "fed_created_dsi": "2014-03-19T20:46:03.164Z",
+    "object_created_dsi": "2014-03-19T20:46:03.164Z",
+    "fed_last_modified_dsi": "2021-11-22T13:49:25.382Z",
+    "object_last_modified_dsi": "2021-11-22T13:49:25.382Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:03.164000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:03.164000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:03.164000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 1945, \"checksum\": \"72ccab30bd44787dc506f03c47862cb1ab134070a63247ecba5a246632ba19007e46007649465d63d8775782a0a83d0dbb5879c676a757b250f75e6d8e51cdd0\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:49.836000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7384, \"checksum\": \"73f11f311c25eab87fca7cdcd52c8acd67671dfee42f8e8ed95cf59ba204ba65c63a29580bcfa09b669929f0f7a6d44951597a04b6063de63194c04152b302cc\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T21:41:45.355000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"8e6d5d1d6bb2782f104d29fc1e9150b152a0233017f1371f3637583163ca443b88d1bf3aa7d664bc9e68b6768ee4a027166c689ebf7f69dd72dda2c391d31c53\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:49:25.382729Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"c4e1d9957105890ce4821587f46a565d72a019ced333ae01dbda83a4a1c604f810b65781d19a1bed1e08287e53ca66b87bd8a9d1aa554e0f2fdf8712ee052c3b\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:03.164000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 366, \"checksum\": \"c67f1c80d5b7d88458979955bc4a0038620acd1713f994941c0a485ae0d7c284521483e1c9cc169699b6afd95e619234f6bda9d21844c6db667dbb9630a13134\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:03.164000Z\"}}",
+    "fed_object_size_lsi": 12301,
+    "object_size_lsi": 12301,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-08-05"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-08-05"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "08"
+    ],
+    "dateIssued_month_text_ssim": [
+      "August"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-08-05T00:00:00Z",
+    "date_dsi": "1964-08-05T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "São Paulo 22"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "São Paulo 22"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 8/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 8/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "telegrams"
+    ],
+    "mods_genre_aat_ssim": [
+      "telegrams"
+    ],
+    "genre_aat": [
+      "telegrams"
+    ],
+    "name": [
+      "State",
+      "São Paulo"
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State"
+    ],
+    "contributor": [
+      "State",
+      "São Paulo"
+    ],
+    "contributor_string": [
+      "State",
+      "São Paulo"
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "São Paulo (distribution place)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "São Paulo"
+    ],
+    "mods_name_place_ssim": [
+      "São Paulo"
+    ],
+    "keyword": [
+      "CGI",
+      "Wheat-importation scandal"
+    ],
+    "mods_subject_ssim": [
+      "CGI",
+      "Wheat-importation scandal"
+    ],
+    "mods_subject_local_ssim": [
+      "CGI",
+      "Wheat-importation scandal"
+    ],
+    "mods_subject_joined_ssim": [
+      "CGI",
+      "Wheat-importation scandal"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "CGI",
+      "Wheat-importation scandal"
+    ],
+    "mods_title_full_tsim": [
+      "Adhemar Investigation"
+    ],
+    "mods_title_full_primary_tsi": "Adhemar Investigation",
+    "primary_title": "Adhemar Investigation",
+    "primary_title_txt_en_split": "Adhemar Investigation",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:49:26.161Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Adhemar Investigation"
+  },
+  {
+    "pid": "bdr:335100",
+    "fed_created_dsi": "2014-03-19T20:46:32.561Z",
+    "object_created_dsi": "2014-03-19T20:46:32.561Z",
+    "fed_last_modified_dsi": "2021-11-22T13:49:54.300Z",
+    "object_last_modified_dsi": "2021-11-22T13:49:54.300Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:32.561000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"15f29ce7acb3248db383e37e4169b1924fbbde257fd711a2060fb3db0a8d82b65a951e3989314c493b1efb1f2cc381ba2d8376e8ac66b99a63e0d472b1c0ec2d\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:32.561000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6613, \"checksum\": \"1f274cb28f54af52b4aa27f22d9dac150329a36eb3a00038b4640d7ce84b0ff2fcdc587deac8af29db4fd2a77decdeef22df7b119573e737fa10cedca620320a\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-28T03:39:33.429000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2375, \"checksum\": \"26c7ba021413063e29d304bf69ef468d15ac311ef41fb87747a8d6f5131edc3fc974f53ca70ee41f2f90e88da55a20d6f201b6e6dc95fbd5829b28b892f3e0cc\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:52.617000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:32.561000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"52a85510fa1da7b2ba333df01f522f2392659ad94aaced2089bd240c38b245565ba7b8bbd0781305fd6dbd669cae89d0de651401a293b52abfddb0df00d0e73f\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:49:54.300766Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:32.561000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"67119cbf801826fb0b8292014f7823f4c0d67a8e43761e234125474407eab6b3cdd20b08e03f130a5f1abffea00320926efc072be3011965268e6caa2a5f93ca\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:32.561000Z\"}}",
+    "fed_object_size_lsi": 11954,
+    "object_size_lsi": 11954,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-31"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-31"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-31T00:00:00Z",
+    "date_dsi": "1964-07-31T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-11"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-11"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Salvador (Brazil)",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "contributor": [
+      "State",
+      "Salvador (Brazil)",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "contributor_string": [
+      "State",
+      "Salvador (Brazil)",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Salvador (Brazil) (distribution place)",
+      "Midkiff, H. M. (drafter)",
+      "McCloskey, R. G. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "keyword": [
+      "Prices",
+      "Ambassador Magalhães",
+      "Navy"
+    ],
+    "mods_subject_ssim": [
+      "Prices",
+      "Ambassador Magalhães",
+      "Navy"
+    ],
+    "mods_subject_local_ssim": [
+      "Prices",
+      "Ambassador Magalhães",
+      "Navy"
+    ],
+    "mods_subject_joined_ssim": [
+      "Prices",
+      "Ambassador Magalhães",
+      "Navy"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Prices",
+      "Ambassador Magalhães",
+      "Navy"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly summary"
+    ],
+    "mods_title_full_primary_tsi": "Weekly summary",
+    "primary_title": "Weekly summary",
+    "primary_title_txt_en_split": "Weekly summary",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:49:55.091Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly summary"
+  },
+  {
+    "pid": "bdr:335107",
+    "fed_created_dsi": "2014-03-19T20:46:42.039Z",
+    "object_created_dsi": "2014-03-19T20:46:42.039Z",
+    "fed_last_modified_dsi": "2021-11-22T13:50:02.463Z",
+    "object_last_modified_dsi": "2021-11-22T13:50:02.463Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:42.039000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6255, \"checksum\": \"255c0c93d71a9f1b01a7eb8cd1ba2bff130ae8f8b412c3067317de3a309e7f2de8d6cc8fce2c326418eab194e83ebc721f91e395e95600ea61466b367e1dddee\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T11:07:40.888000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:42.039000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:42.039000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2269, \"checksum\": \"667292e83eee62ca83275655d7c0402d15c7e9a909dd6481b8ff1f5c4b4f6af080a28a2537aa41b248e8a151eebef93bdce17ffe0a3a06f8ceb38845f9332416\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:21:53.256000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"764dfa5be9455ac1a1523914e1df6b837a1e846fe608fee9dc2a7857c6786159c8a2638355b6eafef9bf93b0c969adf1ada5e230447243a6c15b661590b42836\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:42.039000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 362, \"checksum\": \"8e28f0f5b3681a779006b88ce5936c895855037230fa0a841d45aec231cedcc5061e7bfbe3f4fd4b956bb092c29f36dc853b1fbf94ecd2b45c98738f63d32baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:46:42.039000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"a691e54d4da5d3db15cc2f8eafa31836c32c72be81f93e178865f580bfd4dbd366cee72876ea3576eb571c421d839a0ee39e949ca0e7c1b4d170ff81ae63d2f4\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:50:02.463895Z\"}}",
+    "fed_object_size_lsi": 11492,
+    "object_size_lsi": 11492,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-30"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-30"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-30T00:00:00Z",
+    "date_dsi": "1964-07-30T00:00:00Z",
+    "identifier": [
+      "XR POL 2 BRAZ",
+      "A-27"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "XR POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-27"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "São Paulo",
+      "Lyon, S. C."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Lyon, S. C."
+    ],
+    "contributor": [
+      "State",
+      "São Paulo",
+      "Lyon, S. C."
+    ],
+    "contributor_string": [
+      "State",
+      "São Paulo",
+      "Lyon, S. C."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "São Paulo (distribution place)",
+      "Lyon, S. C. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "São Paulo"
+    ],
+    "mods_name_place_ssim": [
+      "São Paulo"
+    ],
+    "mods_role_drafter_ssim": [
+      "Lyon, S. C."
+    ],
+    "keyword": [
+      "Castello Branco",
+      "Goulart",
+      "Kruel"
+    ],
+    "mods_subject_ssim": [
+      "Castello Branco",
+      "Goulart",
+      "Kruel"
+    ],
+    "mods_subject_local_ssim": [
+      "Castello Branco",
+      "Goulart",
+      "Kruel"
+    ],
+    "mods_subject_joined_ssim": [
+      "Castello Branco",
+      "Goulart",
+      "Kruel"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Castello Branco",
+      "Goulart",
+      "Kruel"
+    ],
+    "mods_title_full_tsim": [
+      "Conversation with General Amaury KRUEL concerning the revolution and current political situation in Brazil"
+    ],
+    "mods_title_full_primary_tsi": "Conversation with General Amaury KRUEL concerning the revolution and current political situation in Brazil",
+    "primary_title": "Conversation with General Amaury KRUEL concerning the revolution and current political situation in Brazil",
+    "primary_title_txt_en_split": "Conversation with General Amaury KRUEL concerning the revolution and current political situation in Brazil",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:50:03.370Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Conversation with General Amaury KRUEL concerning the revolution and current political situation in Brazil"
+  },
+  {
+    "pid": "bdr:335148",
+    "fed_created_dsi": "2014-03-19T20:47:48.419Z",
+    "object_created_dsi": "2014-03-19T20:47:48.419Z",
+    "fed_last_modified_dsi": "2021-11-22T13:50:54.406Z",
+    "object_last_modified_dsi": "2021-11-22T13:50:54.406Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:47:48.419000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:47:48.419000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"4140cdeb75eca62723f0c9fe3064c549de89b5e2d8dc384ec147877ce647554121c689fe50376c206268945770f6f720f9436f62d03b7412bb2ddb0f30918f40\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:47:48.419000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:47:48.419000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 3336, \"checksum\": \"89f0f63bc598d3cbce00b1101e85435e76c8f1bc9fc3a8a1dd8d3946104546f62847c3ba6cbf6c8d5ab7cd914ffe9a88fef1ab23441a8650074ad7cdd9651cc5\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2020-04-09T15:31:23.943000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"8e7553739c900f3730184adb2474c4e37c58212d168021467b6de281786639fa58760bf62348b8b78ecfd11f298a0b9bab6b70a054d3a34194a7e80908b384e3\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:47:48.419000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"9eb9268efb094fab425bd80591ed6d9e9c3efc5c69a9843f2b81b48d4d7890f519b3e668466aaf55d3905b4f699105f328572e03874c022bb363d733f7822227\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:50:54.406084Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6667, \"checksum\": \"e0389a3aff8d4dcd71fdafa52e870db37b831a2576c90db1716fba3e1191c2e317839bde4b2ac50a7d2a6cc86cd24e956e549f697368f51131df66e3a7f49765\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T16:09:02.484000Z\"}}",
+    "fed_object_size_lsi": 12969,
+    "object_size_lsi": 12969,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-23"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-23"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-23T00:00:00Z",
+    "date_dsi": "1964-07-23T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-20"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-20"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "name": [
+      "State",
+      "São Paulo",
+      "Proper",
+      "Lyon, Scott C."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Proper",
+      "Lyon, Scott C."
+    ],
+    "contributor": [
+      "State",
+      "São Paulo",
+      "Proper"
+    ],
+    "contributor_string": [
+      "State",
+      "São Paulo",
+      "Proper"
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "São Paulo (distribution place)",
+      "Proper (drafter)",
+      "Lyon, Scott C."
+    ],
+    "mods_role_distribution_place_ssim": [
+      "São Paulo"
+    ],
+    "mods_name_place_ssim": [
+      "São Paulo"
+    ],
+    "mods_role_drafter_ssim": [
+      "Proper"
+    ],
+    "keyword": [
+      "Julia Mesquita",
+      "Carvalho Pinto",
+      "Paulistas",
+      "Castello Branco",
+      "Lacerda",
+      "Coup d'etat",
+      "Folha de São Paulo",
+      "Morimoto",
+      "Kennedy"
+    ],
+    "mods_subject_ssim": [
+      "Julia Mesquita",
+      "Carvalho Pinto",
+      "Paulistas",
+      "Castello Branco",
+      "Lacerda",
+      "Coup d'etat",
+      "Folha de São Paulo",
+      "Morimoto",
+      "Kennedy"
+    ],
+    "mods_subject_local_ssim": [
+      "Julia Mesquita",
+      "Carvalho Pinto",
+      "Paulistas",
+      "Castello Branco",
+      "Lacerda",
+      "Coup d'etat",
+      "Folha de São Paulo",
+      "Morimoto",
+      "Kennedy"
+    ],
+    "mods_subject_joined_ssim": [
+      "Julia Mesquita",
+      "Carvalho Pinto",
+      "Paulistas",
+      "Castello Branco",
+      "Lacerda",
+      "Coup d'etat",
+      "Folha de São Paulo",
+      "Morimoto",
+      "Kennedy"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Julia Mesquita",
+      "Carvalho Pinto",
+      "Paulistas",
+      "Castello Branco",
+      "Lacerda",
+      "Coup d'etat",
+      "Folha de São Paulo",
+      "Morimoto",
+      "Kennedy"
+    ],
+    "mods_type_of_resource": [
+      "text"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 30"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 30",
+    "primary_title": "Weekly Summary No. 30",
+    "primary_title_txt_en_split": "Weekly Summary No. 30",
+    "resource_type_ssi": "text_resources",
+    "timestamp": "2021-11-22T13:50:55.195Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 30"
+  },
+  {
+    "pid": "bdr:335188",
+    "fed_created_dsi": "2014-03-19T20:49:00.166Z",
+    "object_created_dsi": "2014-03-19T20:49:00.166Z",
+    "fed_last_modified_dsi": "2021-11-22T13:51:46.044Z",
+    "object_last_modified_dsi": "2021-11-22T13:51:46.044Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:49:00.166000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"235d2bd459ce83adc0f974e33881b43b7acd1dcb317093c77592f692f5a3b66be0fef062f9f011ef22047c688018027ff9337cdf00532c95d3e247584e8577f0\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:49:00.166000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:49:00.166000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"3c24dda312fd09b93833e5191b37f6e8f2612f09d7aebea5dc39fcaf32e475b0f1abe80acf20b3ea306f65634ea3a8688f0cf576308a0151b97a7bd52f12db2d\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:51:46.044378Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:49:00.166000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7041, \"checksum\": \"69ea25e0fbf1d7eef1df49986545e4db4392cd4bec7ea9f1a3ff3eafaa1aa5e078a7206fff334d7d98509c45f45029ada898f9b6bacc141efbdc4d390431e72f\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T13:16:49.566000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 359, \"checksum\": \"d8deec50c1d4577903b59fcb297f571302e80611c651937d95c39c7b6bf7ca6364816af08db123d2cf7e7697be66c78a10c8b61350915eeeb559205a20cfad85\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:49:00.166000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 4557, \"checksum\": \"daa54d875c992e05bc065d80c4d4a5fc583bd35449a1e387a969aac4ea27bdf46ffa2843b557dbecf15063937d8e961634516688a656f266a1ecb783dea5cb70\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:22:02.076000Z\"}}",
+    "fed_object_size_lsi": 14563,
+    "object_size_lsi": 14563,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-14"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-14"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-14T00:00:00Z",
+    "date_dsi": "1964-07-14T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-2"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-2"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Duffield, Thomas J."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Duffield, Thomas J."
+    ],
+    "contributor": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Duffield, Thomas J."
+    ],
+    "contributor_string": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Duffield, Thomas J."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil) (distribution place)",
+      "Duffield, Thomas J. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Duffield, Thomas J."
+    ],
+    "keyword": [
+      "Ildo Meneghetti",
+      "RGS",
+      "Labor",
+      "American & Foreign Power Company, Inc.",
+      "Mario Mondino",
+      "PDC",
+      "William Medeiros",
+      "Mario Poppe de Figueiredo",
+      "Justino Alves Bastos",
+      "III Army",
+      "Paulo Brossard",
+      "Civil rights",
+      "Negroes",
+      "Juana Castro Ruz",
+      "Cuba",
+      "OAS",
+      "IBRD"
+    ],
+    "mods_subject_ssim": [
+      "Ildo Meneghetti",
+      "RGS",
+      "Labor",
+      "American & Foreign Power Company, Inc.",
+      "Mario Mondino",
+      "PDC",
+      "William Medeiros",
+      "Mario Poppe de Figueiredo",
+      "Justino Alves Bastos",
+      "III Army",
+      "Paulo Brossard",
+      "Civil rights",
+      "Negroes",
+      "Juana Castro Ruz",
+      "Cuba",
+      "OAS",
+      "IBRD"
+    ],
+    "mods_subject_local_ssim": [
+      "Ildo Meneghetti",
+      "RGS",
+      "Labor",
+      "American & Foreign Power Company, Inc.",
+      "Mario Mondino",
+      "PDC",
+      "William Medeiros",
+      "Mario Poppe de Figueiredo",
+      "Justino Alves Bastos",
+      "III Army",
+      "Paulo Brossard",
+      "Civil rights",
+      "Negroes",
+      "Juana Castro Ruz",
+      "Cuba",
+      "OAS",
+      "IBRD"
+    ],
+    "mods_subject_joined_ssim": [
+      "Ildo Meneghetti",
+      "RGS",
+      "Labor",
+      "American & Foreign Power Company, Inc.",
+      "Mario Mondino",
+      "PDC",
+      "William Medeiros",
+      "Mario Poppe de Figueiredo",
+      "Justino Alves Bastos",
+      "III Army",
+      "Paulo Brossard",
+      "Civil rights",
+      "Negroes",
+      "Juana Castro Ruz",
+      "Cuba",
+      "OAS",
+      "IBRD"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Ildo Meneghetti",
+      "RGS",
+      "Labor",
+      "American & Foreign Power Company, Inc.",
+      "Mario Mondino",
+      "PDC",
+      "William Medeiros",
+      "Mario Poppe de Figueiredo",
+      "Justino Alves Bastos",
+      "III Army",
+      "Paulo Brossard",
+      "Civil rights",
+      "Negroes",
+      "Juana Castro Ruz",
+      "Cuba",
+      "OAS",
+      "IBRD"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 2"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 2",
+    "primary_title": "Weekly Summary No. 2",
+    "primary_title_txt_en_split": "Weekly Summary No. 2",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:51:46.847Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 2"
+  },
+  {
+    "pid": "bdr:335234",
+    "fed_created_dsi": "2014-03-19T20:50:37.864Z",
+    "object_created_dsi": "2014-03-19T20:50:37.864Z",
+    "fed_last_modified_dsi": "2021-11-22T13:52:47.707Z",
+    "object_last_modified_dsi": "2021-11-22T13:52:47.707Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:37.864000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"10894f3d3be5219f0ff601238ca82dd2a0cb219f6d50df98a33561e0f5cb0ec24160468cf3d17fc13867a01f23d689aa2ed0dbd3704ac008f190e5903b93de27\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:52:47.707127Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:37.864000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:37.864000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"67ef62d7e53359eaaeef79197ec5c5faa99352b0698c41fe84d16852f358e420e31d350ed25cb2a27e2c81c270cb82b928f46b49e01e3a066a9a2f399dcb392a\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:37.864000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7512, \"checksum\": \"a024a9233aaf0a55c29641f47e8a8da17c452ecb764dcca7f1a5437b62eff5dc5434917468fd9b729aff534de54eb88718715d833917d57cebe5c114727cbc2a\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T11:38:55.814000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 7056, \"checksum\": \"a809bdbc181b93a91aa7ca0d390d954f695e56b347e40624f6b2726c34f31a376a707a3e1b571bddc204f46377bcaf4c6d0e8fc766116e128cae082155ae0bc7\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:22:07.278000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 359, \"checksum\": \"d68848bb1c329ac64797fdcf680984af3b6aa3f0ab68cab10c476d36d68ec118002d225e1b0dde8a46c2770a768969749b10ef88d0684f0ca194e7f82d5474d2\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:37.864000Z\"}}",
+    "fed_object_size_lsi": 17533,
+    "object_size_lsi": 17533,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-07"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-07"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-07T00:00:00Z",
+    "date_dsi": "1964-07-07T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-1"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-1"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Barnhart, D. H."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Barnhart, D. H."
+    ],
+    "contributor": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Barnhart, D. H."
+    ],
+    "contributor_string": [
+      "State",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)",
+      "Barnhart, D. H."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Pôrto Alegre (Rio Grande do Sul, Brazil) (distribution place)",
+      "Barnhart, D. H. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Pôrto Alegre (Rio Grande do Sul, Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Barnhart, D. H."
+    ],
+    "keyword": [
+      "Meneghetti",
+      "Porto Alegre",
+      "Mario Mondino",
+      "PTB",
+      "PSD",
+      "ADP",
+      "Alexandre Machado",
+      "Suely de Oliveira",
+      "Alberto Hoffmann",
+      "Antonio Pires",
+      "Antonio Mesquita",
+      "MTR",
+      "India",
+      "Vicent Herbert Coelho",
+      "South Africa",
+      "Social problems",
+      "Ambassador",
+      "Masao Fujimoto",
+      "Japan",
+      "Tokyo",
+      "Justino Quintana",
+      "prisoner",
+      "Hugo Garrastazú",
+      "Bagé",
+      "Walter Alexandre Almeida",
+      "Élida Rodrigues Costa",
+      "American financial group",
+      "loan",
+      "Civil Rights Bill",
+      "U.E.E.",
+      "Mario Poppe de Figueiredo",
+      "Nathanael Gomes Alvares"
+    ],
+    "mods_subject_ssim": [
+      "Meneghetti",
+      "Porto Alegre",
+      "Mario Mondino",
+      "PTB",
+      "PSD",
+      "ADP",
+      "Alexandre Machado",
+      "Suely de Oliveira",
+      "Alberto Hoffmann",
+      "Antonio Pires",
+      "Antonio Mesquita",
+      "MTR",
+      "India",
+      "Vicent Herbert Coelho",
+      "South Africa",
+      "Social problems",
+      "Ambassador",
+      "Masao Fujimoto",
+      "Japan",
+      "Tokyo",
+      "Justino Quintana",
+      "prisoner",
+      "Hugo Garrastazú",
+      "Bagé",
+      "Walter Alexandre Almeida",
+      "Élida Rodrigues Costa",
+      "American financial group",
+      "loan",
+      "Civil Rights Bill",
+      "U.E.E.",
+      "Mario Poppe de Figueiredo",
+      "Nathanael Gomes Alvares"
+    ],
+    "mods_subject_local_ssim": [
+      "Meneghetti",
+      "Porto Alegre",
+      "Mario Mondino",
+      "PTB",
+      "PSD",
+      "ADP",
+      "Alexandre Machado",
+      "Suely de Oliveira",
+      "Alberto Hoffmann",
+      "Antonio Pires",
+      "Antonio Mesquita",
+      "MTR",
+      "India",
+      "Vicent Herbert Coelho",
+      "South Africa",
+      "Social problems",
+      "Ambassador",
+      "Masao Fujimoto",
+      "Japan",
+      "Tokyo",
+      "Justino Quintana",
+      "prisoner",
+      "Hugo Garrastazú",
+      "Bagé",
+      "Walter Alexandre Almeida",
+      "Élida Rodrigues Costa",
+      "American financial group",
+      "loan",
+      "Civil Rights Bill",
+      "U.E.E.",
+      "Mario Poppe de Figueiredo",
+      "Nathanael Gomes Alvares"
+    ],
+    "mods_subject_joined_ssim": [
+      "Meneghetti",
+      "Porto Alegre",
+      "Mario Mondino",
+      "PTB",
+      "PSD",
+      "ADP",
+      "Alexandre Machado",
+      "Suely de Oliveira",
+      "Alberto Hoffmann",
+      "Antonio Pires",
+      "Antonio Mesquita",
+      "MTR",
+      "India",
+      "Vicent Herbert Coelho",
+      "South Africa",
+      "Social problems",
+      "Ambassador",
+      "Masao Fujimoto",
+      "Japan",
+      "Tokyo",
+      "Justino Quintana",
+      "prisoner",
+      "Hugo Garrastazú",
+      "Bagé",
+      "Walter Alexandre Almeida",
+      "Élida Rodrigues Costa",
+      "American financial group",
+      "loan",
+      "Civil Rights Bill",
+      "U.E.E.",
+      "Mario Poppe de Figueiredo",
+      "Nathanael Gomes Alvares"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Meneghetti",
+      "Porto Alegre",
+      "Mario Mondino",
+      "PTB",
+      "PSD",
+      "ADP",
+      "Alexandre Machado",
+      "Suely de Oliveira",
+      "Alberto Hoffmann",
+      "Antonio Pires",
+      "Antonio Mesquita",
+      "MTR",
+      "India",
+      "Vicent Herbert Coelho",
+      "South Africa",
+      "Social problems",
+      "Ambassador",
+      "Masao Fujimoto",
+      "Japan",
+      "Tokyo",
+      "Justino Quintana",
+      "prisoner",
+      "Hugo Garrastazú",
+      "Bagé",
+      "Walter Alexandre Almeida",
+      "Élida Rodrigues Costa",
+      "American financial group",
+      "loan",
+      "Civil Rights Bill",
+      "U.E.E.",
+      "Mario Poppe de Figueiredo",
+      "Nathanael Gomes Alvares"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 1"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 1",
+    "primary_title": "Weekly Summary No. 1",
+    "primary_title_txt_en_split": "Weekly Summary No. 1",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:52:48.637Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 1"
+  },
+  {
+    "pid": "bdr:335241",
+    "fed_created_dsi": "2014-03-19T20:50:49.553Z",
+    "object_created_dsi": "2014-03-19T20:50:49.553Z",
+    "fed_last_modified_dsi": "2021-11-22T13:52:56.770Z",
+    "object_last_modified_dsi": "2021-11-22T13:52:56.770Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:49.553000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:49.553000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"3b5689c5a6eb6dbeb348f52ca08c2e8e7b98d50e11ed6647b559c4b798d04859d7328d6462086c805f4f8b26fe9bb67c6a8bea90f9bcbcd88c742b63e317e617\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:49.553000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"4d8d81220c29858ec24d1f911140b2c8ffc29d6c17103c8d632efaf1c784dc4c9222d93429801f30d0e924fe593ec89aa34e903322f5a5152558c72abf29644c\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:52:56.770111Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:49.553000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 3773, \"checksum\": \"5eda2d53c6f579092868096eb17c1961c7b5f772c3daf7a0bebd0ad87571feb39144502c8040f97d0c23568f5a63417041df45dd65ac6aef94afae29eae51dea\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:22:07.948000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 359, \"checksum\": \"68e90238eba24f243084d10ec2f3cbc1e310c664cc14a890452dd2ba9bfdfc9c85ee0116cb3c5884d9c9e61a8c6318425cebb3facd38a84de6a42e46ccb2c73f\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:50:49.553000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7083, \"checksum\": \"eac9cf0f7bb9e10b2ea1b921a6b73d433f41472895b1f031d30fec24f7f0838e3357aceb9c0cb1dd484aeb5cbac8c533fc07000edf34009d28adf477eabf8ce5\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-20T17:57:31.337000Z\"}}",
+    "fed_object_size_lsi": 13821,
+    "object_size_lsi": 13821,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-10"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-10"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-10T00:00:00Z",
+    "date_dsi": "1964-07-10T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-3"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-3"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Curitiba (Brazil)",
+      "Gilbertson, G. D."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Gilbertson, G. D."
+    ],
+    "contributor": [
+      "State",
+      "Curitiba (Brazil)",
+      "Gilbertson, G. D."
+    ],
+    "contributor_string": [
+      "State",
+      "Curitiba (Brazil)",
+      "Gilbertson, G. D."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Curitiba (Brazil) (distribution place)",
+      "Gilbertson, G. D. (drafter)",
+      "Gilbertson, G. D."
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Curitiba (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Curitiba (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Gilbertson, G. D."
+    ],
+    "keyword": [
+      "Political poll",
+      "Paulo Pimentel",
+      "Paraná",
+      "Curitiba",
+      "Ney Braga",
+      "Kubitchek",
+      "Quadros",
+      "Affonso Camarga Netto",
+      "Castello Branco",
+      "Carlos Lacerda",
+      "PDC",
+      "PTB"
+    ],
+    "mods_subject_ssim": [
+      "Political poll",
+      "Paulo Pimentel",
+      "Paraná",
+      "Curitiba",
+      "Ney Braga",
+      "Kubitchek",
+      "Quadros",
+      "Affonso Camarga Netto",
+      "Castello Branco",
+      "Carlos Lacerda",
+      "PDC",
+      "PTB"
+    ],
+    "mods_subject_local_ssim": [
+      "Political poll",
+      "Paulo Pimentel",
+      "Paraná",
+      "Curitiba",
+      "Ney Braga",
+      "Kubitchek",
+      "Quadros",
+      "Affonso Camarga Netto",
+      "Castello Branco",
+      "Carlos Lacerda",
+      "PDC",
+      "PTB"
+    ],
+    "mods_subject_joined_ssim": [
+      "Political poll",
+      "Paulo Pimentel",
+      "Paraná",
+      "Curitiba",
+      "Ney Braga",
+      "Kubitchek",
+      "Quadros",
+      "Affonso Camarga Netto",
+      "Castello Branco",
+      "Carlos Lacerda",
+      "PDC",
+      "PTB"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Political poll",
+      "Paulo Pimentel",
+      "Paraná",
+      "Curitiba",
+      "Ney Braga",
+      "Kubitchek",
+      "Quadros",
+      "Affonso Camarga Netto",
+      "Castello Branco",
+      "Carlos Lacerda",
+      "PDC",
+      "PTB"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 4"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 4",
+    "primary_title": "Weekly Summary No. 4",
+    "primary_title_txt_en_split": "Weekly Summary No. 4",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:52:57.774Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 4"
+  },
+  {
+    "pid": "bdr:335271",
+    "fed_created_dsi": "2014-03-19T20:51:45.420Z",
+    "object_created_dsi": "2014-03-19T20:51:45.420Z",
+    "fed_last_modified_dsi": "2021-11-22T13:53:37.500Z",
+    "object_last_modified_dsi": "2021-11-22T13:53:37.500Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:45.420000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:45.420000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"4b760d50d23cf25a8fe2a4c9327a8c4df7094643eecd5a41a993d09ccd2dd7c090e7bfcbb376f2bd58400184267521c5fc87f15208b91b11f3fa543eab214f3f\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:53:37.500876Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:45.420000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"6d09e36e98a34ee11c6be0da309b3b22c86d3517def4a8d72ffcf8510aa7d30992567fae90c0ed3d4515fbbe36eb02f6c0b472d29300e8b2cbbf49c125d4e577\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:45.420000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2776, \"checksum\": \"b961befcd5fcaadf846de16c91acb9e6f8fe092de2aad05878618123b128149d80d54f48c676b3384f7af26023e9ab3fdfc62a6f3202b6ac7213c95f873bbc14\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:22:11.634000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 359, \"checksum\": \"c628514152650825a51e8e2a10afc2336ff2f02628d715c46b7f9cf3499bbddbf6a3cc5960a065420aee4132362e99e3ae9249c8a9cbb40084a5097016583d6c\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:45.420000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6896, \"checksum\": \"fb68904d81daeb5fde714c60d52d4bab420d11128fa4ead8d08ad02704207c6bb1492b06763597aee82ebf5a773e9d40b0249488e56c5d714eed924b083f4a5f\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-26T14:38:17.993000Z\"}}",
+    "fed_object_size_lsi": 12637,
+    "object_size_lsi": 12637,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-03"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-03"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-03T00:00:00Z",
+    "date_dsi": "1964-07-03T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-1"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-1"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Salvador (Brazil)",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "contributor": [
+      "State",
+      "Salvador (Brazil)",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "contributor_string": [
+      "State",
+      "Salvador (Brazil)",
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Salvador (Brazil) (distribution place)",
+      "Midkiff, H. M. (drafter)",
+      "McCloskey, R. G. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Midkiff, H. M.",
+      "McCloskey, R. G."
+    ],
+    "keyword": [
+      "Miguel Calmon du Pin e Almeida",
+      "José Fernandes Pedral Sampaio",
+      "Brizola eleven",
+      "Ouro Para o Bem do Brasil",
+      "Wilson Lins de Albuquerque"
+    ],
+    "mods_subject_ssim": [
+      "Miguel Calmon du Pin e Almeida",
+      "José Fernandes Pedral Sampaio",
+      "Brizola eleven",
+      "Ouro Para o Bem do Brasil",
+      "Wilson Lins de Albuquerque"
+    ],
+    "mods_subject_local_ssim": [
+      "Miguel Calmon du Pin e Almeida",
+      "José Fernandes Pedral Sampaio",
+      "Brizola eleven",
+      "Ouro Para o Bem do Brasil",
+      "Wilson Lins de Albuquerque"
+    ],
+    "mods_subject_joined_ssim": [
+      "Miguel Calmon du Pin e Almeida",
+      "José Fernandes Pedral Sampaio",
+      "Brizola eleven",
+      "Ouro Para o Bem do Brasil",
+      "Wilson Lins de Albuquerque"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Miguel Calmon du Pin e Almeida",
+      "José Fernandes Pedral Sampaio",
+      "Brizola eleven",
+      "Ouro Para o Bem do Brasil",
+      "Wilson Lins de Albuquerque"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly summary"
+    ],
+    "mods_title_full_primary_tsi": "Weekly summary",
+    "primary_title": "Weekly summary",
+    "primary_title_txt_en_split": "Weekly summary",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:53:38.330Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly summary"
+  },
+  {
+    "pid": "bdr:335276",
+    "fed_created_dsi": "2014-03-19T20:51:53.682Z",
+    "object_created_dsi": "2014-03-19T20:51:53.682Z",
+    "fed_last_modified_dsi": "2021-11-22T13:53:43.567Z",
+    "object_last_modified_dsi": "2021-11-22T13:53:43.567Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:53.682000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"04b68cdb35efa18a87b62a1e8118cb7693dfe725238f3715a18c3a855ea09a210b2d24fe1ce7e11ff47716a8b553cf407ab4c95df34eb4e6b3643d6103fdd873\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:53.682000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:53.682000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2231, \"checksum\": \"404babe331cdb24cce6899dadce2230dc3d819dfc449ea038bd312e95dce52dc50ca34af120119cbc15aa35328e489dbad32a3b2f6d41f5c1c3d857b5ae4bddd\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:22:12.260000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:53.682000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"8d07c389c10d3ca60d94cecda8d39326216e79caebcccdbe0e25e7a71301ac6e403fb1a9d4e72da37abdcca2fba62cc3d3504fc1dc908aae6d513fb2a4db9c27\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:53:43.567641Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7366, \"checksum\": \"8fbc8f5dbffe0209933b38918ad222a44c349137fbb84286ee32ae20c23323e8cebe0a4426ed0dcd79b811f83e18135af72017e700bd5f869f638f27e13841e1\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-24T10:30:12.489000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 359, \"checksum\": \"c631ef0d53dd9909e995e23f9d4463c1f3b0930f141a7164e094c06207ef37fc5697992af9df7434a2d4b114057848ac80cd5917d9ac8004b7225ec9402db403\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:51:53.682000Z\"}}",
+    "fed_object_size_lsi": 12562,
+    "object_size_lsi": 12562,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-02"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-02"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-02T00:00:00Z",
+    "date_dsi": "1964-07-02T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-3"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-3"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Recife (Brazil)",
+      "MacDougall, H. C."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "MacDougall, H. C."
+    ],
+    "contributor": [
+      "State",
+      "Recife (Brazil)",
+      "MacDougall, H. C."
+    ],
+    "contributor_string": [
+      "State",
+      "Recife (Brazil)",
+      "MacDougall, H. C."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Recife (Brazil) (distribution place)",
+      "MacDougall, H. C. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Recife (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Recife (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "MacDougall, H. C."
+    ],
+    "keyword": [
+      "Preventive custody",
+      "Miguel Arraes",
+      "Military tribunal"
+    ],
+    "mods_subject_ssim": [
+      "Preventive custody",
+      "Miguel Arraes",
+      "Military tribunal"
+    ],
+    "mods_subject_local_ssim": [
+      "Preventive custody",
+      "Miguel Arraes",
+      "Military tribunal"
+    ],
+    "mods_subject_joined_ssim": [
+      "Preventive custody",
+      "Miguel Arraes",
+      "Military tribunal"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Preventive custody",
+      "Miguel Arraes",
+      "Military tribunal"
+    ],
+    "mods_title_full_tsim": [
+      "More Preventive Custody in the Northeast"
+    ],
+    "mods_title_full_primary_tsi": "More Preventive Custody in the Northeast",
+    "primary_title": "More Preventive Custody in the Northeast",
+    "primary_title_txt_en_split": "More Preventive Custody in the Northeast",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:53:44.415Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "More Preventive Custody in the Northeast"
+  },
+  {
+    "pid": "bdr:335312",
+    "fed_created_dsi": "2014-03-19T20:52:55.560Z",
+    "object_created_dsi": "2014-03-19T20:52:55.560Z",
+    "fed_last_modified_dsi": "2021-11-22T13:54:37.017Z",
+    "object_last_modified_dsi": "2021-11-22T13:54:37.017Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:55.560000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2883, \"checksum\": \"16b4b5cea807c3138d55e5cb61a02ba94aa95167938ae6250aa56b7dec7c341d91b47f2e690400326dcd0ad6b7bf3953622e35902c8eca09e7c11b94741f6c00\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:31:44.618000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"220a6706d85a839f9c2a24531c52b73b5febbc987078755ffc0bdb7224fd0ff946f74b501b50731368bdac302961b08bd589a3decb8920e4a7001a1f7a685eaa\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:55.560000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:55.560000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"42564fa2d98ac97e4687536277a10d7df29c90b047e065793b3490210053bd00f8d7fb6842dd907d925e977f2ec710bbf02d6c09cff2237e099e4ccda08baa93\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:55.560000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:55.560000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"bf0153176f1a8c1f128032354ed970ca7c52d03be541c6ad45a57cd4d7a7871289804c5bd09be6e37dc293944aa15fe6b5746c4ee5757f45d7cf156f68d9eb9c\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:54:37.017737Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 6677, \"checksum\": \"dbd992bb596ee0f12f31fedc1bb76a3da590ee6e999bc038bc7d345361c7aa8c23bfb17c9b1bd92e8bce419b7acd9f45a962abe24462e9fbab4e43d9a0556f24\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-20T17:59:18.648000Z\"}}",
+    "fed_object_size_lsi": 12526,
+    "object_size_lsi": 12526,
+    "rel_content_models_ssim": [
+      "implicit-set",
+      "commonMetadata"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1965-01-29"
+    ],
+    "mods_dateAll_ssim": [
+      "1965-01-29"
+    ],
+    "dateIssued_year_ssim": [
+      "1965"
+    ],
+    "dateIssued_month_ssim": [
+      "01"
+    ],
+    "dateIssued_month_text_ssim": [
+      "January"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1965"
+    ],
+    "dateIssued": "1965-01-29T00:00:00Z",
+    "date_dsi": "1965-01-29T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-51"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-51"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 1/1/65",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 1/1/65"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Salvador (Brazil)",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "contributor": [
+      "State",
+      "Salvador (Brazil)",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "contributor_string": [
+      "State",
+      "Salvador (Brazil)",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Salvador (Brazil) (distribution place)",
+      "Service, Robert E. (drafter)",
+      "McCloskey, R. G. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "keyword": [
+      "Carlos Lacerda",
+      "Maria de Azevedo Brandão",
+      "Navy",
+      "Miguel Calmon",
+      "Tuition",
+      "Vietnam"
+    ],
+    "mods_subject_ssim": [
+      "Carlos Lacerda",
+      "Maria de Azevedo Brandão",
+      "Navy",
+      "Miguel Calmon",
+      "Tuition",
+      "Vietnam"
+    ],
+    "mods_subject_local_ssim": [
+      "Carlos Lacerda",
+      "Maria de Azevedo Brandão",
+      "Navy",
+      "Miguel Calmon",
+      "Tuition",
+      "Vietnam"
+    ],
+    "mods_subject_joined_ssim": [
+      "Carlos Lacerda",
+      "Maria de Azevedo Brandão",
+      "Navy",
+      "Miguel Calmon",
+      "Tuition",
+      "Vietnam"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Carlos Lacerda",
+      "Maria de Azevedo Brandão",
+      "Navy",
+      "Miguel Calmon",
+      "Tuition",
+      "Vietnam"
+    ],
+    "mods_title_full_tsim": [
+      "Bi-Weekly Summary"
+    ],
+    "mods_title_full_primary_tsi": "Bi-Weekly Summary",
+    "primary_title": "Bi-Weekly Summary",
+    "primary_title_txt_en_split": "Bi-Weekly Summary",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:54:37.931Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Bi-Weekly Summary"
+  },
+  {
+    "pid": "bdr:335306",
+    "fed_created_dsi": "2014-03-19T20:52:47.819Z",
+    "object_created_dsi": "2014-03-19T20:52:47.819Z",
+    "fed_last_modified_dsi": "2021-11-22T13:54:27.697Z",
+    "object_last_modified_dsi": "2021-11-22T13:54:27.697Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:47.819000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:47.819000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7120, \"checksum\": \"52c3603e288f5658b3697f3062b5f29d276351579517cf368cf96dab04458ae1ccf30475d34a96a1839284d511fe778e0715a74c351e7903a5de1cb549c467db\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-20T05:34:25.077000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:47.819000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"96fc3afa4e96484d948ee47067556c6a2ea6459b1a728b0a1db12d4b000ab7960bee5780e6da968a9160767631ca8abeab6d5593e3fade06915f2200218030d5\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:54:27.697532Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 363, \"checksum\": \"cee30b22801b035dbea1a3dcfb4bd18c02265c882df82498c3ea46206e369e323500eda75b0762e5d431f07b220bd4f5249c7f0bd397ae555fc458bce562d0c9\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:47.819000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2777, \"checksum\": \"dd5e15f0b4ccbf369abce6fa17e1a5dcebd794a6d5434a1556d867388b16c220842f3d6360a6e360a42f253dd10cfea9e293c571fb9bd66fa031f10f1f918e35\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:31:43.809000Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"e00cd01e57838af8d323834522713b5383f001684cde1e9784c7d5e3bdbb9a5ca5d280fe64d2dabe8440842abb1bd30961f362b350d0672912e37f0b5edfa8f4\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:52:47.819000Z\"}}",
+    "fed_object_size_lsi": 12866,
+    "object_size_lsi": 12866,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1964-07-02"
+    ],
+    "mods_dateAll_ssim": [
+      "1964-07-02"
+    ],
+    "dateIssued_year_ssim": [
+      "1964"
+    ],
+    "dateIssued_month_ssim": [
+      "07"
+    ],
+    "dateIssued_month_text_ssim": [
+      "July"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1964"
+    ],
+    "dateIssued": "1964-07-02T00:00:00Z",
+    "date_dsi": "1964-07-02T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-1"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-1"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 7/1/64",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 7/1/64"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Belo Horizonte (Brazil)",
+      "Okun, H. S."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Okun, H. S."
+    ],
+    "contributor": [
+      "State",
+      "Belo Horizonte (Brazil)",
+      "Okun, H. S."
+    ],
+    "contributor_string": [
+      "State",
+      "Belo Horizonte (Brazil)",
+      "Okun, H. S."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Belo Horizonte (Brazil) (distribution place)",
+      "Okun, H. S. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Belo Horizonte (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Belo Horizonte (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Okun, H. S."
+    ],
+    "other_title": [
+      "Weekly Summary No. 23",
+      "A-35"
+    ],
+    "keyword": [
+      "Magalhães Pinto",
+      "Castello Branco",
+      "Jorge Carone Filho",
+      "Freight rate"
+    ],
+    "mods_subject_ssim": [
+      "Magalhães Pinto",
+      "Castello Branco",
+      "Jorge Carone Filho",
+      "Freight rate"
+    ],
+    "mods_subject_local_ssim": [
+      "Magalhães Pinto",
+      "Castello Branco",
+      "Jorge Carone Filho",
+      "Freight rate"
+    ],
+    "mods_subject_joined_ssim": [
+      "Magalhães Pinto",
+      "Castello Branco",
+      "Jorge Carone Filho",
+      "Freight rate"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Magalhães Pinto",
+      "Castello Branco",
+      "Jorge Carone Filho",
+      "Freight rate"
+    ],
+    "mods_title_full_tsim": [
+      "Weekly Summary No. 24 (June 23-29, 1964)"
+    ],
+    "mods_title_full_primary_tsi": "Weekly Summary No. 24 (June 23-29, 1964)",
+    "primary_title": "Weekly Summary No. 24 (June 23-29, 1964)",
+    "primary_title_txt_en_split": "Weekly Summary No. 24 (June 23-29, 1964)",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:54:28.622Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Weekly Summary No. 24 (June 23-29, 1964)"
+  },
+  {
+    "pid": "bdr:335340",
+    "fed_created_dsi": "2014-03-19T20:53:34.290Z",
+    "object_created_dsi": "2014-03-19T20:53:34.290Z",
+    "fed_last_modified_dsi": "2021-11-22T13:55:18.820Z",
+    "object_last_modified_dsi": "2021-11-22T13:55:18.820Z",
+    "storage_location_ssi": "ocfl",
+    "datastreams_ssi": "{\"irMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 566, \"checksum\": \"00b0f38cdb0f301bd31ede87ddb3aef547adb525a425154087142fcf58ca8fcf5333dc31f6d7ee2a5d9405a7d8e8b7787c3d7c5d9587effae91ed3fe2303bc75\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:53:34.290000Z\"}, \"MODS\": {\"mimeType\": \"application/mods+xml\", \"size\": 2719, \"checksum\": \"274cb427f963393d71e1656093f16e3293fb57259abd6711397ccf94308965b01f602b0c0bc66ee77e3957b81a9af72cf3e542c3a64cc1d618edd9524140b19b\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2017-04-19T16:31:47.974000Z\"}, \"archiveMETS\": {\"mimeType\": \"application/octet-stream\", \"size\": 334, \"checksum\": \"35d6af7b99b61765c587fe705610349c7b45bc34e72eff20bf8f5684ba5b6bd4cc356fb9c1f2b77ed8424645a6696706f24583517c89fb5f7dd6c540ef8ddc45\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:53:34.290000Z\"}, \"RELS-EXT\": {\"mimeType\": \"text/xml\", \"size\": 554, \"checksum\": \"444c89458c1cea915d853c5386fe2b28ff8cac376cb1ccb5c6130c6bb349aac6cf47005920640c8e58e21531f0f9a0f0ffb0ce64280b8972d87a939369544662\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2021-11-22T13:55:18.820917Z\"}, \"DC\": {\"mimeType\": \"application/octet-stream\", \"size\": 339, \"checksum\": \"4bc8bb758e02c88a93e5ffb7f87bd7a63280dd508b187638658dd96cccaea9505df9fdd90f9eaefec6fccb591a5490a8af52fc8b7db7cd71321734686414a1b1\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:53:34.290000Z\"}, \"rightsMetadata\": {\"mimeType\": \"application/octet-stream\", \"size\": 813, \"checksum\": \"55c2dbd1e0c425e84d10d2ceebc1baf373646a0e8c0a80d8de778c8042811bf09333aac9dd95312e12d08e85ec7f5e1aafb182498090ba42f5480c3e81780baf\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:53:34.290000Z\"}, \"RELS-INT\": {\"mimeType\": \"text/xml\", \"size\": 360, \"checksum\": \"72414469d7cc363e668e9e2bdd5952b7711157e3560b4847eb1c0d3f6ba128755f88f665907c57ac98e7b7247a36b708ad5bf36cf31bb161a31f56e1a4fe8e1e\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-19T20:53:34.290000Z\"}, \"thumbnail\": {\"mimeType\": \"application/octet-stream\", \"size\": 7194, \"checksum\": \"ad59e55c1917f05d747b8eb7ec6951854f1dc8750d627f77fcc8ebafbc3370e5c0f999dfb87e048eb3606cb31077f7c20a965a174cce0b9ead3c67b14a4952e2\", \"checksumType\": \"SHA-512\", \"lastModified\": \"2014-03-21T19:59:02.128000Z\"}}",
+    "fed_object_size_lsi": 12879,
+    "object_size_lsi": 12879,
+    "rel_content_models_ssim": [
+      "commonMetadata",
+      "implicit-set"
+    ],
+    "rel_object_type_ssi": "implicit-set",
+    "object_type": "implicit-set",
+    "rel_is_member_of_collection_ssim": [
+      "bdr:318399"
+    ],
+    "depositor": "Brown University Library: Digital Production Services",
+    "depositor_email": "digprod@brown.edu",
+    "deposit_date": "2014-03-19T00:00:00Z",
+    "collection_date": "2014-03-19T00:00:00Z",
+    "ir_collection_id": [
+      644
+    ],
+    "ir_collection_name": [
+      "History",
+      "Opening the Archives: Documenting U.S.-Brazil Relations, 1960s-80s"
+    ],
+    "_display_public_bsi": true,
+    "_display_brown_bsi": false,
+    "_display_private_bsi": false,
+    "mods_dateIssued_ssim": [
+      "1965-01-15"
+    ],
+    "mods_dateAll_ssim": [
+      "1965-01-15"
+    ],
+    "dateIssued_year_ssim": [
+      "1965"
+    ],
+    "dateIssued_month_ssim": [
+      "01"
+    ],
+    "dateIssued_month_text_ssim": [
+      "January"
+    ],
+    "mods_dateAll_year_ssim": [
+      "1965"
+    ],
+    "dateIssued": "1965-01-15T00:00:00Z",
+    "date_dsi": "1965-01-15T00:00:00Z",
+    "identifier": [
+      "POL 2 BRAZ",
+      "A-48"
+    ],
+    "mods_id_subjectnumeric_code_ssim": [
+      "POL 2 BRAZ"
+    ],
+    "mods_id_document_no_ssim": [
+      "A-48"
+    ],
+    "mods_location_physical_location_ssim": [
+      "United States. National Archives and Records Administration"
+    ],
+    "mods_location_copy_info_note_box_name_ssim": [
+      "Box Number 1929"
+    ],
+    "mods_location_copy_info_note_ssim": [
+      "Box Number 1929",
+      "POL 2 BRAZ 1/1/65",
+      "59",
+      "A1 1132-A"
+    ],
+    "mods_location_copy_info_note_folder_title_ssim": [
+      "POL 2 BRAZ 1/1/65"
+    ],
+    "mods_location_copy_info_note_record_group_ssim": [
+      "59"
+    ],
+    "mods_location_copy_info_note_entry_number_ssim": [
+      "A1 1132-A"
+    ],
+    "genre": [
+      "airgrams"
+    ],
+    "mods_genre_local_ssim": [
+      "airgrams"
+    ],
+    "genre_local": [
+      "airgrams"
+    ],
+    "name": [
+      "State",
+      "Salvador (Brazil)",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "mods_role_ssim": [
+      "addressee",
+      "distribution place",
+      "drafter"
+    ],
+    "mods_role_addressee_ssim": [
+      "State"
+    ],
+    "mods_name_nonplace_ssim": [
+      "State",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "contributor": [
+      "State",
+      "Salvador (Brazil)",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "contributor_string": [
+      "State",
+      "Salvador (Brazil)",
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "contributor_display": [
+      "State (addressee)",
+      "Salvador (Brazil) (distribution place)",
+      "Service, Robert E. (drafter)",
+      "McCloskey, R. G. (drafter)"
+    ],
+    "mods_role_distribution_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_name_place_ssim": [
+      "Salvador (Brazil)"
+    ],
+    "mods_role_drafter_ssim": [
+      "Service, Robert E.",
+      "McCloskey, R. G."
+    ],
+    "keyword": [
+      "Nei Ferreira",
+      "Cocoa",
+      "Lomanto",
+      "Naval-aviation crisis",
+      "Political party"
+    ],
+    "mods_subject_ssim": [
+      "Nei Ferreira",
+      "Cocoa",
+      "Lomanto",
+      "Naval-aviation crisis",
+      "Political party"
+    ],
+    "mods_subject_local_ssim": [
+      "Nei Ferreira",
+      "Cocoa",
+      "Lomanto",
+      "Naval-aviation crisis",
+      "Political party"
+    ],
+    "mods_subject_joined_ssim": [
+      "Nei Ferreira",
+      "Cocoa",
+      "Lomanto",
+      "Naval-aviation crisis",
+      "Political party"
+    ],
+    "mods_subject_joined_local_ssim": [
+      "Nei Ferreira",
+      "Cocoa",
+      "Lomanto",
+      "Naval-aviation crisis",
+      "Political party"
+    ],
+    "mods_title_full_tsim": [
+      "Bi-Weekly Summary"
+    ],
+    "mods_title_full_primary_tsi": "Bi-Weekly Summary",
+    "primary_title": "Bi-Weekly Summary",
+    "primary_title_txt_en_split": "Bi-Weekly Summary",
+    "resource_type_ssi": "other",
+    "timestamp": "2021-11-22T13:55:19.830Z",
+    "image_parent_bsi": true,
+    "iiif_resource_bsi": true,
+    "title_si": "Bi-Weekly Summary"
+  },
+}
+]
+  
