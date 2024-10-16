@@ -34,7 +34,10 @@ def load_and_preprocess_unlabeled_data(file_path):
         if column not in features_used_for_training:
             print(f"Column {column} not in trained features")
             df = df.drop(column, axis=1)
-
+    # NOTE: Currently predicting all zeros regardless of input
+    print("We need to look into handling strings in training and testing data"
+          " to make sure they match")
+    sys.exit()
     # add columns that are in the trained features but not in the data
     for column in features_used_for_training:
         if column not in df.columns:
