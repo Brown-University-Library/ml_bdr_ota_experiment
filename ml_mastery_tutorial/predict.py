@@ -1,4 +1,4 @@
-import os
+import os, sys
 import pickle
 import numpy as np
 import pandas as pd
@@ -18,7 +18,7 @@ def load_and_preprocess_unlabeled_data(file_path):
     df = pd.read_json(file_path)
     
     # Apply the same preprocessing steps as in prepare_dataset.py
-    df = basic_cleaning(df)
+    df = basic_cleaning(df, require_all_features=False)
     
     # Load the pickled file with the features to be used
     with open('features.pkl', 'rb') as f:
@@ -30,7 +30,11 @@ def load_and_preprocess_unlabeled_data(file_path):
     
     ## Ensure the columns match those used in training
     # exclude columns that are not in the trained features
-    df = df[features_used_for_training]
+    for column in df.columns:
+        if column not in features_used_for_training:
+            print(f"Column {column} not in trained features")
+            df = df.drop(column, axis=1)
+
     # add columns that are in the trained features but not in the data
     for column in features_used_for_training:
         if column not in df.columns:
@@ -38,7 +42,7 @@ def load_and_preprocess_unlabeled_data(file_path):
     
     return df
 
-def make_predictions(model, data):
+def make_predictions(model, data) -> np.ndarray:
     return model.predict(data)
 
 if __name__ == "__main__":
@@ -46,15 +50,19 @@ if __name__ == "__main__":
     model = load_model('model.keras')
     
     # NOTE: For next time:
-    # Need to mofidy the basic_cleaning function to handle situations
+    # Need to modify the basic_cleaning function to handle situations
     # where the data being cleaned is missing columns
 
     # Load and preprocess the unlabeled data
-    unlabeled_data = load_and_preprocess_unlabeled_data('../source_data/extracted_record.json')
+    unlabeled_data = load_and_preprocess_unlabeled_data('../source_data/test_record.json')
     
     # Make predictions
-    predictions = make_predictions(model, unlabeled_data)
+    predictions: np.ndarray = make_predictions(model, unlabeled_data)
     
+    # Print the predictions
+    # Round the predictions to 2 decimal places
+    print(np.round(predictions, 2))
+
     # Process and save the predictions
     # This will depend on how you want to use/interpret the results
     np.save('predictions.npy', predictions)

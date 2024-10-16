@@ -173,7 +173,9 @@ def one_hot_encode(df: pd.DataFrame, column_name: str
     
     return df
 
-def basic_cleaning(df: pd.DataFrame) -> pd.DataFrame:
+def basic_cleaning(df: pd.DataFrame,
+                   require_all_features: bool = True
+                   ) -> pd.DataFrame:
     """ Removes unwanted columns from the dataframe. """
     # Remove columns that are not needed
     '''
@@ -183,7 +185,15 @@ def basic_cleaning(df: pd.DataFrame) -> pd.DataFrame:
     'mods_language_code_ssim',
     'mods_subject_broad_theme_ssim'
     '''
-    df = df[['pid', 'genre', 'keyword', 'mods_location_physical_location_ssim', 'mods_language_code_ssim', 'mods_subject_broad_theme_ssim']]
+    kept_fields = ['pid', 'genre', 'keyword',
+                     'mods_location_physical_location_ssim',
+                        'mods_language_code_ssim',
+                            'mods_subject_broad_theme_ssim']
+    if require_all_features:
+        df = df[kept_fields]
+    else:
+        # Remove columns that are not needed
+        df = df.drop([col for col in df.columns if col not in kept_fields], axis=1)
     
     # Convert NaN values to ['']
     df = df.fillna('')
