@@ -12,6 +12,10 @@ from prepare_dataset import (
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
+# Suppress ```PerformanceWarning: DataFrame is highly fragmented``` warning
+import warnings
+warnings.filterwarnings("ignore", message="DataFrame is highly fragmented")
+
 
 def load_and_preprocess_unlabeled_data(file_path):
     # Load the unlabeled data
@@ -23,6 +27,11 @@ def load_and_preprocess_unlabeled_data(file_path):
     # Load the pickled file with the features to be used
     with open('features.pkl', 'rb') as f:
         features_used_for_training = pickle.load(f)
+
+    # # Save the features to a text file
+    # with open('features.txt', 'w') as f:
+    #     for feature in features_used_for_training:
+    #         f.write(f"{feature}\n")
     
     feature_columns = df.columns[1:]  # Exclude 'pid'
     for column_name in feature_columns:
@@ -37,7 +46,6 @@ def load_and_preprocess_unlabeled_data(file_path):
     # NOTE: Currently predicting all zeros regardless of input
     print("We need to look into handling strings in training and testing data"
           " to make sure they match")
-    sys.exit()
     # add columns that are in the trained features but not in the data
     for column in features_used_for_training:
         if column not in df.columns:
@@ -58,13 +66,29 @@ if __name__ == "__main__":
 
     # Load and preprocess the unlabeled data
     unlabeled_data = load_and_preprocess_unlabeled_data('../source_data/test_record.json')
+
+    # Load the pickled file with the labels to be used
+    with open('labels.pkl', 'rb') as f:
+        labels_used_for_training = pickle.load(f)
+
+    # print the labels used for training
+    print("Labels used for training:")
+    print(labels_used_for_training)
     
     # Make predictions
     predictions: np.ndarray = make_predictions(model, unlabeled_data)
     
     # Print the predictions
-    # Round the predictions to 2 decimal places
-    print(np.round(predictions, 2))
+    print("Predictions:")
+    print(predictions)
+    # Round the predictions to 3 decimal places
+    print(np.round(predictions, 3))
+
+    print(f'{predictions.shape=}')
+
+    # Print the labels and their corresponding predictions
+    for i, label in enumerate(labels_used_for_training):
+        print(f"{label}: {predictions[0][i]}")
 
     # Process and save the predictions
     # This will depend on how you want to use/interpret the results

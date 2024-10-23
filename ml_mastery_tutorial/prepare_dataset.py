@@ -1,3 +1,4 @@
+import sys
 from hashlib import md5
 import pickle
 
@@ -173,6 +174,25 @@ def one_hot_encode(df: pd.DataFrame, column_name: str
     
     return df
 
+def convert_to_lowercase(df: pd.DataFrame) -> pd.DataFrame:
+    '''
+    Converts all string values in a dataframe to lowercase.
+
+    Args:
+        df: The dataframe to process.
+
+    Returns:
+        The dataframe with all string values converted to lowercase.
+    '''
+    # Iterate through the columns in the dataframe
+    for column in df.columns:
+        # If the column is a string, convert it to lowercase
+        print(f'{column = }')
+        print(f'{df[column].dtype = }')
+
+    sys.exit("Stopping for testing")
+    return df
+
 def basic_cleaning(df: pd.DataFrame,
                    require_all_features: bool = True
                    ) -> pd.DataFrame:
@@ -198,6 +218,9 @@ def basic_cleaning(df: pd.DataFrame,
     # Convert NaN values to ['']
     df = df.fillna('')
     df = df.map(lambda x: x if isinstance(x, list) else [x])
+
+    # Convert all string values to lowercase
+    df = convert_to_lowercase(df)
 
     return df
 
@@ -345,11 +368,19 @@ def get_dataset():
     updated_feature_columns = updated_feature_columns[1:]
     ic(updated_feature_columns)
 
+    # Get the labels for pickling
+    labels = df_labels.columns
+    ic(labels)
+
     # pickle the updated_feature_columns for use in the prediction script
     with open('features.pkl', 'wb') as f:
         pickle.dump(updated_feature_columns, f)
     
     print('updated_feature_columns pickled')
+
+    # pickle the labels for use in the prediction script
+    with open('labels.pkl', 'wb') as f:
+        pickle.dump(labels, f)
 
     # convert the dataframe to numpy arrays
     X = df[updated_feature_columns].values

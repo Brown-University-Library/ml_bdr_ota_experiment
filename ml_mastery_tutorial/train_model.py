@@ -55,6 +55,10 @@ def manage_training(X, y):
     # model.fit(X, y, verbose=0, epochs=100)
     model.fit(X, y, verbose=0, epochs=100)  # type: ignore
     print( 'finished manager model.fit()' )
+    # validate the model
+    scores = model.evaluate(X, y, verbose='auto')
+    print( f'Scores: {scores}' )
+    print( f'Model Accuracy: {scores}' )
 
 
 
