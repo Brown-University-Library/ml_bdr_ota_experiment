@@ -4,6 +4,7 @@ import numpy as np
 
 from keras.layers import Dense
 from keras.models import Sequential
+from keras.metrics import Recall, Precision
 
 from icecream import ic
 
@@ -35,7 +36,7 @@ def build_model(n_inputs, n_outputs):
     # add a dense layer with n_outputs units, using 'sigmoid' activation function
     model.add(Dense(n_outputs, activation='sigmoid'))
     # compile the model with binary cross-entropy loss and adam optimizer
-    model.compile(loss='binary_crossentropy', optimizer='adam')
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', Recall(), Precision()])
     return model
 
 def manage_training(X, y):
@@ -58,7 +59,11 @@ def manage_training(X, y):
     # validate the model
     scores = model.evaluate(X, y, verbose='auto')
     print( f'Scores: {scores}' )
-    print( f'Model Accuracy: {scores}' )
+    print( f'Accuracy: {scores[1]*100}' )
+    print( f'Recall: {scores[2]*100}' )
+    print( f'Precision: {scores[3]*100}' )
+    print( f'F1: {2*(scores[2]*scores[3])/(scores[2]+scores[3])}' )
+
 
 
 
