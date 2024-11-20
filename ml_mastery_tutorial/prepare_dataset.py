@@ -184,13 +184,23 @@ def convert_to_lowercase(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         The dataframe with all string values converted to lowercase.
     '''
+    # Print the first 20 rows of the keyword column
+    # print(df['keyword'].head(20))
     # Iterate through the columns in the dataframe
     for column in df.columns:
         # If the column is a string, convert it to lowercase
-        print(f'{column = }')
-        print(f'{df[column].dtype = }')
+        if df[column].dtype == 'string':
+            df[column] = df[column].str.lower()
+        # If the column is a list, convert each value to lowercase
+        elif df[column].dtype == 'object':
+            df[column] = df[column].apply(lambda x: [value.lower() 
+                                                     for value in x])
+        else:
+            print(f'{column} is not a string or object. Type: {df[column].dtype}')
 
-    sys.exit("Stopping for testing")
+    # Print the first 20 rows of the keyword column
+    # print(df['keyword'].head(20))
+
     return df
 
 def basic_cleaning(df: pd.DataFrame,
@@ -224,6 +234,47 @@ def basic_cleaning(df: pd.DataFrame,
 
     return df
 
+def remove_broadtheme_keywords(df: pd.DataFrame) -> pd.DataFrame:
+    '''
+    Removes the keywords that are duplicates of the broad themes.
+
+    Args:
+        df: The dataframe to process.
+
+    Returns:
+        The dataframe with the broad theme keywords removed.
+    '''
+    # print the keywords in rows 79-81
+    print('Keywords in rows 79-81')
+    print('-'*40)
+    for index, row in df.iterrows():
+        i = int(index)
+        if i > 78 and i < 82:
+            print(row['keyword'])
+        if i > 81:
+            break
+    print('-'*40)
+
+    # We need to remove any keywords that start with "broad theme:"
+    df['keyword'] = df['keyword'].apply(
+        lambda x: [value for value in x if not value.startswith('broad theme:')]
+    )
+
+    # Confirm that the keywords have been removed by printing the same rows
+    print('Keywords in rows 79-81')
+    print('-'*40)
+    for index, row in df.iterrows():
+        i = int(index)
+        if i > 78 and i < 82:
+            print(row['keyword'])
+        if i > 81:
+            break
+    print('-'*40)
+
+    sys.exit("Stopping for testing")
+    return df
+    
+
 def get_dataset():
     """ 
     Converts a dataset from a csv file to a dataframe.
@@ -238,6 +289,9 @@ def get_dataset():
     df = basic_cleaning(df)
     print(f'df.head() after removing columns:\n{df.head()}')
     print(f'Columns in df:\n{df.columns}')
+
+    # Remove the broad theme keywords
+    df = remove_broadtheme_keywords(df)
 
     # Save 25 rows of the dataframe to a json file
     with open('df_25.json', 'w') as f:
