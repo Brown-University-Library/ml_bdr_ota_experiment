@@ -244,34 +244,33 @@ def remove_broadtheme_keywords(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         The dataframe with the broad theme keywords removed.
     '''
-    # print the keywords in rows 79-81
-    print('Keywords in rows 79-81')
-    print('-'*40)
-    for index, row in df.iterrows():
-        i = int(index)
-        if i > 78 and i < 82:
-            print(row['keyword'])
-        if i > 81:
-            break
-    print('-'*40)
+    # # print the keywords in rows 79-81
+    # print('Keywords in rows 79-81')
+    # print('-'*40)
+    # for index, row in df.iterrows():
+    #     i = int(index)
+    #     if i > 78 and i < 82:
+    #         print(row['keyword'])
+    #     if i > 81:
+    #         break
+    # print('-'*40)
 
     # We need to remove any keywords that start with "broad theme:"
     df['keyword'] = df['keyword'].apply(
         lambda x: [value for value in x if not value.startswith('broad theme:')]
     )
 
-    # Confirm that the keywords have been removed by printing the same rows
-    print('Keywords in rows 79-81')
-    print('-'*40)
-    for index, row in df.iterrows():
-        i = int(index)
-        if i > 78 and i < 82:
-            print(row['keyword'])
-        if i > 81:
-            break
-    print('-'*40)
+    # # Confirm that the keywords have been removed by printing the same rows
+    # print('Keywords in rows 79-81')
+    # print('-'*40)
+    # for index, row in df.iterrows():
+    #     i = int(index)
+    #     if i > 78 and i < 82:
+    #         print(row['keyword'])
+    #     if i > 81:
+    #         break
+    # print('-'*40)
 
-    sys.exit("Stopping for testing")
     return df
     
 
@@ -465,7 +464,7 @@ def manage_dataset_prep():
 
     # confirm dataset is cleaned the same over multiple runs
     X_bytes = X.tobytes()
-    assert md5(X_bytes).hexdigest() == 'c242519776e782520a61563cdd63a214', \
+    assert md5(X_bytes).hexdigest() == '6972970f83604fa2cf4c40b6585957ca', \
         f'X hash is {md5(X_bytes).hexdigest()}'
     y_bytes = y.tobytes()
     assert md5(y_bytes).hexdigest() == 'd8c459c8dcd0625b555e71db7a992309', \
