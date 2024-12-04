@@ -7,6 +7,7 @@ from keras.regularizers import l2
 from keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
 from icecream import ic
+import pickle
 
 def open_dataset():
     '''
@@ -45,6 +46,54 @@ def build_model(n_inputs, n_outputs):
         ]
     )
     return model
+
+def analyze_label_distribution(y, label_names=None):
+    """
+    Analyze the distribution and raw counts of each label in the dataset.
+    
+    Args:
+        y: numpy array of shape (n_samples, n_labels) containing the labels
+        label_names: optional list of label names corresponding to each column index
+    """
+    n_samples, n_labels = y.shape
+    
+    print("\nLabel Distribution Analysis:")
+    print("-" * 60)
+    print(f"Total number of samples: {n_samples}")
+    print("\nPer-label statistics:")
+    print("-" * 60)
+    
+    for i in range(n_labels):
+        positive_count = np.sum(y[:, i] == 1)
+        negative_count = np.sum(y[:, i] == 0)
+        positive_ratio = positive_count / n_samples * 100
+        
+        label_name = f"Label {i}" if label_names is None else label_names[i]
+        
+        print(f"\n{label_name}:")
+        print(f"  Positive samples: {positive_count:,}")
+        print(f"  Negative samples: {negative_count:,}")
+        print(f"  Positive ratio: {positive_ratio:.2f}%")
+    
+    # Analysis of samples with multiple labels
+    label_counts_per_sample = np.sum(y, axis=1)
+    avg_labels = np.mean(label_counts_per_sample)
+    max_labels = np.max(label_counts_per_sample)
+    min_labels = np.min(label_counts_per_sample)
+    
+    print("\nMulti-label statistics:")
+    print("-" * 60)
+    print(f"Average labels per sample: {avg_labels:.2f}")
+    print(f"Maximum labels per sample: {max_labels:.0f}")
+    print(f"Minimum labels per sample: {min_labels:.0f}")
+    
+    # Distribution of number of labels per sample
+    unique_counts = np.unique(label_counts_per_sample, return_counts=True)
+    print("\nDistribution of labels per sample:")
+    for count, freq in zip(unique_counts[0], unique_counts[1]):
+        percentage = (freq / n_samples) * 100
+        print(f"  {count} labels: {freq:,} samples ({percentage:.2f}%)")
+
 
 def evaluate_multilabel(model, X_test, y_test):
     """
@@ -137,17 +186,23 @@ if __name__ == '__main__':
     np.random.seed(42)
     tf.random.set_seed(42)
     
+    # Load dataset
     X, y = open_dataset()
+    
+    # Load label names from pickle file if it exists
+    try:
+        with open('labels.pkl', 'rb') as f:
+            label_names = pickle.load(f)
+    except FileNotFoundError:
+        label_names = None
+    
+    # Analyze distributions
+    analyze_label_distribution(y, label_names)
+    
+    # Train model
     model, scores, label_metrics, history = manage_training(X, y)
     model.save('model.keras')
     
     # Save training history
     np.save('training_history.npy', history.history)
     print('\nModel and training history saved')
-
-    print('--'*20)
-    print('We determined that the model is not predicting well')
-    print('There is a large imbalance in the data, where some broad themes are')
-    print('overrepresented and others are underrepresented')
-    print('We need to look into techniques to handle imbalanced data')
-    print('--'*20)
