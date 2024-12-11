@@ -3,11 +3,41 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from keras.layers import Dense, Dropout
-from keras.regularizers import l2
 from keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
 from icecream import ic
 import pickle
+
+class FocalLoss(tf.keras.losses.Loss):
+    """
+    Implements focal loss for multi-label classification
+    """
+    def __init__(self, gamma=2.0, alpha=0.25):
+        super().__init__()
+        self.gamma = gamma
+        self.alpha = alpha
+
+    def call(self, y_true, y_pred):
+        # Convert types to float32
+        y_true = tf.cast(y_true, tf.float32)
+        y_pred = tf.cast(y_pred, tf.float32)
+        
+        # Clip predictions to prevent log(0)
+        epsilon = 1e-7
+        y_pred = tf.clip_by_value(y_pred, epsilon, 1 - epsilon)
+        
+        # Calculate cross entropy for both positive and negative cases
+        pos_loss = -y_true * tf.math.log(y_pred)
+        neg_loss = -(1 - y_true) * tf.math.log(1 - y_pred)
+        
+        # Apply focal modulation
+        pos_focal = tf.pow(1 - y_pred, self.gamma) * pos_loss
+        neg_focal = tf.pow(y_pred, self.gamma) * neg_loss
+        
+        # Apply alpha weighting
+        loss = self.alpha * pos_focal + (1 - self.alpha) * neg_focal
+        
+        return tf.reduce_mean(loss)
 
 def open_dataset():
     '''
@@ -20,14 +50,14 @@ def open_dataset():
 
 def build_model(n_inputs, n_outputs):
     """
-    Creates a model specifically designed for multi-label classification
+    Creates a model using focal loss
     """
     model = keras.Sequential([
         # Input layer
         Dense(128, input_dim=n_inputs, activation='relu'),
         Dropout(0.3),
         
-        # Hidden layer - keeping network wider for multi-label
+        # Hidden layer
         Dense(128, activation='relu'),
         Dropout(0.3),
         
@@ -35,10 +65,22 @@ def build_model(n_inputs, n_outputs):
         Dense(n_outputs, activation='sigmoid')
     ])
     
-    # Using binary crossentropy since each output is a binary classification
+    # Using focal loss
+    '''
+    In focal loss, alpha is a simple class weighting factor 
+    (like 0.25 vs 0.75 for positive/negative examples), while gamma 
+    dynamically reduces the loss contribution from "easy" examples by 
+    making correctly classified examples contribute less and less as the 
+    model becomes more confident about them.
+    '''
+    # focal_loss = FocalLoss(gamma=2.0, alpha=0.25) # Initial suggested values - Recall 100% Precision 7%
+    # focal_loss = FocalLoss(gamma=4.0, alpha=0.1) # Recall: 18.51% Precision: 95.91%
+    # focal_loss = FocalLoss(gamma=3.0, alpha=0.1) # Recall: 22.97% Precision: 94.00%
+    focal_loss = FocalLoss(gamma=3.0, alpha=0.15) # Recall: 27.06% Precision: 92.31%
+
     model.compile(
         optimizer=keras.optimizers.Adam(learning_rate=0.001),
-        loss='binary_crossentropy',
+        loss=focal_loss,
         metrics=[
             'binary_accuracy',
             tf.keras.metrics.Recall(),
@@ -95,7 +137,7 @@ def analyze_label_distribution(y, label_names=None):
         print(f"  {count} labels: {freq:,} samples ({percentage:.2f}%)")
 
 
-def evaluate_multilabel(model, X_test, y_test):
+def evaluate_multilabel(model, X_test, y_test, label_names=None):
     """
     Evaluate the model with multi-label specific metrics
     """
@@ -108,7 +150,7 @@ def evaluate_multilabel(model, X_test, y_test):
     label_metrics = []
     
     print("\nPer-label metrics:")
-    print("-" * 40)
+    print("-" * 60)
     
     for i in range(n_labels):
         true_pos = np.sum((y_test[:, i] == 1) & (y_pred_binary[:, i] == 1))
@@ -125,10 +167,15 @@ def evaluate_multilabel(model, X_test, y_test):
             'f1': f1
         })
         
-        print(f"Label {i}:")
+        label_name = f"Label {i}" if label_names is None else label_names[i]
+        print(f"\n{label_name}:")
         print(f"  Precision: {precision:.3f}")
         print(f"  Recall: {recall:.3f}")
         print(f"  F1: {f1:.3f}")
+        
+        # Add support (number of positive examples)
+        support = np.sum(y_test[:, i] == 1)
+        print(f"  Support: {support}")
     
     # Calculate overall metrics
     scores = model.evaluate(X_test, y_test, verbose=0)
@@ -142,9 +189,9 @@ def evaluate_multilabel(model, X_test, y_test):
     
     return scores, label_metrics
 
-def manage_training(X, y):
+def manage_training(X, y, label_names=None):
     """
-    Manage the training process for multi-label classification
+    Manage the training process
     """
     # Split the data
     X_train, X_test, y_train, y_test = train_test_split(
@@ -178,7 +225,7 @@ def manage_training(X, y):
     
     # Evaluate with multi-label metrics
     print('\nEvaluating model...')
-    scores, label_metrics = evaluate_multilabel(model, X_test, y_test)
+    scores, label_metrics = evaluate_multilabel(model, X_test, y_test, label_names)
     
     return model, scores, label_metrics, history
 
@@ -189,18 +236,19 @@ if __name__ == '__main__':
     # Load dataset
     X, y = open_dataset()
     
-    # Load label names from pickle file if it exists
+    # Load label names if available
     try:
         with open('labels.pkl', 'rb') as f:
             label_names = pickle.load(f)
     except FileNotFoundError:
         label_names = None
-    
+
     # Analyze distributions
     analyze_label_distribution(y, label_names)
+
     
     # Train model
-    model, scores, label_metrics, history = manage_training(X, y)
+    model, scores, label_metrics, history = manage_training(X, y, label_names)
     model.save('model.keras')
     
     # Save training history
