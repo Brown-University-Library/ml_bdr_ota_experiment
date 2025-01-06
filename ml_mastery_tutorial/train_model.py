@@ -7,34 +7,31 @@ from keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
 from icecream import ic
 import pickle
+import matplotlib.pyplot as plt
+from itertools import product
+import pandas as pd
+import seaborn as sns
+from datetime import datetime
 
 class FocalLoss(tf.keras.losses.Loss):
-    """
-    Implements focal loss for multi-label classification
-    """
-    def __init__(self, gamma=2.0, alpha=0.25):
+    def __init__(self, gamma, alpha):
         super().__init__()
         self.gamma = gamma
         self.alpha = alpha
 
     def call(self, y_true, y_pred):
-        # Convert types to float32
         y_true = tf.cast(y_true, tf.float32)
         y_pred = tf.cast(y_pred, tf.float32)
         
-        # Clip predictions to prevent log(0)
         epsilon = 1e-7
         y_pred = tf.clip_by_value(y_pred, epsilon, 1 - epsilon)
         
-        # Calculate cross entropy for both positive and negative cases
         pos_loss = -y_true * tf.math.log(y_pred)
         neg_loss = -(1 - y_true) * tf.math.log(1 - y_pred)
         
-        # Apply focal modulation
         pos_focal = tf.pow(1 - y_pred, self.gamma) * pos_loss
         neg_focal = tf.pow(y_pred, self.gamma) * neg_loss
         
-        # Apply alpha weighting
         loss = self.alpha * pos_focal + (1 - self.alpha) * neg_focal
         
         return tf.reduce_mean(loss)
@@ -48,46 +45,49 @@ def open_dataset():
     ic(X.shape, y.shape)
     return X, y
 
-def build_model(n_inputs, n_outputs):
-    """
-    Creates a model using focal loss
-    """
+def build_model(n_inputs, n_outputs, gamma, alpha):
     model = keras.Sequential([
-        # Input layer
         Dense(128, input_dim=n_inputs, activation='relu'),
         Dropout(0.3),
-        
-        # Hidden layer
         Dense(128, activation='relu'),
         Dropout(0.3),
-        
-        # Output layer - one neuron per label
         Dense(n_outputs, activation='sigmoid')
     ])
     
-    # Using focal loss
-    '''
-    In focal loss, alpha is a simple class weighting factor 
-    (like 0.25 vs 0.75 for positive/negative examples), while gamma 
-    dynamically reduces the loss contribution from "easy" examples by 
-    making correctly classified examples contribute less and less as the 
-    model becomes more confident about them.
-    '''
-    # focal_loss = FocalLoss(gamma=2.0, alpha=0.25) # Initial suggested values - Recall 100% Precision 7%
-    # focal_loss = FocalLoss(gamma=4.0, alpha=0.1) # Recall: 18.51% Precision: 95.91%
-    # focal_loss = FocalLoss(gamma=3.0, alpha=0.1) # Recall: 22.97% Precision: 94.00%
-    focal_loss = FocalLoss(gamma=3.0, alpha=0.15) # Recall: 27.06% Precision: 92.31%
-
+    focal_loss = FocalLoss(gamma=gamma, alpha=alpha)
+    
     model.compile(
         optimizer=keras.optimizers.Adam(learning_rate=0.001),
         loss=focal_loss,
-        metrics=[
-            'binary_accuracy',
-            tf.keras.metrics.Recall(),
-            tf.keras.metrics.Precision()
-        ]
+        metrics=['binary_accuracy', tf.keras.metrics.Recall(), tf.keras.metrics.Precision()]
     )
     return model
+
+def evaluate_model(model, X_test, y_test):
+    y_pred = model.predict(X_test)
+    y_pred_binary = (y_pred > 0.5).astype(int)
+    
+    metrics = []
+    for i in range(y_test.shape[1]):
+        true_pos = np.sum((y_test[:, i] == 1) & (y_pred_binary[:, i] == 1))
+        false_pos = np.sum((y_test[:, i] == 0) & (y_pred_binary[:, i] == 1))
+        false_neg = np.sum((y_test[:, i] == 1) & (y_pred_binary[:, i] == 0))
+        
+        precision = true_pos / (true_pos + false_pos) if (true_pos + false_pos) > 0 else 0
+        recall = true_pos / (true_pos + false_neg) if (true_pos + false_neg) > 0 else 0
+        f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+        
+        metrics.append({
+            'precision': precision,
+            'recall': recall,
+            'f1': f1
+        })
+    
+    avg_precision = np.mean([m['precision'] for m in metrics])
+    avg_recall = np.mean([m['recall'] for m in metrics])
+    avg_f1 = np.mean([m['f1'] for m in metrics])
+    
+    return avg_precision, avg_recall, avg_f1
 
 def analyze_label_distribution(y, label_names=None):
     """
@@ -229,28 +229,96 @@ def manage_training(X, y, label_names=None):
     
     return model, scores, label_metrics, history
 
+def grid_search(X, y, gamma_range, alpha_range):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    results = []
+    total_combinations = len(gamma_range) * len(alpha_range)
+    current = 0
+    
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    
+    for gamma, alpha in product(gamma_range, alpha_range):
+        current += 1
+        print(f"\nTesting gamma={gamma}, alpha={alpha} ({current}/{total_combinations})")
+        
+        model = build_model(X.shape[1], y.shape[1], gamma, alpha)
+        
+        history = model.fit(
+            X_train, y_train,
+            validation_split=0.2,
+            epochs=30,  # Reduced for grid search
+            batch_size=32,
+            verbose=0
+        )
+        
+        precision, recall, f1 = evaluate_model(model, X_test, y_test)
+        
+        results.append({
+            'gamma': gamma,
+            'alpha': alpha,
+            'precision': precision,
+            'recall': recall,
+            'f1': f1
+        })
+        
+        # Save intermediate results
+        df = pd.DataFrame(results)
+        df.to_csv(f'grid_search_results_{timestamp}.csv', index=False)
+        
+        # Plot current results
+        plot_results(df, timestamp)
+
+    return pd.DataFrame(results)
+
+def plot_results(df, timestamp):
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    
+    metrics = ['precision', 'recall', 'f1']
+    titles = ['Precision', 'Recall', 'F1 Score']
+    
+    for ax, metric, title in zip(axes, metrics, titles):
+        pivot = df.pivot_table(values=metric, 
+                             index='gamma', 
+                             columns='alpha', 
+                             aggfunc='mean')
+        
+        sns.heatmap(pivot, ax=ax, cmap='YlOrRd', annot=True, fmt='.3f')
+        ax.set_title(title)
+        ax.set_xlabel('Alpha')
+        ax.set_ylabel('Gamma')
+    
+    plt.tight_layout()
+    plt.savefig(f'grid_search_results_{timestamp}.png')
+    plt.close()
+
 if __name__ == '__main__':
     np.random.seed(42)
     tf.random.set_seed(42)
     
     # Load dataset
     X, y = open_dataset()
-    
-    # Load label names if available
-    try:
-        with open('labels.pkl', 'rb') as f:
-            label_names = pickle.load(f)
-    except FileNotFoundError:
-        label_names = None
 
-    # Analyze distributions
-    analyze_label_distribution(y, label_names)
+    gamma_range = np.arange(2.0, 5.1, 1.0) # 2 to 6 with step 1
+    alpha_range = np.arange(0.1, 0.31, 0.05) # 0.1 to 0.3 with step 0.05
+    
+    results_df = grid_search(X, y, gamma_range, alpha_range)
+    
+    # # Load label names if available
+    # try:
+    #     with open('labels.pkl', 'rb') as f:
+    #         label_names = pickle.load(f)
+    # except FileNotFoundError:
+    #     label_names = None
+
+    # # Analyze distributions
+    # analyze_label_distribution(y, label_names)
 
     
-    # Train model
-    model, scores, label_metrics, history = manage_training(X, y, label_names)
-    model.save('model.keras')
+    # # Train model
+    # model, scores, label_metrics, history = manage_training(X, y, label_names)
+    # model.save('model.keras')
     
-    # Save training history
-    np.save('training_history.npy', history.history)
-    print('\nModel and training history saved')
+    # # Save training history
+    # np.save('training_history.npy', history.history)
+    # print('\nModel and training history saved')
