@@ -1,3 +1,6 @@
+# This repo has been superceded by other work and is being archived
+2025-04-04
+
 # Purpose
 
 This repo will be used to experiment with using machine-learning techniques to create useful metadata for [Opening-the-Archives](https://repository.library.brown.edu/studio/collections/bdr:318399/) items that are metadata-deficient.
